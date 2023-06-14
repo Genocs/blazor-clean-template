@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  blazor_portal:
+    image: ${DOCKER_REGISTRY-}genocs-blazor
+    container_name: genocs-blazor
+    build:
+      context: .
+      dockerfile: src/Server/dockerfile
+    environment:
+      - "ConnectionStrings__DefaultConnection=Server=mssql;Database=GenocsBlazor;User=sa;Password=Your_password123;MultipleActiveResultSets=true"
+      - "ASPNETCORE_Kestrel__Certificates__Default__Password=securePassword123"
+      - "ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx"
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    ports:
+      - "5005:5005"
+      - "5006:5006"
+    depends_on:
+      - mssql
+    restart: on-failure
+
+  mssql:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: mssql
+    environment:
+      - "SA_PASSWORD=Your_password123"
+      - "ACCEPT_EULA=Y"
