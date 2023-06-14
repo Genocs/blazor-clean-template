@@ -367,7 +367,7 @@
         </member>
         <member name="M:GenocsBlazor.Server.Controllers.v1.Catalog.BrandsController.Export(System.String)">
             <summary>
-            Search Brands and Export to Excel
+            Use this api to search a brands and export it into Excel
             </summary>
             <param name="searchString"></param>
             <returns></returns>

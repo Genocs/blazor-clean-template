@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace GenocsBlazor.Server.Permission
-{
-    internal class PermissionRequirement : IAuthorizationRequirement
-    {
-        public string Permission { get; private set; }
+namespace GenocsBlazor.Server.Permission;
 
-        public PermissionRequirement(string permission)
-        {
-            Permission = permission;
-        }
+internal class PermissionRequirement : IAuthorizationRequirement
+{
+    public string Permission { get; private set; }
+
+    public PermissionRequirement(string permission)
+    {
+        Permission = permission;
     }
 }

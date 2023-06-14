@@ -1,4 +1,4 @@
-﻿<!-- PROJECT SHIELDS -->
+<!-- PROJECT SHIELDS -->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -8,36 +8,36 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 [contributors-shield]: https://img.shields.io/github/contributors/Genocs/CleanArchitecture.svg?style=flat-square
-[contributors-url]: https://github.com/Genocs/CleanArchitecture/graphs/contributors
+[contributors-url]: https://github.com/Genocs/blazor-clean-template/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Genocs/CleanArchitecture?style=flat-square
-[forks-url]: https://github.com/Genocs/CleanArchitecture/network/members
+[forks-url]: https://github.com/Genocs/blazor-clean-template/network/members
 [stars-shield]: https://img.shields.io/github/stars/Genocs/CleanArchitecture.svg?style=flat-square
 [stars-url]: https://img.shields.io/github/stars/Genocs/CleanArchitecture?style=flat-square
 [issues-shield]: https://img.shields.io/github/issues/Genocs/CleanArchitecture?style=flat-square
-[issues-url]: https://github.com/Genocs/CleanArchitecture/issues
+[issues-url]: https://github.com/Genocs/blazor-clean-template/issues
 [license-shield]: https://img.shields.io/github/license/Genocs/CleanArchitecture?style=flat-square
-[license-url]: https://github.com/Genocs/CleanArchitecture/blob/master/LICENSE
+[license-url]: https://github.com/Genocs/blazor-clean-template/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Genocs/CleanArchitecture">
-    <img src="https://genocs-blog.netlify.app/wp-content/uploads/2021/05/GenocsPortalBannerv2.1.jpg" alt="Blazor Hero">
+  <a href="https://github.com/Genocs/blazor-clean-template">
+    <img src="https://genocs-blog.netlify.app/introduction/logo_hu5f84e5ac74e01291dbce57bab350d273_35818_2000x0_resize_box_3.png" alt="Blazor Portal">
   </a>
-  <h3 align="center">BlazorPortal - Clean Architecture Template</h3>
+  <h3 align="center">Blazor Portal - Clean Architecture Template</h3>
   <p align="center">
     Open Sourced Solution Template For Blazor Web-Assembly 5.0 built with MudBlazor Components
     <br />
     <a href="https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/"><strong>Read the Documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Genocs/CleanArchitecture/issues">Report Bug</a>
+    <a href="https://github.com/Genocs/blazor-clean-template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Genocs/CleanArchitecture/issues">Request Feature</a>
+    <a href="https://github.com/Genocs/blazor-clean-template/issues">Request Feature</a>
     .
-    <a href="https://github.com/Genocs/CleanArchitecture/issues">Request Documentation</a>
+    <a href="https://github.com/Genocs/blazor-clean-template/issues">Request Documentation</a>
   </p>
 </p>
 
@@ -92,9 +92,9 @@ If you are already using Blazor Hero v1.x, make sure that you drop your existing
 
 The easiest way to get started with Blazor Hero is to install the [NuGet package](https://www.nuget.org/packages/GenocsBlazor/) and run `dotnet new GenocsBlazor`:
 
-1. Install the latest [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+1. Install the latest [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 2. Install the latest DOTNET & EF CLI Tools by using this command `dotnet tool install --global dotnet-ef` 
-3. Install the latest version of Visual Studio IDE 2019 (v16.8 and above) 🚀
+3. Install the latest version of Visual Studio IDE 2022 (v17.7 and above) 🚀
 4. Open up Command Prompt and run `dotnet new --install GenocsBlazor` to install the project template
 5. Create a folder for your solution and cd into it (the template will use it as project name)
 6. Run `dotnet new GenocsBlazor` to create a new Solution with all the Awesomeness 🕶️ of BlazorPortal 🦸
@@ -127,7 +127,7 @@ The provided documentation / guide will get you started with BlazorPortal in no-
 
 # Features
 
-All the completed and the upcoming features are mentioned in the [Features.MD File](https://github.com/Genocs/CleanArchitecture/blob/master/Features.md)
+All the completed and the upcoming features are mentioned in the [Features.MD File](https://github.com/Genocs/blazor-clean-template/blob/master/Features.md)
 
 ## Contributing
 

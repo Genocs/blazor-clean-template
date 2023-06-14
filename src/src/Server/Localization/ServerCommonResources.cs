@@ -1,7 +1,6 @@
-﻿namespace GenocsBlazor.Server.Localization
+﻿namespace GenocsBlazor.Server.Localization;
+
+internal class ServerCommonResources
 {
-    internal class ServerCommonResources
-    {
-        // Used to localize strings in static classes
-    }
+    // Used to localize strings in static classes
 }

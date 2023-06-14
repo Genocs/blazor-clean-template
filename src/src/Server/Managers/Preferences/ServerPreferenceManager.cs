@@ -1,56 +1,55 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using GenocsBlazor.Application.Interfaces.Services.Storage;
+﻿using GenocsBlazor.Application.Interfaces.Services.Storage;
 using GenocsBlazor.Server.Settings;
 using GenocsBlazor.Shared.Constants.Storage;
 using GenocsBlazor.Shared.Settings;
 using GenocsBlazor.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Managers.Preferences
+namespace GenocsBlazor.Server.Managers.Preferences;
+
+public class ServerPreferenceManager : IServerPreferenceManager
 {
-    public class ServerPreferenceManager : IServerPreferenceManager
+    private readonly IServerStorageService _serverStorageService;
+    private readonly IStringLocalizer<ServerPreferenceManager> _localizer;
+
+    public ServerPreferenceManager(
+        IServerStorageService serverStorageService,
+        IStringLocalizer<ServerPreferenceManager> localizer)
     {
-        private readonly IServerStorageService _serverStorageService;
-        private readonly IStringLocalizer<ServerPreferenceManager> _localizer;
+        _serverStorageService = serverStorageService;
+        _localizer = localizer;
+    }
 
-        public ServerPreferenceManager(
-            IServerStorageService serverStorageService,
-            IStringLocalizer<ServerPreferenceManager> localizer)
+    public async Task<IResult> ChangeLanguageAsync(string languageCode)
+    {
+        var preference = await GetPreference() as ServerPreference;
+        if (preference != null)
         {
-            _serverStorageService = serverStorageService;
-            _localizer = localizer;
-        }
-
-        public async Task<IResult> ChangeLanguageAsync(string languageCode)
-        {
-            var preference = await GetPreference() as ServerPreference;
-            if (preference != null)
-            {
-                preference.LanguageCode = languageCode;
-                await SetPreference(preference);
-                return new Result
-                {
-                    Succeeded = true,
-                    Messages = new List<string> { _localizer["Server Language has been changed"] }
-                };
-            }
-
+            preference.LanguageCode = languageCode;
+            await SetPreference(preference);
             return new Result
             {
-                Succeeded = false,
-                Messages = new List<string> { _localizer["Failed to get server preferences"] }
+                Succeeded = true,
+                Messages = new List<string> { _localizer["Server Language has been changed"] }
             };
         }
 
-        public async Task<IPreference> GetPreference()
+        return new Result
         {
-            return await _serverStorageService.GetItemAsync<ServerPreference>(StorageConstants.Server.Preference) ?? new ServerPreference();
-        }
+            Succeeded = false,
+            Messages = new List<string> { _localizer["Failed to get server preferences"] }
+        };
+    }
 
-        public async Task SetPreference(IPreference preference)
-        {
-            await _serverStorageService.SetItemAsync(StorageConstants.Server.Preference, preference as ServerPreference);
-        }
+    public async Task<IPreference> GetPreference()
+    {
+        return await _serverStorageService.GetItemAsync<ServerPreference>(StorageConstants.Server.Preference) ?? new ServerPreference();
+    }
+
+    public async Task SetPreference(IPreference preference)
+    {
+        await _serverStorageService.SetItemAsync(StorageConstants.Server.Preference, preference as ServerPreference);
     }
 }

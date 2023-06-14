@@ -1,46 +1,45 @@
-﻿using GenocsBlazor.Application.Models.Chat;
+﻿using GenocsBlazor.Application.Interfaces.Chat;
+using GenocsBlazor.Application.Models.Chat;
 using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
-using GenocsBlazor.Application.Interfaces.Chat;
 
-namespace GenocsBlazor.Server.Hubs
+namespace GenocsBlazor.Server.Hubs;
+
+public class SignalRHub : Hub
 {
-    public class SignalRHub : Hub
+    public async Task OnConnectAsync(string userId)
     {
-        public async Task OnConnectAsync(string userId)
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.ConnectUser, userId);
-        }
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.ConnectUser, userId);
+    }
 
-        public async Task OnDisconnectAsync(string userId)
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.DisconnectUser, userId);
-        }
+    public async Task OnDisconnectAsync(string userId)
+    {
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.DisconnectUser, userId);
+    }
 
-        public async Task OnChangeRolePermissions(string userId, string roleId)
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.LogoutUsersByRole, userId, roleId);
-        }
+    public async Task OnChangeRolePermissions(string userId, string roleId)
+    {
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.LogoutUsersByRole, userId, roleId);
+    }
 
-        public async Task SendMessageAsync(ChatHistory<IChatUser> chatHistory, string userName)
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveMessage, chatHistory, userName);
-        }
+    public async Task SendMessageAsync(ChatHistory<IChatUser> chatHistory, string userName)
+    {
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveMessage, chatHistory, userName);
+    }
 
-        public async Task ChatNotificationAsync(string message, string receiverUserId, string senderUserId)
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveChatNotification, message, receiverUserId, senderUserId);
-        }
+    public async Task ChatNotificationAsync(string message, string receiverUserId, string senderUserId)
+    {
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveChatNotification, message, receiverUserId, senderUserId);
+    }
 
-        public async Task UpdateDashboardAsync()
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveUpdateDashboard);
-        }
+    public async Task UpdateDashboardAsync()
+    {
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveUpdateDashboard);
+    }
 
-        public async Task RegenerateTokensAsync()
-        {
-            await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveRegenerateTokens);
-        }
+    public async Task RegenerateTokensAsync()
+    {
+        await Clients.All.SendAsync(ApplicationConstants.SignalR.ReceiveRegenerateTokens);
     }
 }

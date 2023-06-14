@@ -1,14 +1,13 @@
 ﻿using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Server.Localization
-{
-    internal class ServerLocalizer<T> where T : class
-    {
-        public IStringLocalizer<T> Localizer { get; }
+namespace GenocsBlazor.Server.Localization;
 
-        public ServerLocalizer(IStringLocalizer<T> localizer)
-        {
-            Localizer = localizer;
-        }
+internal class ServerLocalizer<T> where T : class
+{
+    public IStringLocalizer<T> Localizer { get; }
+
+    public ServerLocalizer(IStringLocalizer<T> localizer)
+    {
+        Localizer = localizer;
     }
 }

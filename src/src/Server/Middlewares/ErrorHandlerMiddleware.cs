@@ -7,49 +7,48 @@ using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Middlewares
+namespace GenocsBlazor.Server.Middlewares;
+
+public class ErrorHandlerMiddleware
 {
-    public class ErrorHandlerMiddleware
+    private readonly RequestDelegate _next;
+
+    public ErrorHandlerMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
+        _next = next;
+    }
 
-        public ErrorHandlerMiddleware(RequestDelegate next)
+    public async Task Invoke(HttpContext context)
+    {
+        try
         {
-            _next = next;
+            await _next(context);
         }
-
-        public async Task Invoke(HttpContext context)
+        catch (Exception error)
         {
-            try
+            var response = context.Response;
+            response.ContentType = "application/json";
+            var responseModel = await Result<string>.FailAsync(error.Message);
+
+            switch (error)
             {
-                await _next(context);
+                case ApiException e:
+                    // custom application error
+                    response.StatusCode = (int)HttpStatusCode.BadRequest;
+                    break;
+
+                case KeyNotFoundException e:
+                    // not found error
+                    response.StatusCode = (int)HttpStatusCode.NotFound;
+                    break;
+
+                default:
+                    // unhandled error
+                    response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    break;
             }
-            catch (Exception error)
-            {
-                var response = context.Response;
-                response.ContentType = "application/json";
-                var responseModel = await Result<string>.FailAsync(error.Message);
-
-                switch (error)
-                {
-                    case ApiException e:
-                        // custom application error
-                        response.StatusCode = (int)HttpStatusCode.BadRequest;
-                        break;
-
-                    case KeyNotFoundException e:
-                        // not found error
-                        response.StatusCode = (int)HttpStatusCode.NotFound;
-                        break;
-
-                    default:
-                        // unhandled error
-                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                        break;
-                }
-                var result = JsonSerializer.Serialize(responseModel);
-                await response.WriteAsync(result);
-            }
+            string result = JsonSerializer.Serialize(responseModel);
+            await response.WriteAsync(result);
         }
     }
 }

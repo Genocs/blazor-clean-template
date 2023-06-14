@@ -55,39 +55,84 @@ namespace GenocsBlazor.Infrastructure
                     adminRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.AdministratorRole);
                     _logger.LogInformation(_localizer["Seeded Administrator Role."]);
                 }
+
+                var basicRole = new BlazorPortalRole(RoleConstants.BasicRole, _localizer["Basic role with full permissions"]);
+                var basicRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.BasicRole);
+                if (basicRoleInDb == null)
+                {
+                    await _roleManager.CreateAsync(basicRole);
+                    basicRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.BasicRole);
+                    _logger.LogInformation(_localizer["Seeded Administrator Role."]);
+                }
+
                 //Check if User Exists
-                var superUser = new BlazorPortalUser
                 {
-                    FirstName = "Giovanni E.",
-                    LastName = "Nocco",
-                    Email = "giovanni.nocco@genocs.com",
-                    UserName = "nocco",
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
-                    CreatedOn = DateTime.Now,
-                    IsActive = true
-                };
-                var superUserInDb = await _userManager.FindByEmailAsync(superUser.Email);
-                if (superUserInDb == null)
-                {
-                    await _userManager.CreateAsync(superUser, UserConstants.DefaultPassword);
-                    var result = await _userManager.AddToRoleAsync(superUser, RoleConstants.AdministratorRole);
-                    if (result.Succeeded)
+                    var sysAdmin = new BlazorPortalUser
                     {
-                        _logger.LogInformation(_localizer["Seeded Default SuperAdmin User."]);
-                    }
-                    else
+                        FirstName = "Administrator",
+                        LastName = "Sys",
+                        Email = "info@genocs.com",
+                        UserName = "sysAdmin",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        CreatedOn = DateTime.Now,
+                        IsActive = true
+                    };
+                    var sysAdminInDb = await _userManager.FindByEmailAsync(sysAdmin.Email);
+                    if (sysAdminInDb == null)
                     {
-                        foreach (var error in result.Errors)
+                        await _userManager.CreateAsync(sysAdmin, UserConstants.DefaultPassword);
+                        var result = await _userManager.AddToRoleAsync(sysAdmin, RoleConstants.AdministratorRole);
+                        if (result.Succeeded)
                         {
-                            _logger.LogError(error.Description);
+                            _logger.LogInformation(_localizer["Seeded Default SuperAdmin User."]);
+                        }
+                        else
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                _logger.LogError(error.Description);
+                            }
                         }
                     }
                 }
+                {
+                    var superUser = new BlazorPortalUser
+                    {
+                        FirstName = "Giovanni E.",
+                        LastName = "Nocco",
+                        Email = "giovanni.nocco@genocs.com",
+                        UserName = "nocco",
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        CreatedOn = DateTime.Now,
+                        IsActive = true
+                    };
+                    var superUserInDb = await _userManager.FindByEmailAsync(superUser.Email);
+                    if (superUserInDb == null)
+                    {
+                        await _userManager.CreateAsync(superUser, UserConstants.DefaultPassword);
+                        var result = await _userManager.AddToRoleAsync(superUser, RoleConstants.BasicRole);
+                        if (result.Succeeded)
+                        {
+                            _logger.LogInformation(_localizer["Seeded Default BasicRole User."]);
+                        }
+                        else
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                _logger.LogError(error.Description);
+                            }
+                        }
+                    }
+                }
+
                 foreach (var permission in Permissions.GetRegisteredPermissions())
                 {
                     await _roleManager.AddPermissionClaim(adminRoleInDb, permission);
+                    await _roleManager.AddPermissionClaim(basicRoleInDb, permission);
                 }
+
             }).GetAwaiter().GetResult();
         }
 

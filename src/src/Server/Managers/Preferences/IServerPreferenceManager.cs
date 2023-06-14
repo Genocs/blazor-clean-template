@@ -1,8 +1,7 @@
 ﻿using GenocsBlazor.Shared.Managers;
 
-namespace GenocsBlazor.Server.Managers.Preferences
+namespace GenocsBlazor.Server.Managers.Preferences;
+
+public interface IServerPreferenceManager : IPreferenceManager
 {
-    public interface IServerPreferenceManager : IPreferenceManager
-    {
-    }
 }
