@@ -5,6 +5,7 @@
 		<RootNamespace>GenocsBlazor.Client.Infrastructure</RootNamespace>
 		<AssemblyName>GenocsBlazor.Client.Infrastructure</AssemblyName>
 	</PropertyGroup>
+    
 	<ItemGroup>
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="5.0.*" />
@@ -12,6 +13,7 @@
 		<PackageReference Include="Blazored.LocalStorage" Version="4.1.2" />
 		<PackageReference Include="Toolbelt.Blazor.HttpClientInterceptor" Version="9.2.1" />
 	</ItemGroup>
+    
 	<ItemGroup>
 		<ProjectReference Include="..\Application\Application.csproj" />
 		<ProjectReference Include="..\Shared\Shared.csproj" />
