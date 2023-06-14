@@ -5,7 +5,7 @@ using GenocsBlazor.Domain.Contracts;
 
 namespace GenocsBlazor.Application.Specifications.Base
 {
-    public abstract class HeroSpecification<T> : ISpecification<T> where T : class, IEntity
+    public abstract class GenocsSpecification<T> : ISpecification<T> where T : class, IEntity
     {
         public Expression<Func<T, bool>> Criteria { get; set; }
         public List<Expression<Func<T, object>>> Includes { get; } = new();

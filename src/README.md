@@ -24,13 +24,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/Genocs/CleanArchitecture">
-    <img src="https://genocs-blog.netlify.app/wp-content/uploads/2021/05/GenocsPortalBannerv2.1.jpg" alt="Blazor Hero">
+    <img src="https://genocs-blog.netlify.app/wp-content/uploads/2021/05/GenocsPortalBannerv2.1.jpg" alt="Blazor Portal">
   </a>
   <h3 align="center">BlazorPortal - Clean Architecture Template</h3>
   <p align="center">
     Open Sourced Solution Template For Blazor Web-Assembly 5.0 built with MudBlazor Components
     <br />
-    <a href="https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/"><strong>Read the Documentation »</strong></a>
+    <a href="https://genocs-blog.netlify.app/blazor-template/><strong>Read the Documentation »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Genocs/CleanArchitecture/issues">Report Bug</a>
@@ -51,7 +51,7 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 
 <a href="https://www.youtube.com/watch?v=j7BxKN7HYjk&lc=Ugy1SjDcmP0pboRxJe94AaABAg">Watch it here!</a>
 
-[![Blazor Portal - Clean Architecture Solution Template for Blazor WebAssembly](http://img.youtube.com/vi/j7BxKN7HYjk/0.jpg)](http://www.youtube.com/watch?v=j7BxKN7HYjk "Blazor Hero - Clean Architecture Solution Template for Blazor WebAssembly")
+[![Blazor Portal - Clean Architecture Solution Template for Blazor WebAssembly](http://img.youtube.com/vi/j7BxKN7HYjk/0.jpg)](http://www.youtube.com/watch?v=j7BxKN7HYjk "Blazor Portal - Clean Architecture Solution Template for Blazor WebAssembly")
 
 ### Tech Stack :muscle:
 
@@ -72,7 +72,7 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 
 - Modular Architecture
 - Cleaner Seperation Of Code
-- Dedicated Documentation Website - [Here](https://genocs.github.io/docs/)
+- Dedicated Documentation Website - [Here](https://genocs-blog.netlify.app/blazor-template/)
 - Tutorials to add new entities, controllers
 - UI Updates
 - Support for PostgreSQL / MySQL - Easy DB Switching
@@ -88,7 +88,7 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 # Getting Started 🦸
 
 > **Important**
-If you are already using Blazor Hero v1.x, make sure that you drop your existing database and re-update your database using the CLI as there are couple of new migrations added that may clash with your existing schema. Also, install the latest version of BlazorPortal.
+If you are already using Blazor Hero v1.x, make sure that you drop your existing database and re-update your database using the CLI as there are couple of new migrations added that may clash with your existing schema. Also, install the latest version of Blazor Portal.
 
 The easiest way to get started with Blazor Hero is to install the [NuGet package](https://www.nuget.org/packages/GenocsBlazor/) and run `dotnet new GenocsBlazor`:
 
@@ -119,7 +119,7 @@ What to do next? Read the [entire guide on my blog](https://genocs-blog.netlify.
 
 # Complete Documentation :rocket:
 
-Getting started with Blazor Portal – A Clean Architecture Template built for Blazor WebAssembly using MudBlazor Components. This project will make your Blazor Learning Process much easier than you anticipate. Blazor Hero is meant to be an Enterprise Level Boilerplate, which comes free of cost, completely open sourced. 
+Getting started with Blazor Portal – A Clean Architecture Template built for Blazor WebAssembly using MudBlazor Components. This project will make your Blazor Learning Process much easier than you anticipate. Blazor Portal is meant to be an Enterprise Level Boilerplate, which comes free of cost, completely open sourced. 
 
 The provided documentation / guide will get you started with BlazorPortal in no-time. It provides a complete walkthrough about the project with to-the-point guides and notes.
 

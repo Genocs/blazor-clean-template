@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
         <RootNamespace>GenocsBlazor.Client</RootNamespace>
         <AssemblyName>GenocsBlazor.Client</AssemblyName>
@@ -9,14 +9,14 @@
 
     <ItemGroup>
         <PackageReference Include="Blazored.FluentValidation" Version="2.0.1" />
-        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.*" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="5.0.*" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.*" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.*" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.*" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.*" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.*" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.*" PrivateAssets="all" />
         <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-        <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.*" />
-        <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.*" />
-        <PackageReference Include="Microsoft.Extensions.Localization" Version="5.0.*" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.*" />
+        <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.*" />
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.*" />
         <PackageReference Include="MudBlazor" Version="5.0.14" />
         <PackageReference Include="Blazored.LocalStorage" Version="4.1.2" />
     </ItemGroup>

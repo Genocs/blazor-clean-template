@@ -3,7 +3,7 @@ using GenocsBlazor.Domain.Entities.Catalog;
 
 namespace GenocsBlazor.Application.Specifications.Catalog
 {
-    public class BrandFilterSpecification : HeroSpecification<Brand>
+    public class BrandFilterSpecification : GenocsSpecification<Brand>
     {
         public BrandFilterSpecification(string searchString)
         {

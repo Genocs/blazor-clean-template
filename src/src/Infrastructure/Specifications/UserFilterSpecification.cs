@@ -3,7 +3,7 @@ using GenocsBlazor.Application.Specifications.Base;
 
 namespace GenocsBlazor.Infrastructure.Specifications
 {
-    public class UserFilterSpecification : HeroSpecification<BlazorPortalUser>
+    public class UserFilterSpecification : GenocsSpecification<BlazorPortalUser>
     {
         public UserFilterSpecification(string searchString)
         {

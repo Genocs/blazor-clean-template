@@ -3,7 +3,7 @@ using GenocsBlazor.Application.Specifications.Base;
 
 namespace GenocsBlazor.Infrastructure.Specifications
 {
-    public class AuditFilterSpecification : HeroSpecification<Audit>
+    public class AuditFilterSpecification : GenocsSpecification<Audit>
     {
         public AuditFilterSpecification(string userId, string searchString, bool searchInOldValues, bool searchInNewValues)
         {

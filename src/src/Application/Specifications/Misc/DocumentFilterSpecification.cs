@@ -3,7 +3,7 @@ using GenocsBlazor.Domain.Entities.Misc;
 
 namespace GenocsBlazor.Application.Specifications.Misc
 {
-    public class DocumentFilterSpecification : HeroSpecification<Document>
+    public class DocumentFilterSpecification : GenocsSpecification<Document>
     {
         public DocumentFilterSpecification(string searchString, string userId)
         {

@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<RootNamespace>GenocsBlazor.Client.Infrastructure</RootNamespace>
 		<AssemblyName>GenocsBlazor.Client.Infrastructure</AssemblyName>
 	</PropertyGroup>
     
 	<ItemGroup>
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="5.0.*" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.*" />
 		<PackageReference Include="MudBlazor" Version="5.0.14" />
 		<PackageReference Include="Blazored.LocalStorage" Version="4.1.2" />
 		<PackageReference Include="Toolbelt.Blazor.HttpClientInterceptor" Version="9.2.1" />
