@@ -136,7 +136,7 @@
     <value>Logged Out.</value>
   </data>
   <data name="New Message From {0}" xml:space="preserve">
-    <value>New Message From {0}</value>
+    <value>Nuovo Messaggio da {0}</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>Invia</value>

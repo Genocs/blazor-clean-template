@@ -2,19 +2,18 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace GenocsBlazor.Client.Extensions
+namespace GenocsBlazor.Client.Extensions;
+
+public static class HubExtensions
 {
-    public static class HubExtensions
+    public static HubConnection TryInitialize(this HubConnection hubConnection, NavigationManager navigationManager)
     {
-        public static HubConnection TryInitialize(this HubConnection hubConnection, NavigationManager navigationManager)
+        if (hubConnection == null)
         {
-            if (hubConnection == null)
-            {
-                hubConnection = new HubConnectionBuilder()
-                                  .WithUrl(navigationManager.ToAbsoluteUri(ApplicationConstants.SignalR.HubUrl))
-                                  .Build();
-            }
-            return hubConnection;
+            hubConnection = new HubConnectionBuilder()
+                              .WithUrl(navigationManager.ToAbsoluteUri(ApplicationConstants.SignalR.HubUrl))
+                              .Build();
         }
+        return hubConnection;
     }
 }

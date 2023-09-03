@@ -1,7 +1,9 @@
-﻿namespace GenocsBlazor.Shared.Constants.User
+﻿namespace GenocsBlazor.Shared.Constants.User;
+
+public static class UserConstants
 {
-    public static class UserConstants
-    {
-        public const string DefaultPassword = "123Pa$$word!";
-    }
+    /// <summary>
+    /// Default password for new users. ONLY FOR DEMO PURPOSES!
+    /// </summary>
+    public const string DefaultPassword = "123Pa$$word!";
 }

@@ -121,13 +121,13 @@
     <value>Azioni</value>
   </data>
   <data name="Add Brand" xml:space="preserve">
-    <value>Aggiungi marca</value>
+    <value>Aggiungi Marca</value>
   </data>
   <data name="Brands" xml:space="preserve">
     <value>Marche</value>
   </data>
   <data name="Brands exported" xml:space="preserve">
-    <value>Brands exported</value>
+    <value>Marche Esportate</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>Crea</value>
@@ -145,28 +145,28 @@
     <value>Modifica</value>
   </data>
   <data name="Export" xml:space="preserve">
-    <value>Export</value>
+    <value>Esporta</value>
   </data>
   <data name="Filtered Brands exported" xml:space="preserve">
-    <value>Filtered Brands exported</value>
+    <value>Marche filtrate Esportate</value>
   </data>
   <data name="Id" xml:space="preserve">
     <value>Id</value>
   </data>
   <data name="Manage Brands." xml:space="preserve">
-    <value>Gestione marca.</value>
+    <value>Gestione Marca.</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
   </data>
   <data name="No Allowed Actions" xml:space="preserve">
-    <value>No Allowed Actions</value>
+    <value>Azioni Non Permesse</value>
   </data>
   <data name="Reload" xml:space="preserve">
     <value>Ricarica</value>
   </data>
   <data name="Search for Brands" xml:space="preserve">
-    <value>Ricerca marche</value>
+    <value>Ricerca Marche</value>
   </data>
   <data name="Tax" xml:space="preserve">
     <value>Imposta</value>

@@ -151,46 +151,46 @@
     <value>Id</value>
   </data>
   <data name="is already taken." xml:space="preserve">
-    <value>è già stato preso.</value>
+    <value>già usato.</value>
   </data>
   <data name="IsActive" xml:space="preserve">
-    <value>IsActive</value>
+    <value>Attivo</value>
   </data>
   <data name="LastName" xml:space="preserve">
-    <value>LastName</value>
+    <value>Cognome</value>
   </data>
   <data name="Not Allowed to add or delete Administrator Role if you have not this role." xml:space="preserve">
-    <value>Not Allowed to add or delete Administrator Role if you have not this role.</value>
+    <value>Non è permesso Aggiungere o eliminare Administrator Role se non possiedi questo Ruolo.</value>
   </data>
   <data name="Not Allowed." xml:space="preserve">
     <value>Non Autorizzato.</value>
   </data>
   <data name="Password Reset Mail has been sent to your authorized Email." xml:space="preserve">
-    <value>La mail per il ripristino della password è stata inviata al tuo indirizzo emial autorizzato.</value>
+    <value>La mail per il ripristino della password è stata inviata al tuo indirizzo email autorizzato.</value>
   </data>
   <data name="Password Reset Successful!" xml:space="preserve">
     <value>Reimpostazione della password riuscita!</value>
   </data>
   <data name="Phone number {0} is already registered." xml:space="preserve">
-    <value>Phone number {0} è già registrato.</value>
+    <value>Il Numero di Telefono {0} è già registrato.</value>
   </data>
   <data name="PhoneNumber" xml:space="preserve">
-    <value>PhoneNumber</value>
+    <value>Numero di Telefono</value>
   </data>
   <data name="PhoneNumberConfirmed" xml:space="preserve">
-    <value>PhoneNumberConfirmed</value>
+    <value>Numero di Telefono Confermato</value>
   </data>
   <data name="Please confirm your account by &lt;a href='{0}'&gt;clicking here&lt;/a&gt;." xml:space="preserve">
-    <value>Please confirm your account by &lt;a href='{0}'&gt;cliccando qui&lt;/a&gt;.</value>
+    <value>Per favore conferma il tuo account &lt;a href='{0}'&gt;cliccando qui&lt;/a&gt;.</value>
   </data>
   <data name="Please reset your password by &lt;a href='{0}&gt;clicking here&lt;/a&gt;." xml:space="preserve">
-    <value>Reimposta la password entro &lt;a href='{0}&gt;cliccando qui&lt;/a&gt;.</value>
+    <value>Reimposta la password &lt;a href='{0}&gt;cliccando qui&lt;/a&gt;.</value>
   </data>
   <data name="ProfilePictureDataUrl" xml:space="preserve">
     <value>ProfilePictureDataUrl</value>
   </data>
   <data name="Reset Password" xml:space="preserve">
-    <value>Resetta la password</value>
+    <value>Reimposta la password</value>
   </data>
   <data name="Roles Updated" xml:space="preserve">
     <value>Ruoli Aggiornati</value>
@@ -208,6 +208,6 @@
     <value>Username</value>
   </data>
   <data name="Username {0} is already taken." xml:space="preserve">
-    <value>Username {0} è già stato preso.</value>
+    <value>Username {0} è già in uso.</value>
   </data>
 </root>

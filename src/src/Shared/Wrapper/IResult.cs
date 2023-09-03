@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 
-namespace GenocsBlazor.Shared.Wrapper
+namespace GenocsBlazor.Shared.Wrapper;
+
+
+public interface IResult
 {
-    public interface IResult
-    {
-        List<string> Messages { get; set; }
+    List<string> Messages { get; set; }
 
-        bool Succeeded { get; set; }
-    }
+    bool Succeeded { get; set; }
+}
 
-    public interface IResult<out T> : IResult
-    {
-        T Data { get; }
-    }
+public interface IResult<out T> : IResult
+{
+    T Data { get; }
 }

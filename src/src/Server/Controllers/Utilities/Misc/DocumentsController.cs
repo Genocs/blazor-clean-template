@@ -1,11 +1,11 @@
 ﻿using GenocsBlazor.Application.Features.Documents.Commands.AddEdit;
 using GenocsBlazor.Application.Features.Documents.Commands.Delete;
 using GenocsBlazor.Application.Features.Documents.Queries.GetAll;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using GenocsBlazor.Application.Features.Documents.Queries.GetById;
 using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace GenocsBlazor.Server.Controllers.Utilities.Misc;
 

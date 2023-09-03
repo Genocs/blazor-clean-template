@@ -1,8 +1,8 @@
 ﻿using GenocsBlazor.Application.Interfaces.Services;
+using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using GenocsBlazor.Shared.Constants.Permission;
 
 namespace GenocsBlazor.Server.Controllers.Utilities;
 

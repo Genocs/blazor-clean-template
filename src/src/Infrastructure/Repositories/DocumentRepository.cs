@@ -1,28 +1,27 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using GenocsBlazor.Application.Interfaces.Repositories;
+﻿using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Domain.Entities.Misc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Repositories
+namespace GenocsBlazor.Infrastructure.Repositories;
+
+public class DocumentRepository : IDocumentRepository
 {
-    public class DocumentRepository : IDocumentRepository
+    private readonly IRepositoryAsync<Document, int> _repository;
+
+    public DocumentRepository(IRepositoryAsync<Document, int> repository)
     {
-        private readonly IRepositoryAsync<Document, int> _repository;
+        _repository = repository;
+    }
 
-        public DocumentRepository(IRepositoryAsync<Document, int> repository)
-        {
-            _repository = repository;
-        }
+    public async Task<bool> IsDocumentTypeUsed(int documentTypeId)
+    {
+        return await _repository.Entities.AnyAsync(b => b.DocumentTypeId == documentTypeId);
+    }
 
-        public async Task<bool> IsDocumentTypeUsed(int documentTypeId)
-        {
-            return await _repository.Entities.AnyAsync(b => b.DocumentTypeId == documentTypeId);
-        }
-
-        public async Task<bool> IsDocumentExtendedAttributeUsed(int documentExtendedAttributeId)
-        {
-            return await _repository.Entities.AnyAsync(b => b.ExtendedAttributes.Any(x => x.Id == documentExtendedAttributeId));
-        }
+    public async Task<bool> IsDocumentExtendedAttributeUsed(int documentExtendedAttributeId)
+    {
+        return await _repository.Entities.AnyAsync(b => b.ExtendedAttributes.Any(x => x.Id == documentExtendedAttributeId));
     }
 }

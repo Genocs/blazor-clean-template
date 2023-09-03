@@ -117,22 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Confirm Password" xml:space="preserve">
-    <value>Conferma Password</value>
+  <data name="Failed to get server preferences" xml:space="preserve">
+    <value>Errore durante il recupero delle preferenze</value>
   </data>
-  <data name="E-mail" xml:space="preserve">
-    <value>E-mail</value>
-  </data>
-  <data name="Enter email for password reset" xml:space="preserve">
-    <value>Inserisci E-mail per reimpostare la Password</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="Reset password" xml:space="preserve">
-    <value>Reset Password</value>
-  </data>
-  <data name="Token Not Found!" xml:space="preserve">
-    <value>Token Non Trovato!</value>
+  <data name="Server Language has been changed" xml:space="preserve">
+    <value>Linguaggio del Server è stato aggiornato</value>
   </data>
 </root>

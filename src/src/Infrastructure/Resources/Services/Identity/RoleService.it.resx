@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Not allowed to delete {0} Role as it is being used." xml:space="preserve">
-    <value>Non è consentito eliminare {0} Ruolo come viene utilizzato.</value>
+    <value>Non è consentito eliminare il Ruolo {0} perche in uso.</value>
   </data>
   <data name="Not allowed to delete {0} Role." xml:space="preserve">
-    <value>Non è consentito eliminare {0} Ruolo.</value>
+    <value>Non è consentito eliminare il Ruolo {0}.</value>
   </data>
   <data name="Not allowed to deselect {0} or {1} or {2} for this Role." xml:space="preserve">
-    <value>Not allowed to deselect {0} or {1} or {2} for this Role.</value>
+    <value>Non è consentito rimovere {0} o {1} o {2} per questo Ruolo.</value>
   </data>
   <data name="Not allowed to modify Permissions for this Role." xml:space="preserve">
-    <value>Non è consentito modificare le autorizzazioni per questo ruolo.</value>
+    <value>Non è consentito modificare le Autorizzazioni per questo ruolo.</value>
   </data>
   <data name="Not allowed to modify {0} Role." xml:space="preserve">
     <value>Non è consentito modificare {0} Ruolo.</value>
   </data>
   <data name="Permissions Updated." xml:space="preserve">
-    <value>Autorizzazione aggiornata.</value>
+    <value>Autorizzazione Aggiornata.</value>
   </data>
   <data name="Role {0} Created." xml:space="preserve">
     <value>Ruolo {0} Creato.</value>
   </data>
   <data name="Role {0} Deleted." xml:space="preserve">
-    <value>Ruolo {0} Deleted.</value>
+    <value>Ruolo {0} Cancellato.</value>
   </data>
   <data name="Role {0} Updated." xml:space="preserve">
     <value>Ruolo {0} Aggiornato</value>
   </data>
   <data name="Similar Role already exists." xml:space="preserve">
-    <value>Un ruolo simile esiste già. Un ruolo simile esiste già.</value>
+    <value>Un ruolo simile esiste già.</value>
   </data>
 </root>

@@ -9,7 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Blazored.FluentValidation" Version="2.1.0" />
-        <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />        
+        <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
         <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.*" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.*" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.*" />
@@ -27,6 +27,10 @@
 
     <ItemGroup>
         <Content Remove="Shared\Components\GenocsPortalLogo.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Extensions\HubExtensions.cs~RF5bd5d3.TMP" />
     </ItemGroup>
 
     <ItemGroup>

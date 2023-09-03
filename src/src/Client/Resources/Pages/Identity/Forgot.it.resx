@@ -124,12 +124,12 @@
     <value>E-mail</value>
   </data>
   <data name="Enter email for password reset" xml:space="preserve">
-    <value>Inserisci l'email per reimpostare la password</value>
+    <value>Inserisci l'email per reimpostare la Password</value>
   </data>
   <data name="Forgot password?" xml:space="preserve">
     <value>Password Dimenticata?</value>
   </data>
   <data name="Reset Password" xml:space="preserve">
-    <value>Resetta la password</value>
+    <value>Resetta la Password</value>
   </data>
 </root>

@@ -1,10 +1,10 @@
-﻿using System.Linq;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
 using GenocsBlazor.Application.Configurations;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
 using GenocsBlazor.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace GenocsBlazor.Server.Extensions;
 

@@ -8,46 +8,46 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Shared.Services
+namespace GenocsBlazor.Infrastructure.Shared.Services;
+
+public class SMTPMailService : IMailService
 {
-    public class SMTPMailService : IMailService
+    private readonly MailConfiguration _config;
+    private readonly ILogger<SMTPMailService> _logger;
+
+    public SMTPMailService(IOptions<MailConfiguration> config, ILogger<SMTPMailService> logger)
     {
-        private readonly MailConfiguration _config;
-        private readonly ILogger<SMTPMailService> _logger;
+        _config = config.Value;
+        _logger = logger;
+    }
 
-        public SMTPMailService(IOptions<MailConfiguration> config, ILogger<SMTPMailService> logger)
+    public async Task SendAsync(MailRequest request)
+    {
+        try
         {
-            _config = config.Value;
-            _logger = logger;
-        }
-
-        public async Task SendAsync(MailRequest request)
-        {
-            try
+            var email = new MimeMessage()
             {
-                var email = new MimeMessage()
+                Sender = new MailboxAddress(_config.DisplayName, request.From ?? _config.From),
+                
+                Subject = request.Subject,
+                Body = new BodyBuilder
                 {
-                    Sender = new MailboxAddress(_config.DisplayName, request.From ?? _config.From),
-                    
-                    Subject = request.Subject,
-                    Body = new BodyBuilder
-                    {
-                        HtmlBody = request.Body,                        
-                    }.ToMessageBody()
+                    HtmlBody = request.Body,                        
+                }.ToMessageBody()
 
-                };
-                email.To.Add(new MailboxAddress("Alice", request.To));
+            };
 
-                using var smtp = new SmtpClient();
-                await smtp.ConnectAsync(_config.Host, _config.Port, SecureSocketOptions.StartTls);
-                await smtp.AuthenticateAsync(_config.UserName, _config.Password);
-                await smtp.SendAsync(email);
-                await smtp.DisconnectAsync(true);
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
-            }
+            email.To.Add(new MailboxAddress("NoReply", request.To));
+
+            using var smtp = new SmtpClient();
+            await smtp.ConnectAsync(_config.Host, _config.Port, SecureSocketOptions.StartTls);
+            await smtp.AuthenticateAsync(_config.UserName, _config.Password);
+            await smtp.SendAsync(email);
+            await smtp.DisconnectAsync(true);
+        }
+        catch (System.Exception ex)
+        {
+            _logger.LogError(ex.Message, ex);
         }
     }
 }

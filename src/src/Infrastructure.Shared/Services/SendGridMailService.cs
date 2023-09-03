@@ -1,6 +1,5 @@
-﻿namespace GenocsBlazor.Infrastructure.Shared.Services
+﻿namespace GenocsBlazor.Infrastructure.Shared.Services;
+
+internal class SendGridMailService
 {
-    internal class SendGridMailService
-    {
-    }
 }

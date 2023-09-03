@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
+using GenocsBlazor.Shared.Constants.Permission;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
-using GenocsBlazor.Shared.Constants.Permission;
 
 namespace GenocsBlazor.Server.Controllers.v1;
 

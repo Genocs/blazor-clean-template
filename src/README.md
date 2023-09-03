@@ -68,15 +68,15 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 - Minor Bug Fixes
 - Better Project Structure
 
-# What to Excpect in BlazorPortal 3.0?
+# What to Expect in BlazorPortal 3.0?
 
 - Modular Architecture
-- Cleaner Seperation Of Code
+- Cleaner Separation Of Code
 - Dedicated Documentation Website - [Here](https://genocs-blog.netlify.app/blazor-template/)
 - Tutorials to add new entities, controllers
 - UI Updates
 - Support for PostgreSQL / MySQL - Easy DB Switching
-- Theme Manager Integration to change UI Color Palletes / Fonts on the go.
+- Theme Manager Integration to change UI Color Palettes / Fonts on the go.
 - You can suggest your requirements as well!
 
 # Down the Roadmap
@@ -99,7 +99,7 @@ The easiest way to get started with Blazor Hero is to install the [NuGet package
 5. Create a folder for your solution and cd into it (the template will use it as project name)
 6. Run `dotnet new GenocsBlazor` to create a new Solution with all the Awesomeness 🕶️ of BlazorPortal 🦸
 
-What to do next? Read the [entire guide on my blog](https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/).
+What to do next? Read the [guide](https://genocs-blog.netlify.app/blazor-template/general/getting-started/).
 
 ## Getting Started with Docker in Windows :rocket:
 
@@ -113,7 +113,7 @@ What to do next? Read the [entire guide on my blog](https://genocs-blog.netlify.
 - Now navigate back to the root of the BlazorPortal Project on your local machine and run the following via terminal - `docker-compose -f 'docker-compose.yml' up --build`
 - This will start pulling MSSQL Server Image from Docker Hub if you don't already have this image. It's around 500+ Mbs of download.
 - Once that is done, dotnet SDKs and runtimes are downloaded, if not present already. That's almost 200+ more Mbs of download.
-- PS If you find any issues while Docker installs the nuget packages, it is most likelt that your ssl certificates are not intalled properly. Apart from that I also added the `--disable-parallel` in the `Server\dockerfile`to ensure network issues don't pop-up. You can remove this option to speed up the build process.
+- PS If you find any issues while Docker installs the nuget packages, it is most likely that your ssl certificates are not intalled properly. Apart from that I also added the `--disable-parallel` in the `Server\dockerfile`to ensure network issues don't pop-up. You can remove this option to speed up the build process.
 - That's almost everything. Once the containers are available, migrations are updated in the MSSQL DB, default data is seeded.
 - Browse to https://localhost:5005/ to use your version of Blazor Portal!
 
@@ -123,7 +123,7 @@ Getting started with Blazor Portal – A Clean Architecture Template built for B
 
 The provided documentation / guide will get you started with BlazorPortal in no-time. It provides a complete walkthrough about the project with to-the-point guides and notes.
 
-<a href="https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/"><strong>Read the Quick Start Guide</strong></a>
+<a href="https://genocs-blog.netlify.app/blazor-template/general/getting-started/"><strong>Read the Quick Start Guide</strong></a>
 
 # Features
 
@@ -143,7 +143,7 @@ Here are the few contributions that I would highly appreciate ;)
 
 - [ ] Need someone to add in the API Documentation for Swagger.
 - [ ] Need someone to implement localization throughout every Razor Component of the solution under the WASM(Client) Project. You can take the Pages/Authentication/Login.razor as the point of reference. It is as simple as adding `@inject Microsoft.Extensions.Localization.IStringLocalizer<Login> localizer` to every page, changing the texts to `@localizer["Text Here"]` and finally adding resx files to the Resources Folder as per the folder structure.
-- [ ] Need few contributors to add in various language transalations as per the implemented Location. I got time to only add a few transalations for French as of now.
+- [ ] Need few contributors to add in various language translations as per the implemented Location. I got time to only add a few translations for French as of now.
 - [ ] Need a UI contributor to look at the UX/UI of the entire project
 - [ ] Need someone to buildup a cool Material Logo for BlazorPortal (BH):D Do contact me on LinkedIn (https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/).
 - [ ] And finally, Stars from everyone! :D
@@ -168,7 +168,7 @@ Here are a few ways by which you can support.
 
 - Leave a star! :star:
 - Recommend this awesome project to your colleagues. 🥇
-- Leave your feedback / comments regarding this project in the comments section on my blog [Genocs Library Blog](https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/)
+- Leave your feedback / comments regarding this project in the comments section on my blog [Genocs Library documentation](https://genocs-blog.netlify.app/blazor-template/general/getting-started/)
 - Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169) 🦸
 - Or, If you want to support this project on the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)! ☕
 
