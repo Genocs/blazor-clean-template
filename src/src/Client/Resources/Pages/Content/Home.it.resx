@@ -117,62 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Description" xml:space="preserve">
-    <value>Descrizione</value>
-  </data>
-  <data name="Blazor Portal Description" xml:space="preserve">
-    <value>Portale Blazor</value>
-  </data>
   <data name="Blazor For Beginners – Getting Started With Blazor" xml:space="preserve">
     <value>Blazor per principianti – Come iniziare ad usare Blazor</value>
   </data>
   <data name="Blazor Portal Description" xml:space="preserve">
-    <value>Blazor Portal is an All-In-One Clean Architecture Solution Template For Blazor Web-Assembly built with</value>
+    <value>Blazor Portal è un Template All-In-One Clean Architecture Solution Blazor Web-Assembly</value>
   </data>
   <data name="Building A Chat Application With Blazor, Identity, And SignalR" xml:space="preserve">
-    <value>Building A Chat Application With Blazor, Identity, And SignalR</value>
+    <value>Come sviluppare una chat con Blazor, Identity, e SignalR</value>
   </data>
   <data name="Component Library" xml:space="preserve">
-    <value>Libraria Componanti</value>
+    <value>Libreria Componanti</value>
   </data>
   <data name="Custom Authentication In Blazor WebAssembly – Detailed" xml:space="preserve">
-    <value>Custom Authentication In Blazor WebAssembly – Detailed</value>
+    <value>Custom Authentication In Blazor WebAssembly – Dettagliata</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Clean Architecture Template For Blazor Web-Assembly</value>
+    <value>Clean Architecture Template Blazor Web-Assembly</value>
   </data>
   <data name="Exploring Blazor Project Structure" xml:space="preserve">
     <value>Esplora la struttura del Progetto Blazor</value>
   </data>
   <data name="Getting Started" xml:space="preserve">
-    <value>Andiamo ad Iniziare</value>
+    <value>Per Iniziare</value>
   </data>
   <data name="Github Repository : Do Not Forget to Leave a Star ;)" xml:space="preserve">
     <value>Github Repository : Non dimenticare di aggiungere una Stella ;)</value>
   </data>
   <data name="Here are few articles that should help you get started with Blazor." xml:space="preserve">
-    <value>Here are few articles that should help you get started with Blazor.</value>
+    <value>Leggi acuni articoli che spiegano come iniziare ad usare Blazor.</value>
   </data>
   <data name="How To Implement Blazor CRUD Using Entity Framework Core?" xml:space="preserve">
-    <value>How To Implement Blazor CRUD Using Entity Framework Core?</value>
+    <value>Come implementare Blazor CRUD con Entity Framework Core?</value>
   </data>
-  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 5" xml:space="preserve">
-    <value>Implementing Blazor CRUD Using Mudblazor Component Library In .NET 5</value>
+  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 6" xml:space="preserve">
+    <value>Implementare Blazor CRUD con Mudblazor Component Library In .NET 6</value>
   </data>
   <data name="Important Links" xml:space="preserve">
-    <value>Important Links</value>
+    <value>Link Importanti</value>
   </data>
   <data name="Increase you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
-    <value>Increase you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference.</value>
+    <value>Se sei bloccato o hai domande al riguardo? Leggi la guida rapida come riferimento.</value>
   </data>
   <data name="Learning Resources" xml:space="preserve">
     <value>Risorse dove Imparare</value>
   </data>
   <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
-    <value>Onion Architecture In ASP.NET Core With CQRS – Detailed</value>
+    <value>Onion Architecture In ASP.NET Core With CQRS – Dettagliato</value>
   </data>
   <data name="Project Page" xml:space="preserve">
-    <value>Pagin del Progetto</value>
+    <value>Pagina del Progetto</value>
   </data>
   <data name="Quick Start Guide" xml:space="preserve">
     <value>Guida Veloce</value>

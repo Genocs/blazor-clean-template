@@ -28,9 +28,9 @@
   </a>
   <h3 align="center">Blazor Portal - Clean Architecture Template</h3>
   <p align="center">
-    Open Sourced Solution Template For Blazor Web-Assembly 5.0 built with MudBlazor Components
+    Open Sourced Solution Template For Blazor Web-Assembly 6.0 built with MudBlazor Components
     <br />
-    <a href="https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/"><strong>Read the Documentation »</strong></a>
+    <a href="https://genocs-blog.netlify.app/blazor-template/general/getting-started/"><strong>Read the Documentation »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Genocs/blazor-clean-template/issues">Report Bug</a>
@@ -45,20 +45,12 @@
 
 BlazorPortal is a Clean Architecture Solution Template for Blazor Webassembly 5.0 built with MudBlazor Components.
 
-## Complete Overview - Youtube Video 🆕 📈
-
-So, here is an in-depth video that takes you through the BlazorPortal Project! Do Like & Subscribe to my Youtube channel! It would be great if you could leave behind your valuable feedback in the comments section of the Video. This helps me reach a much wider audience with time :)
-
-<a href="https://www.youtube.com/watch?v=j7BxKN7HYjk&lc=Ugy1SjDcmP0pboRxJe94AaABAg">Watch it here!</a>
-
-[![Blazor Portal - Clean Architecture Solution Template for Blazor WebAssembly](http://img.youtube.com/vi/j7BxKN7HYjk/0.jpg)](http://www.youtube.com/watch?v=j7BxKN7HYjk "Blazor Hero - Clean Architecture Solution Template for Blazor WebAssembly")
-
 ### Tech Stack :muscle:
 
 - Blazor WebAssembly 5.0 - ASP.NET Core Hosted Model
 - [Entity Framework Core 5.0](https://docs.microsoft.com/en-us/ef/core/)
 
-# BlazorPortal v3.0
+# BlazorPortal v5.0
 
 - UI Improvements
 - Docker Support

@@ -8,22 +8,22 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 [contributors-shield]: https://img.shields.io/github/contributors/Genocs/CleanArchitecture.svg?style=flat-square
-[contributors-url]: https://github.com/Genocs/CleanArchitecture/graphs/contributors
+[contributors-url]: https://github.com/Genocs/blazor-clean-template/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Genocs/CleanArchitecture?style=flat-square
-[forks-url]: https://github.com/Genocs/CleanArchitecture/network/members
+[forks-url]: https://github.com/Genocs/blazor-clean-template/network/members
 [stars-shield]: https://img.shields.io/github/stars/Genocs/CleanArchitecture.svg?style=flat-square
 [stars-url]: https://img.shields.io/github/stars/Genocs/CleanArchitecture?style=flat-square
 [issues-shield]: https://img.shields.io/github/issues/Genocs/CleanArchitecture?style=flat-square
-[issues-url]: https://github.com/Genocs/CleanArchitecture/issues
+[issues-url]: https://github.com/Genocs/blazor-clean-template/issues
 [license-shield]: https://img.shields.io/github/license/Genocs/CleanArchitecture?style=flat-square
-[license-url]: https://github.com/Genocs/CleanArchitecture/blob/master/LICENSE
+[license-url]: https://github.com/Genocs/blazor-clean-template/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Genocs/CleanArchitecture">
+  <a href="https://github.com/Genocs/blazor-clean-template">
     <img src="https://genocs-blog.netlify.app/wp-content/uploads/2021/05/GenocsPortalBannerv2.1.jpg" alt="Blazor Portal">
   </a>
   <h3 align="center">BlazorPortal - Clean Architecture Template</h3>
@@ -33,11 +33,11 @@
     <a href="https://genocs-blog.netlify.app/blazor-template/><strong>Read the Documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Genocs/CleanArchitecture/issues">Report Bug</a>
+    <a href="https://github.com/Genocs/blazor-clean-template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Genocs/CleanArchitecture/issues">Request Feature</a>
+    <a href="https://github.com/Genocs/blazor-clean-template/issues">Request Feature</a>
     .
-    <a href="https://github.com/Genocs/CleanArchitecture/issues">Request Documentation</a>
+    <a href="https://github.com/Genocs/blazor-clean-template/issues">Request Documentation</a>
   </p>
 </p>
 
@@ -127,7 +127,7 @@ The provided documentation / guide will get you started with BlazorPortal in no-
 
 # Features
 
-All the completed and the upcoming features are mentioned in the [Features.MD File](https://github.com/Genocs/CleanArchitecture/blob/master/Features.md)
+All the completed and the upcoming features are mentioned in the [Features.MD File](https://github.com/Genocs/blazor-clean-template/blob/master/Features.md)
 
 ## Contributing
 
