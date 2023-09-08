@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>GenocsBlazor.Domain</RootNamespace>
         <AssemblyName>GenocsBlazor.Domain</AssemblyName>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
 </Project>

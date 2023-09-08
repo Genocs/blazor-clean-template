@@ -4,6 +4,12 @@
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>GenocsBlazor.Shared</RootNamespace>
         <AssemblyName>GenocsBlazor.Shared</AssemblyName>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.1" />
+    </ItemGroup>
 
 </Project>

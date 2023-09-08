@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace GenocsBlazor.Domain.Contracts
-{
-    public abstract class AuditableEntityWithExtendedAttributes<TId, TEntityId, TEntity, TExtendedAttribute> 
-        : AuditableEntity<TEntityId>, IEntityWithExtendedAttributes<TExtendedAttribute>
-            where TEntity : IEntity<TEntityId>
-    {
-        public virtual ICollection<TExtendedAttribute> ExtendedAttributes { get; set; }
+namespace GenocsBlazor.Domain.Contracts;
 
-        public AuditableEntityWithExtendedAttributes()
-        {
-            ExtendedAttributes = new HashSet<TExtendedAttribute>();
-        }
+public abstract class AuditableEntityWithExtendedAttributes<TId, TEntityId, TEntity, TExtendedAttribute> 
+    : AuditableEntity<TEntityId>, IEntityWithExtendedAttributes<TExtendedAttribute>
+        where TEntity : IEntity<TEntityId>
+{
+    public virtual ICollection<TExtendedAttribute> ExtendedAttributes { get; set; }
+
+    public AuditableEntityWithExtendedAttributes()
+    {
+        ExtendedAttributes = new HashSet<TExtendedAttribute>();
     }
 }
