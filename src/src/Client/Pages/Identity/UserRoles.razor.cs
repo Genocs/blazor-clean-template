@@ -9,83 +9,82 @@ using System.Threading.Tasks;
 using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 
-namespace GenocsBlazor.Client.Pages.Identity
+namespace GenocsBlazor.Client.Pages.Identity;
+
+public partial class UserRoles
 {
-    public partial class UserRoles
+    [Parameter] public string Id { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Description { get; set; }
+    public List<UserRoleModel> UserRolesList { get; set; } = new();
+
+    private UserRoleModel _userRole = new();
+    private string _searchString = "";
+    private bool _dense = false;
+    private bool _striped = true;
+    private bool _bordered = false;
+
+    private ClaimsPrincipal _currentUser;
+    private bool _canEditUsers;
+    private bool _canSearchRoles;
+    private bool _loaded;
+
+    protected override async Task OnInitializedAsync()
     {
-        [Parameter] public string Id { get; set; }
-        [Parameter] public string Title { get; set; }
-        [Parameter] public string Description { get; set; }
-        public List<UserRoleModel> UserRolesList { get; set; } = new();
+        _currentUser = await _authenticationManager.CurrentUser();
+        _canEditUsers = (await _authorizationService.AuthorizeAsync(_currentUser, Permissions.Users.Edit)).Succeeded;
+        _canSearchRoles = (await _authorizationService.AuthorizeAsync(_currentUser, Permissions.Roles.Search)).Succeeded;
 
-        private UserRoleModel _userRole = new();
-        private string _searchString = "";
-        private bool _dense = false;
-        private bool _striped = true;
-        private bool _bordered = false;
-
-        private ClaimsPrincipal _currentUser;
-        private bool _canEditUsers;
-        private bool _canSearchRoles;
-        private bool _loaded;
-
-        protected override async Task OnInitializedAsync()
+        string userId = Id;
+        var result = await _userManager.GetAsync(userId);
+        if (result.Succeeded)
         {
-            _currentUser = await _authenticationManager.CurrentUser();
-            _canEditUsers = (await _authorizationService.AuthorizeAsync(_currentUser, Permissions.Users.Edit)).Succeeded;
-            _canSearchRoles = (await _authorizationService.AuthorizeAsync(_currentUser, Permissions.Roles.Search)).Succeeded;
-
-            var userId = Id;
-            var result = await _userManager.GetAsync(userId);
-            if (result.Succeeded)
+            var user = result.Data;
+            if (user != null)
             {
-                var user = result.Data;
-                if (user != null)
-                {
-                    Title = $"{user.FirstName} {user.LastName}";
-                    Description = string.Format(_localizer["Manage {0} {1}'s Roles"], user.FirstName, user.LastName);
-                    var response = await _userManager.GetRolesAsync(user.Id);
-                    UserRolesList = response.Data.UserRoles;
-                }
-            }
-
-            _loaded = true;
-        }
-
-        private async Task SaveAsync()
-        {
-            var request = new UpdateUserRolesRequest()
-            {
-                UserId = Id,
-                UserRoles = UserRolesList
-            };
-            var result = await _userManager.UpdateRolesAsync(request);
-            if (result.Succeeded)
-            {
-                _snackBar.Add(result.Messages[0], Severity.Success);
-                _navigationManager.NavigateTo("/identity/users");
-            }
-            else
-            {
-                foreach (var error in result.Messages)
-                {
-                    _snackBar.Add(error, Severity.Error);
-                }
+                Title = $"{user.FirstName} {user.LastName}";
+                Description = string.Format(_localizer["Manage {0} {1}'s Roles"], user.FirstName, user.LastName);
+                var response = await _userManager.GetRolesAsync(user.Id);
+                UserRolesList = response.Data.UserRoles;
             }
         }
 
-        private bool Search(UserRoleModel userRole)
+        _loaded = true;
+    }
+
+    private async Task SaveAsync()
+    {
+        var request = new UpdateUserRolesRequest()
         {
-            if (string.IsNullOrWhiteSpace(_searchString)) return true;
-            if (userRole.RoleName?.Contains(_searchString, StringComparison.OrdinalIgnoreCase) == true)
-            {
-                return true;
-            }
-            if (userRole.RoleDescription?.Contains(_searchString, StringComparison.OrdinalIgnoreCase) == true)
-            {
-                return true;
-            }
-            return false;
+            UserId = Id,
+            UserRoles = UserRolesList
+        };
+        var result = await _userManager.UpdateRolesAsync(request);
+        if (result.Succeeded)
+        {
+            _snackBar.Add(result.Messages[0], Severity.Success);
+            _navigationManager.NavigateTo("/identity/users");
         }
+        else
+        {
+            foreach (string error in result.Messages)
+            {
+                _snackBar.Add(error, Severity.Error);
+            }
+        }
+    }
+
+    private bool Search(UserRoleModel userRole)
+    {
+        if (string.IsNullOrWhiteSpace(_searchString)) return true;
+        if (userRole.RoleName?.Contains(_searchString, StringComparison.OrdinalIgnoreCase) == true)
+        {
+            return true;
+        }
+        if (userRole.RoleDescription?.Contains(_searchString, StringComparison.OrdinalIgnoreCase) == true)
+        {
+            return true;
+        }
+        return false;
     }
 }
