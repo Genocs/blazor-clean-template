@@ -126,6 +126,9 @@
   <data name="Building A Chat Application With Blazor, Identity, And SignalR" xml:space="preserve">
     <value>Building A Chat Application With Blazor, Identity, And SignalR</value>
   </data>
+  <data name="Celebrating 1 Stars on GitHub!" xml:space="preserve">
+    <value>Достигнуто 1 Звёзд на GitHub!</value>
+  </data>
   <data name="Component Library" xml:space="preserve">
     <value>библиотеки компонентов</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>Шаблон "чистой" архитектуры для Blazor Web-Assembly</value>
+  </data>
+  <data name="Documentation - Work in progress" xml:space="preserve">
+    <value>Документация - скоро появится</value>
   </data>
   <data name="Exploring Blazor Project Structure" xml:space="preserve">
     <value>Exploring Blazor Project Structure</value>
@@ -150,17 +156,20 @@
   <data name="How To Implement Blazor CRUD Using Entity Framework Core?" xml:space="preserve">
     <value>How To Implement Blazor CRUD Using Entity Framework Core?</value>
   </data>
-  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 6" xml:space="preserve">
-    <value>Implementing Blazor CRUD Using Mudblazor Component Library In .NET 6</value>
+  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 5" xml:space="preserve">
+    <value>Implementing Blazor CRUD Using Mudblazor Component Library In .NET 5</value>
   </data>
   <data name="Important Links" xml:space="preserve">
     <value>Важные ссылки</value>
   </data>
-  <data name="Increase you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
+  <data name="In case you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
     <value>Если вы где-то застряли или у вас есть какие-либо вопросы относительно этой реализации, я составил для вас краткое руководство по началу работы.</value>
   </data>
   <data name="Learning Resources" xml:space="preserve">
     <value>Учебные ресурсы</value>
+  </data>
+  <data name="Liked BlazorPortal? Star us on Github!" xml:space="preserve">
+    <value>Нравится BlazorPortal? Поставьте звезду на Github!</value>
   </data>
   <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
     <value>Onion Architecture In ASP.NET Core With CQRS – Detailed</value>

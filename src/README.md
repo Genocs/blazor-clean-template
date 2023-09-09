@@ -58,7 +58,7 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 - Blazor WebAssembly 5.0 - ASP.NET Core Hosted Model
 - [Entity Framework Core 5.0](https://docs.microsoft.com/en-us/ef/core/)
 
-# BlazorPortal v3.0
+# BlazorPortal v5.0
 
 - UI Improvements
 - Docker Support
@@ -68,7 +68,7 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 - Minor Bug Fixes
 - Better Project Structure
 
-# What to Expect in BlazorPortal 3.0?
+# What to Expect in BlazorPortal 5.0?
 
 - Modular Architecture
 - Cleaner Separation Of Code
@@ -81,18 +81,18 @@ So, here is an in-depth video that takes you through the BlazorPortal Project! D
 
 # Down the Roadmap
 
-- Migration to .NET 6
+- Migration to .NET6
 - Multi Tenancy
 - Better Localization - JSON
 
 # Getting Started 🦸
 
 > **Important**
-If you are already using Blazor Hero v1.x, make sure that you drop your existing database and re-update your database using the CLI as there are couple of new migrations added that may clash with your existing schema. Also, install the latest version of Blazor Portal.
+If you are already using Blazor Portal v1.x, make sure that you drop your existing database and re-update your database using the CLI as there are couple of new migrations added that may clash with your existing schema. Also, install the latest version of Blazor Portal.
 
-The easiest way to get started with Blazor Hero is to install the [NuGet package](https://www.nuget.org/packages/GenocsBlazor/) and run `dotnet new GenocsBlazor`:
+The easiest way to get started with Blazor Portal is to install the [NuGet package](https://www.nuget.org/packages/GenocsBlazor/) and run `dotnet new GenocsBlazor`:
 
-1. Install the latest [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+1. Install the latest [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 2. Install the latest DOTNET & EF CLI Tools by using this command `dotnet tool install --global dotnet-ef` 
 3. Install the latest version of Visual Studio IDE 2019 (v16.8 and above) 🚀
 4. Open up Command Prompt and run `dotnet new --install GenocsBlazor` to install the project template
@@ -104,7 +104,7 @@ What to do next? Read the [guide](https://genocs-blog.netlify.app/blazor-templat
 ## Getting Started with Docker in Windows :rocket:
 
 - Install Docker on Windows via `https://docs.docker.com/docker-for-windows/install/`
-- Open up Powershell on Windows and run the following
+- Open up PowerShell on Windows and run the following
     - `cd c:\`
     - `dotnet dev-certs https -ep $env:USERPROFILE\.aspnet\https\aspnetapp.pfx -p securePassword123`
     - `dotnet dev-certs https --trust`

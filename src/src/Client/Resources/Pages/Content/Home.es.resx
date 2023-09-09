@@ -117,11 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Blazor For Beginners – Getting Started With Blazor" xml:space="preserve">
+    <value>Blazor para Principiantes – Iniciarse con Blazor</value>
+  </data>
+  <data name="Blazor Portal Description" xml:space="preserve">
+    <value>Blazor Portal es un template de Solución de Arquitectura todo-en-uno para Blazor Web-Assembly, hecho con la Librería de Componentes</value>
+  </data>
+  <data name="Building A Chat Application With Blazor, Identity, And SignalR" xml:space="preserve">
+    <value>Construir una Aplicación de Chat con Blazor, Identity y SignalR</value>
+  </data>
+  <data name="Celebrating 1 Stars on GitHub!" xml:space="preserve">
+    <value>Celebrando 1 Estrellas en Github!</value>
+  </data>
+  <data name="Component Library" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Custom Authentication In Blazor WebAssembly – Detailed" xml:space="preserve">
+    <value>Autenticación Personalizada en Blazor WebAssembly – Detallado</value>
+  </data>
   <data name="Description" xml:space="preserve">
-    <value>Clean Architecture Template para Blazor Web-Assembly</value>
+    <value>Template de Arquitectura Limpia para Blazor Web-Assembly</value>
+  </data>
+  <data name="Documentation - Work in progress" xml:space="preserve">
+    <value>Documentación - Pronto</value>
+  </data>
+  <data name="Exploring Blazor Project Structure" xml:space="preserve">
+    <value>Explorando la estructura de un Proyecto Blazor</value>
+  </data>
+  <data name="Getting Started" xml:space="preserve">
+    <value>Iniciarse</value>
+  </data>
+  <data name="Github Repository : Do Not Forget to Leave a Star ;)" xml:space="preserve">
+    <value>Repositorio en Github: No olvides dejar una estrella ;)</value>
+  </data>
+  <data name="Here are few articles that should help you get started with Blazor." xml:space="preserve">
+    <value>Aquí hay unos artículos que te ayudarán a iniciarte el Blazor.</value>
+  </data>
+  <data name="How To Implement Blazor CRUD Using Entity Framework Core?" xml:space="preserve">
+    <value>¿Cómo implementar un CRUD en Blazro usando Entity Framework Core?</value>
+  </data>
+  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 5" xml:space="preserve">
+    <value>Implementando un CRUD en Blazor usando la librería de componentes Mudblazor en .NET 5</value>
+  </data>
+  <data name="Important Links" xml:space="preserve">
+    <value>Links Importantes</value>
+  </data>
+  <data name="In case you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
+    <value>En caso que tengas problemas para avanzar o tengas preguntas sobre la implementación, he compilado una Guía de Inicio Rápido para tu referencia.</value>
+  </data>
+  <data name="Learning Resources" xml:space="preserve">
+    <value>Recursos para Aprendizaje</value>
+  </data>
+  <data name="Liked BlazorPortal? Star us on Github!" xml:space="preserve">
+    <value>¿Te gustó BlazorPortal? Deja una estrella en Github!</value>
+  </data>
+  <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
+    <value>Arquitectura Onion en ASP.NET Core con CQRS – Detalle</value>
   </data>
   <data name="Project Page" xml:space="preserve">
     <value>Página del proyecto</value>
+  </data>
+  <data name="Quick Start Guide" xml:space="preserve">
+    <value>Guía de Inicio Rápido</value>
+  </data>
+  <data name="Read The Guide" xml:space="preserve">
+    <value>Lee la guía</value>
   </data>
   <data name="Support Me" xml:space="preserve">
     <value>Apoyarme!</value>

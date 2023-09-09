@@ -27,7 +27,7 @@
                 {
                     <MudItem xs="12" md="6">
                         <MudTextField Disabled For="@(() => AddEditBrandModel.Id)" @bind-Value="AddEditBrandModel.Id" Label="@_localizer["Id"]" />
-                     </MudItem>
+                    </MudItem>
                 }
                 <MudItem xs="12" md="6">
                     <MudTextField T="string" For="@(() => AddEditBrandModel.Name)" @bind-Value="AddEditBrandModel.Name" Label="@_localizer["Name"]" />
@@ -42,7 +42,7 @@
         </DialogContent>
         <DialogActions>
             <MudButton DisableElevation Variant="Variant.Filled" OnClick="Cancel">@_localizer["Cancel"]</MudButton>
-             @if (AddEditBrandModel.Id != 0)
+            @if (AddEditBrandModel.Id != 0)
             {
                 <MudButton DisableElevation Variant="Variant.Filled" ButtonType="ButtonType.Submit" Disabled="@(!Validated)" Color="Color.Secondary">@_localizer["Update"]</MudButton>
             }

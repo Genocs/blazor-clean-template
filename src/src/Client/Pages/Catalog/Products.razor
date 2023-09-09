@@ -37,7 +37,7 @@ else
                     }
                 }
             </div>
-            <MudToolBarSpacer />
+            <MudSpacer />
             @if (_canSearchProducts)
             {
                 <MudTextField T="string" ValueChanged="@(s=>OnSearch(s))" Placeholder="@_localizer["Search"]" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
@@ -72,17 +72,17 @@ else
                 {
                     <MudMenu Label="@_localizer["Actions"]" Variant="Variant.Filled" DisableElevation="true" EndIcon="@Icons.Filled.KeyboardArrowDown" IconColor="Color.Secondary" Direction="Direction.Left" OffsetX="true">
                         @if (_canEditProducts)
-                            {
+                        {
                             <MudMenuItem @onclick="@(() => InvokeModal(@context.Id))">@_localizer["Edit"]</MudMenuItem>
-                            }
+                        }
                         @if (_canDeleteProducts)
-                            {
+                        {
                             <MudMenuItem @onclick="@(() => Delete(@context.Id))">@_localizer["Delete"]</MudMenuItem>
-                            }
+                        }
                     </MudMenu>
-                    }
-                    else
-                    {
+                }
+                else
+                {
                     <MudButton Variant="Variant.Filled"
                                DisableElevation="true"
                                StartIcon="@Icons.Material.Filled.DoNotTouch"

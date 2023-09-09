@@ -8,48 +8,47 @@ using System.Threading.Tasks;
 using Blazored.FluentValidation;
 using GenocsBlazor.Client.Infrastructure.Managers.Identity.Roles;
 
-namespace GenocsBlazor.Client.Pages.Identity
+namespace GenocsBlazor.Client.Pages.Identity;
+
+public partial class RoleModal
 {
-    public partial class RoleModal
+    [Inject] private IRoleManager RoleManager { get; set; }
+
+    [Parameter] public RoleRequest RoleModel { get; set; } = new();
+    [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
+    [CascadingParameter] private HubConnection HubConnection { get; set; }
+
+    private FluentValidationValidator _fluentValidationValidator;
+    private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
+
+    public void Cancel()
     {
-        [Inject] private IRoleManager RoleManager { get; set; }
+        MudDialog.Cancel();
+    }
 
-        [Parameter] public RoleRequest RoleModel { get; set; } = new();
-        [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
-        [CascadingParameter] private HubConnection HubConnection { get; set; }
-
-        private FluentValidationValidator _fluentValidationValidator;
-        private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-
-        public void Cancel()
+    protected override async Task OnInitializedAsync()
+    {
+        HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
+        if (HubConnection.State == HubConnectionState.Disconnected)
         {
-            MudDialog.Cancel();
+            await HubConnection.StartAsync();
         }
+    }
 
-        protected override async Task OnInitializedAsync()
+    private async Task SaveAsync()
+    {
+        var response = await RoleManager.SaveAsync(RoleModel);
+        if (response.Succeeded)
         {
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
-            if (HubConnection.State == HubConnectionState.Disconnected)
-            {
-                await HubConnection.StartAsync();
-            }
+            _snackBar.Add(response.Messages[0], Severity.Success);
+            await HubConnection.SendAsync(ApplicationConstants.SignalR.SendUpdateDashboard);
+            MudDialog.Close();
         }
-
-        private async Task SaveAsync()
+        else
         {
-            var response = await RoleManager.SaveAsync(RoleModel);
-            if (response.Succeeded)
+            foreach (var message in response.Messages)
             {
-                _snackBar.Add(response.Messages[0], Severity.Success);
-                await HubConnection.SendAsync(ApplicationConstants.SignalR.SendUpdateDashboard);
-                MudDialog.Close();
-            }
-            else
-            {
-                foreach (var message in response.Messages)
-                {
-                    _snackBar.Add(message, Severity.Error);
-                }
+                _snackBar.Add(message, Severity.Error);
             }
         }
     }

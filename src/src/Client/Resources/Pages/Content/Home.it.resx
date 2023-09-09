@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+    <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,122 +59,125 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
             <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="Blazor For Beginners – Getting Started With Blazor" xml:space="preserve">
-    <value>Blazor per principianti – Come iniziare ad usare Blazor</value>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Description" xml:space="preserve">
+    <value>Descrizione</value>
   </data>
-  <data name="Blazor Portal Description" xml:space="preserve">
-    <value>Blazor Portal è un Template All-In-One Clean Architecture Solution Blazor Web-Assembly</value>
+    <data name="Blazor Portal Description" xml:space="preserve">
+    <value>Blazor Portal</value>
   </data>
-  <data name="Building A Chat Application With Blazor, Identity, And SignalR" xml:space="preserve">
-    <value>Come sviluppare una chat con Blazor, Identity, e SignalR</value>
+    <data name="Component Library" xml:space="preserve">
+    <value>Component Library</value>
   </data>
-  <data name="Component Library" xml:space="preserve">
-    <value>Libreria Componanti</value>
+    <data name="Blazor For Beginners – Getting Started With Blazor" xml:space="preserve">
+    <value>Blazor For Beginners – Getting Started With Blazor</value>
   </data>
-  <data name="Custom Authentication In Blazor WebAssembly – Detailed" xml:space="preserve">
-    <value>Custom Authentication In Blazor WebAssembly – Dettagliata</value>
+    <data name="Blazor Portal Description1" xml:space="preserve">
+    <value>Blazor Portal is an All-In-One Clean Architecture Solution Template For Blazor Web-Assembly built with</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Clean Architecture Template Blazor Web-Assembly</value>
+    <data name="Building A Chat Application With Blazor, Identity, And SignalR" xml:space="preserve">
+    <value>Building A Chat Application With Blazor, Identity, And SignalR</value>
   </data>
-  <data name="Exploring Blazor Project Structure" xml:space="preserve">
-    <value>Esplora la struttura del Progetto Blazor</value>
+    <data name="Celebrating 1 Stars on GitHub!" xml:space="preserve">
+    <value>Celebrating 1 Stars on GitHub!</value>
   </data>
-  <data name="Getting Started" xml:space="preserve">
-    <value>Per Iniziare</value>
+    <data name="Custom Authentication In Blazor WebAssembly – Detailed" xml:space="preserve">
+    <value>Custom Authentication In Blazor WebAssembly – Detailed</value>
   </data>
-  <data name="Github Repository : Do Not Forget to Leave a Star ;)" xml:space="preserve">
+    <data name="Github Repository : Do Not Forget to Leave a Star ;)" xml:space="preserve">
     <value>Github Repository : Non dimenticare di aggiungere una Stella ;)</value>
   </data>
-  <data name="Here are few articles that should help you get started with Blazor." xml:space="preserve">
+    <data name="Here are few articles that should help you get started with Blazor." xml:space="preserve">
     <value>Leggi acuni articoli che spiegano come iniziare ad usare Blazor.</value>
   </data>
-  <data name="How To Implement Blazor CRUD Using Entity Framework Core?" xml:space="preserve">
+    <data name="How To Implement Blazor CRUD Using Entity Framework Core?" xml:space="preserve">
     <value>Come implementare Blazor CRUD con Entity Framework Core?</value>
   </data>
-  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 6" xml:space="preserve">
+    <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 6" xml:space="preserve">
     <value>Implementare Blazor CRUD con Mudblazor Component Library In .NET 6</value>
   </data>
-  <data name="Important Links" xml:space="preserve">
+    <data name="Important Links" xml:space="preserve">
     <value>Link Importanti</value>
   </data>
-  <data name="Increase you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
+    <data name="In case you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
     <value>Sei bloccato o hai domande? Leggi la guida rapida come riferimento.</value>
   </data>
-  <data name="Learning Resources" xml:space="preserve">
+    <data name="Learning Resources" xml:space="preserve">
     <value>Risorse dove Imparare</value>
   </data>
-  <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
+    <data name="Liked BlazorPortal? Star us on Github!" xml:space="preserve">
+    <value>Liked BlazorPortal? Star us on Github!</value>
+  </data>
+    <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
     <value>Onion Architecture In ASP.NET Core With CQRS – Dettagliato</value>
   </data>
-  <data name="Project Page" xml:space="preserve">
+    <data name="Project Page" xml:space="preserve">
     <value>Pagina del Progetto</value>
   </data>
-  <data name="Quick Start Guide" xml:space="preserve">
+    <data name="Quick Start Guide" xml:space="preserve">
     <value>Guida Veloce</value>
   </data>
-  <data name="Read The Guide" xml:space="preserve">
+    <data name="Read The Guide" xml:space="preserve">
     <value>Leggi la Guida</value>
   </data>
-  <data name="Support Me" xml:space="preserve">
+    <data name="Support Me" xml:space="preserve">
     <value>Supportami!</value>
   </data>
   <data name="Title" xml:space="preserve">

@@ -96,7 +96,7 @@ namespace GenocsBlazor.Client.Shared.Components
                 CurrentUserId = user.GetUserId();
             }
 
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

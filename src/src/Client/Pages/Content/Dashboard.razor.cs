@@ -1,12 +1,13 @@
-﻿using System;
+﻿using GenocsBlazor.Client.Extensions;
+using GenocsBlazor.Client.Infrastructure.Managers.Dashboard;
+using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
+using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
-using GenocsBlazor.Client.Infrastructure.Managers.Dashboard;
-using GenocsBlazor.Shared.Constants.Application;
 
 namespace GenocsBlazor.Client.Pages.Content
 {
@@ -31,15 +32,16 @@ namespace GenocsBlazor.Client.Pages.Content
         {
             await LoadDataAsync();
             _loaded = true;
-            HubConnection = new HubConnectionBuilder()
-            .WithUrl(_navigationManager.ToAbsoluteUri(ApplicationConstants.SignalR.HubUrl))
-            .Build();
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             HubConnection.On(ApplicationConstants.SignalR.ReceiveUpdateDashboard, async () =>
             {
                 await LoadDataAsync();
                 StateHasChanged();
             });
-            await HubConnection.StartAsync();
+            if (HubConnection.State == HubConnectionState.Disconnected)
+            {
+                await HubConnection.StartAsync();
+            }
         }
 
         private async Task LoadDataAsync()

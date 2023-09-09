@@ -126,6 +126,9 @@
   <data name="Building A Chat Application With Blazor, Identity, And SignalR" xml:space="preserve">
     <value>Bygga en Chattapplikation med Blazor, Identity och SignalR</value>
   </data>
+  <data name="Celebrating 1 Stars on GitHub!" xml:space="preserve">
+    <value>Celebrating 1 Stars on GitHub!</value>
+  </data>
   <data name="Component Library" xml:space="preserve">
     <value>Komponentbibliotek</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>Ren arkitekturmall för Blazor Web-Assembly</value>
+  </data>
+  <data name="Documentation - Work in progress" xml:space="preserve">
+    <value>Documentation - Work in progress</value>
   </data>
   <data name="Exploring Blazor Project Structure" xml:space="preserve">
     <value>Utforska Blazor-projektets struktur</value>
@@ -150,17 +156,20 @@
   <data name="How To Implement Blazor CRUD Using Entity Framework Core?" xml:space="preserve">
     <value>Hur implementerar jag Blazor CRUD med Entity Framework Core?</value>
   </data>
-  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 6" xml:space="preserve">
-    <value>Implementering av Blazor CRUD med Mudblazor Komponent Library i .NET 6</value>
+  <data name="Implementing Blazor CRUD Using Mudblazor Component Library In .NET 5" xml:space="preserve">
+    <value>Implementering av Blazor CRUD med Mudblazor Komponent Library i .NET 5</value>
   </data>
   <data name="Important Links" xml:space="preserve">
     <value>Viktiga länkar</value>
   </data>
-  <data name="Increase you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
+  <data name="In case you are stuck anywhere or have any queries regarding this implementation, I have compiled a Quick Start Guide for you reference." xml:space="preserve">
     <value>Öka att du har fastnat någonstans eller har några frågor angående denna implementering, jag har sammanställt en snabbstartsguide som referens.</value>
   </data>
   <data name="Learning Resources" xml:space="preserve">
     <value>Lärande resurser</value>
+  </data>
+  <data name="Liked BlazorPortal? Star us on Github!" xml:space="preserve">
+    <value>Liked BlazorPortal? Star us on Github!</value>
   </data>
   <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
     <value>Onion Architecture In ASP.NET Core With CQRS – Detaljerad</value>

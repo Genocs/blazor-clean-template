@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
+﻿using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
 using GenocsBlazor.Application.Features.DocumentTypes.Queries.GetAll;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Misc.DocumentType;
@@ -14,6 +9,11 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace GenocsBlazor.Client.Pages.Misc
 {
@@ -49,7 +49,7 @@ namespace GenocsBlazor.Client.Pages.Misc
 
             await GetDocumentTypesAsync();
             _loaded = true;
-            HubConnection = HubConnection.TryInitialize(_navigationManager);
+            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
             if (HubConnection.State == HubConnectionState.Disconnected)
             {
                 await HubConnection.StartAsync();

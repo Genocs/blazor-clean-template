@@ -130,18 +130,18 @@
     <value>វាយបញ្ចូលសាររបស់អ្នក</value>
   </data>
   <data name="Logged In." xml:space="preserve">
-    <value>Logged In.</value>
+    <value>ឡុកចូល។</value>
   </data>
   <data name="Logged Out." xml:space="preserve">
-    <value>Logged Out.</value>
+    <value>ឡុកចេញ។</value>
   </data>
   <data name="New Message From {0}" xml:space="preserve">
-    <value>New Message From {0}</value>
+    <value>សារថ្មីមកពី {0}</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>ផ្ញើ</value>
   </data>
   <data name="Want to understand how Chat is implemented in BlazorPortal? Refer this" xml:space="preserve">
-    <value>ដើម្បីស្វែងយល់ពីរបៀបសរសេរកូដលក្ខណៈពិសេសនៅក្នុង Blazor Portal សូមធ្វើតាមតំណនេះ។</value>
+    <value>ចង់ដឹងអំពីរបៀបសរសេរកូដមុខងារជជែកក្នុងប្លេហ្សឺហេរ៉ូ ចូលទៅកាន់តំណភ្ជាប់នេះ</value>
   </data>
 </root>

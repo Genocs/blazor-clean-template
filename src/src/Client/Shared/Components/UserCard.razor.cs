@@ -1,4 +1,5 @@
 ﻿using GenocsBlazor.Client.Extensions;
+using GenocsBlazor.Shared.Constants.Storage;
 using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
 
@@ -15,9 +16,12 @@ namespace GenocsBlazor.Client.Shared.Components
         [Parameter]
         public string ImageDataUrl { get; set; }
 
-        protected override async Task OnInitializedAsync()
+        protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            await LoadDataAsync();
+            if (firstRender)
+            {
+                await LoadDataAsync();
+            }
         }
 
         private async Task LoadDataAsync()
@@ -33,11 +37,12 @@ namespace GenocsBlazor.Client.Shared.Components
                 FirstLetterOfName = FirstName[0];
             }
             var UserId = user.GetUserId();
-            var imageResponse = await _accountManager.GetProfilePictureAsync(UserId);
-            if (imageResponse.Succeeded)
+            var imageResponse = await _localStorage.GetItemAsync<string>(StorageConstants.Local.UserImageURL);
+            if (!string.IsNullOrEmpty(imageResponse))
             {
-                ImageDataUrl = imageResponse.Data;
+                ImageDataUrl = imageResponse;
             }
+            StateHasChanged();
         }
     }
 }

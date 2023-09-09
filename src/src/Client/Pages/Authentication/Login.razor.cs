@@ -1,74 +1,68 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Blazored.FluentValidation;
+using GenocsBlazor.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Blazored.FluentValidation;
 
-namespace GenocsBlazor.Client.Pages.Authentication
+namespace GenocsBlazor.Client.Pages.Authentication;
+
+public partial class Login
 {
-    public partial class Login
+    private FluentValidationValidator _fluentValidationValidator;
+    private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
+    private TokenRequest _tokenModel = new();
+
+    protected override async Task OnInitializedAsync()
     {
-        private FluentValidationValidator _fluentValidationValidator;
-        private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-        private TokenRequest _tokenModel = new();
-
-        protected override async Task OnInitializedAsync()
+        var state = await _stateProvider.GetAuthenticationStateAsync();
+        if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
         {
-            var state = await _stateProvider.GetAuthenticationStateAsync();
-            if (state != new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())))
+            _navigationManager.NavigateTo("/");
+        }
+    }
+
+    private async Task SubmitAsync()
+    {
+        var result = await _authenticationManager.Login(_tokenModel);
+        if (!result.Succeeded)
+        {
+            foreach (var message in result.Messages)
             {
-                _navigationManager.NavigateTo("/");
+                _snackBar.Add(message, Severity.Error);
             }
         }
+    }
 
-        private async Task SubmitAsync()
+    private bool _passwordVisibility;
+    private InputType _passwordInput = InputType.Password;
+    private string _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+    void TogglePasswordVisibility()
+    {
+        if (_passwordVisibility)
         {
-            var result = await _authenticationManager.Login(_tokenModel);
-            if (result.Succeeded)
-            {
-                _snackBar.Add(string.Format(_localizer["Welcome {0}"], _tokenModel.Email), Severity.Success);
-                _navigationManager.NavigateTo("/", true);
-            }
-            else
-            {
-                foreach (var message in result.Messages)
-                {
-                    _snackBar.Add(message, Severity.Error);
-                }
-            }
+            _passwordVisibility = false;
+            _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
+            _passwordInput = InputType.Password;
         }
-
-        private bool _passwordVisibility;
-        private InputType _passwordInput = InputType.Password;
-        private string _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
-
-        void TogglePasswordVisibility()
+        else
         {
-            if(_passwordVisibility)
-            {
-                _passwordVisibility = false;
-                _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
-                _passwordInput = InputType.Password;
-            }
-            else
-            {
-                _passwordVisibility = true;
-                _passwordInputIcon = Icons.Material.Filled.Visibility;
-                _passwordInput = InputType.Text;
-            }
+            _passwordVisibility = true;
+            _passwordInputIcon = Icons.Material.Filled.Visibility;
+            _passwordInput = InputType.Text;
         }
+    }
 
-        private void FillAdministratorCredentials()
-        {
-            _tokenModel.Email = "info@genocs.com";
-            _tokenModel.Password = "123Pa$$word!";
-        }
+    private void FillAdministratorCredentials()
+    {
+        _tokenModel.Email = "info@genocs.com";
+        _tokenModel.Password = "123Pa$$word!";
+    }
 
-        private void FillBasicUserCredentials()
-        {
-            _tokenModel.Email = "giovanni.nocco@genocs.com";
-            _tokenModel.Password = "123Pa$$word!";
-        }
+    private void FillBasicUserCredentials()
+    {
+        _tokenModel.Email = "giovanni.nocco@genocs.com";
+        _tokenModel.Password = "123Pa$$word!";
     }
 }
