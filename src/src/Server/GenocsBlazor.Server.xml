@@ -372,6 +372,13 @@
             <param name="searchString"></param>
             <returns></returns>
         </member>
+        <member name="M:GenocsBlazor.Server.Controllers.v1.Catalog.BrandsController.Import(GenocsBlazor.Application.Features.Brands.Commands.Import.ImportBrandsCommand)">
+            <summary>
+            Import Brands from Excel
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
         <member name="M:GenocsBlazor.Server.Controllers.v1.Catalog.ProductsController.GetAll(System.Int32,System.Int32,System.String,System.String)">
             <summary>
             Get All Products

@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BlazorHero Jobs" xml:space="preserve">
-    <value>Задания BlazorHero</value>
+  <data name="An unhandled error has occurred." xml:space="preserve">
+    <value>Une erreur non gérée s'est produite.</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>Autorisation</value>
+  </data>
+  <data name="Input your Bearer token in this format - Bearer {your token here} to access this API" xml:space="preserve">
+    <value>Renseignez votre jeton Bearer au format suivant - Bearer {votre jeton ici} pour acceder à l'API</value>
+  </data>
+  <data name="The Token is expired." xml:space="preserve">
+    <value>Le jeton a expiré.</value>
+  </data>
+  <data name="You are not authorized to access this resource." xml:space="preserve">
+    <value>Vous n'êtes pas autorisé à accéder à cette ressource.</value>
+  </data>
+  <data name="You are not Authorized." xml:space="preserve">
+    <value>Vous n'êtes pas autorisé.</value>
   </data>
 </root>

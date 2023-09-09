@@ -17,15 +17,16 @@ using GenocsBlazor.Infrastructure.Services.Identity;
 using GenocsBlazor.Infrastructure.Shared.Services;
 using GenocsBlazor.Server.Localization;
 using GenocsBlazor.Server.Managers.Preferences;
-using GenocsBlazor.Server.Permission;
 using GenocsBlazor.Server.Services;
 using GenocsBlazor.Server.Settings;
+using GenocsBlazor.Shared.Constants.Application;
 using GenocsBlazor.Shared.Constants.Localization;
 using GenocsBlazor.Shared.Constants.Permission;
 using GenocsBlazor.Shared.Wrapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,6 +36,7 @@ using Microsoft.Extensions.Localization;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -59,6 +61,42 @@ internal static class ServiceCollectionExtensions
         return localizer;
     }
 
+    internal static IServiceCollection AddForwarding(this IServiceCollection services, IConfiguration configuration)
+    {
+        var applicationSettingsConfiguration = configuration.GetSection(nameof(AppConfiguration));
+        var config = applicationSettingsConfiguration.Get<AppConfiguration>();
+        if (config.BehindSSLProxy)
+        {
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                if (!string.IsNullOrWhiteSpace(config.ProxyIP))
+                {
+                    string ipCheck = config.ProxyIP;
+                    if (IPAddress.TryParse(ipCheck, out var proxyIP))
+                        options.KnownProxies.Add(proxyIP);
+                    else
+                        Log.Logger.Warning("Invalid Proxy IP of {IpCheck}, Not Loaded", ipCheck);
+                }
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder
+                            .AllowCredentials()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .WithOrigins(config.ApplicationUrl.TrimEnd('/'));
+                    });
+            });
+        }
+
+        return services;
+    }
+
     private static async Task SetCultureFromServerPreferenceAsync(IServiceProvider serviceProvider)
     {
         var storageService = serviceProvider.GetService<ServerPreferenceManager>();
@@ -66,11 +104,10 @@ internal static class ServiceCollectionExtensions
         {
             // TODO - should implement ServerStorageProvider to work correctly!
             CultureInfo culture;
-            var preference = await storageService.GetPreference() as ServerPreference;
-            if (preference != null)
-                culture = new CultureInfo(preference.LanguageCode);
+            if (await storageService.GetPreference() is ServerPreference preference)
+                culture = new(preference.LanguageCode);
             else
-                culture = new CultureInfo(LocalizationConstants.SupportedLanguages.FirstOrDefault()?.Code ?? "en-US");
+                culture = new(LocalizationConstants.SupportedLanguages.FirstOrDefault()?.Code ?? "en-US");
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;
             CultureInfo.CurrentCulture = culture;
@@ -191,8 +228,6 @@ internal static class ServiceCollectionExtensions
     internal static IServiceCollection AddIdentity(this IServiceCollection services)
     {
         services
-            .AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>()
-            .AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>()
             .AddIdentity<BlazorPortalUser, BlazorPortalRole>(options =>
             {
                 options.Password.RequiredLength = 6;
@@ -233,7 +268,7 @@ internal static class ServiceCollectionExtensions
     internal static IServiceCollection AddJwtAuthentication(
         this IServiceCollection services, AppConfiguration config)
     {
-        var key = Encoding.ASCII.GetBytes(config.Secret);
+        var key = Encoding.UTF8.GetBytes(config.Secret);
         services
             .AddAuthentication(authentication =>
             {
@@ -258,6 +293,20 @@ internal static class ServiceCollectionExtensions
 
                 bearer.Events = new JwtBearerEvents
                 {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+
+                        // If the request is for our hub...
+                        var path = context.HttpContext.Request.Path;
+                        if (!string.IsNullOrEmpty(accessToken) &&
+                            (path.StartsWithSegments(ApplicationConstants.SignalR.HubUrl)))
+                        {
+                            // Read the token out of the query string
+                            context.Token = accessToken;
+                        }
+                        return Task.CompletedTask;
+                    },
                     OnAuthenticationFailed = c =>
                     {
                         if (c.Exception is SecurityTokenExpiredException)
@@ -269,10 +318,17 @@ internal static class ServiceCollectionExtensions
                         }
                         else
                         {
+#if DEBUG
+                            c.NoResult();
+                            c.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                            c.Response.ContentType = "text/plain";
+                            return c.Response.WriteAsync(c.Exception.ToString());
+#else
                             c.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                             c.Response.ContentType = "application/json";
                             var result = JsonConvert.SerializeObject(Result.Fail(localizer["An unhandled error has occurred."]));
                             return c.Response.WriteAsync(result);
+#endif
                         }
                     },
                     OnChallenge = context =>

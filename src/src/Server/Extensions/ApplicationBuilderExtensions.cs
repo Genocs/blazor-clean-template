@@ -1,4 +1,5 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
+﻿using GenocsBlazor.Application.Configurations;
+using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Server.Hubs;
 using GenocsBlazor.Server.Middlewares;
 using GenocsBlazor.Shared.Constants.Application;
@@ -6,6 +7,7 @@ using GenocsBlazor.Shared.Constants.Localization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Globalization;
@@ -23,6 +25,18 @@ internal static class ApplicationBuilderExtensions
         {
             app.UseDeveloperExceptionPage();
             app.UseWebAssemblyDebugging();
+        }
+
+        return app;
+    }
+
+    internal static IApplicationBuilder UseForwarding(this IApplicationBuilder app, IConfiguration configuration)
+    {
+        AppConfiguration config = GetApplicationSettings(configuration);
+        if (config.BehindSSLProxy)
+        {
+            app.UseCors();
+            app.UseForwardedHeaders();
         }
 
         return app;
@@ -76,5 +90,11 @@ internal static class ApplicationBuilderExtensions
         }
 
         return app;
+    }
+
+    private static AppConfiguration GetApplicationSettings(IConfiguration configuration)
+    {
+        var applicationSettingsConfiguration = configuration.GetSection(nameof(AppConfiguration));
+        return applicationSettingsConfiguration.Get<AppConfiguration>();
     }
 }

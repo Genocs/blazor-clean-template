@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BlazorHero Jobs" xml:space="preserve">
-    <value>Задания BlazorHero</value>
+  <data name="An unhandled error has occurred." xml:space="preserve">
+    <value>Si è verificato un errore non gestito.</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>Autorizzazione</value>
+  </data>
+  <data name="Input your Bearer token in this format - Bearer {your token here} to access this API" xml:space="preserve">
+    <value>Inserisci il tuo token Bearer in questo formato - Bearer {il tuo token qui} per accedere a questa API</value>
+  </data>
+  <data name="The Token is expired." xml:space="preserve">
+    <value>Il token è scaduto.</value>
+  </data>
+  <data name="You are not authorized to access this resource." xml:space="preserve">
+    <value>Non sei autorizzato ad accedere a questa risorsa.</value>
+  </data>
+  <data name="You are not Authorized." xml:space="preserve">
+    <value>Non sei autorizzato.</value>
   </data>
 </root>
