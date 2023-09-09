@@ -1,27 +1,40 @@
 <!-- PROJECT SHIELDS -->
-
+[![License][license-shield]][license-url]
+[![Build][build-shield]][build-url]
+[![Downloads][downloads-shield]][downloads-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Discord][discord-shield]][discord-url]
+[![Gitter][gitter-shield]][gitter-url]
+[![Twitter][twitter-shield]][twitter-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-[contributors-shield]: https://img.shields.io/github/contributors/Genocs/CleanArchitecture.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/Genocs/blazor-clean-template?color=2da44e&style=flat-square
+[license-url]: https://github.com/Genocs/blazor-clean-template/blob/main/LICENSE
+[build-shield]: https://img.shields.io/badge/nuget-v.0.7-blue
+[build-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
+[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg
+[downloads-url]: https://www.nuget.org/packages/Genocs.CLI
+[contributors-shield]: https://img.shields.io/github/contributors/Genocs/blazor-clean-template.svg?style=flat-square
 [contributors-url]: https://github.com/Genocs/blazor-clean-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Genocs/CleanArchitecture?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/Genocs/blazor-clean-template?style=flat-square
 [forks-url]: https://github.com/Genocs/blazor-clean-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/Genocs/CleanArchitecture.svg?style=flat-square
-[stars-url]: https://img.shields.io/github/stars/Genocs/CleanArchitecture?style=flat-square
-[issues-shield]: https://img.shields.io/github/issues/Genocs/CleanArchitecture?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/Genocs/blazor-clean-template.svg?style=flat-square
+[stars-url]: https://img.shields.io/github/stars/Genocs/blazor-clean-template?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/Genocs/blazor-clean-template?style=flat-square
 [issues-url]: https://github.com/Genocs/blazor-clean-template/issues
-[license-shield]: https://img.shields.io/github/license/Genocs/CleanArchitecture?style=flat-square
-[license-url]: https://github.com/Genocs/blazor-clean-template/blob/master/LICENSE
+[discord-shield]: https://img.shields.io/discord/1106846706512953385?color=%237289da&label=Discord&logo=discord&logoColor=%237289da&style=flat-square
+[discord-url]: https://discord.com/invite/fWwArnkV
+[gitter-shield]: https://img.shields.io/badge/chat-on%20gitter-blue.svg
+[gitter-url]: https://gitter.im/genocs/
+[twitter-shield]: https://img.shields.io/twitter/follow/genocs?color=1DA1F2&label=Twitter&logo=Twitter&style=flat-square
+[twitter-url]: https://twitter.com/genocs
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/
 
 <!-- PROJECT LOGO -->
-<br />
 <p align="center">
   <a href="https://github.com/Genocs/blazor-clean-template">
     <img src="https://genocs-blog.netlify.app/introduction/logo_hu5f84e5ac74e01291dbce57bab350d273_35818_2000x0_resize_box_3.png" alt="Blazor Portal">
@@ -40,6 +53,9 @@
     <a href="https://github.com/Genocs/blazor-clean-template/issues">Request Documentation</a>
   </p>
 </p>
+
+
+
 
 ## About The Project :zap:
 
@@ -60,7 +76,7 @@ BlazorPortal is a Clean Architecture Solution Template for Blazor Webassembly 5.
 - Minor Bug Fixes
 - Better Project Structure
 
-# What to Excpect in BlazorPortal 3.0?
+# What to Excpect in BlazorPortal 5.0?
 
 - Modular Architecture
 - Cleaner Seperation Of Code
@@ -73,7 +89,7 @@ BlazorPortal is a Clean Architecture Solution Template for Blazor Webassembly 5.
 
 # Down the Roadmap
 
-- Migration to .NET 6
+- Migration to .NET6
 - Multi Tenancy
 - Better Localization - JSON
 
