@@ -13,7 +13,7 @@
         <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
         <PackageReference Include="EPPlus" Version="6.2.8" />
         <PackageReference Include="Hangfire.Core" Version="1.8.5" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.*" />
         <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />

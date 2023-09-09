@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Extensions\HubExtensions.cs~RF5bd5d3.TMP" />
+        <None Remove="Extensions\HubExtensions.cs~RF5bd5d3.TMP" />
     </ItemGroup>
 
     <ItemGroup>

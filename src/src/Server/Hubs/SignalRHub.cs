@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenocsBlazor.Server.Hubs;
 
-[Authorize]
+//[Authorize]
 public class SignalRHub : Hub
 {
     public async Task PingRequestAsync(string userId)
