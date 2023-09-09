@@ -3,17 +3,17 @@ using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Application.Responses.Identity;
 using GenocsBlazor.Client.Infrastructure.Authentication;
 using GenocsBlazor.Client.Infrastructure.Extensions;
+using GenocsBlazor.Client.Infrastructure.Routes;
+using GenocsBlazor.Shared.Constants.Storage;
 using GenocsBlazor.Shared.Wrapper;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using GenocsBlazor.Client.Infrastructure.Routes;
-using GenocsBlazor.Shared.Constants.Storage;
-using Microsoft.Extensions.Localization;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Authentication
 {
@@ -57,7 +57,9 @@ namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Authentication
                 {
                     await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, userImageURL);
                 }
-                ((GenocsPortalStateProvider)this._authenticationStateProvider).MarkUserAsAuthenticated(model.Email);
+
+                await ((GenocsPortalStateProvider)this._authenticationStateProvider).StateChangedAsync();
+
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
                 return await Result.SuccessAsync();
             }

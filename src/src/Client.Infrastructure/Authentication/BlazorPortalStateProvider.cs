@@ -26,6 +26,13 @@ namespace GenocsBlazor.Client.Infrastructure.Authentication
             _localStorage = localStorage;
         }
 
+        public async Task StateChangedAsync()
+        {
+            var authState = Task.FromResult(await GetAuthenticationStateAsync());
+
+            NotifyAuthenticationStateChanged(authState);
+
+        }
         public void MarkUserAsAuthenticated(string userName)
         {
             var authenticatedUser = new ClaimsPrincipal(
@@ -124,6 +131,13 @@ namespace GenocsBlazor.Client.Infrastructure.Authentication
                 case 3: base64 += "="; break;
             }
 
+            return Convert.FromBase64String(base64);
+        }
+
+        private byte[] ParseBase64WithoutPaddingOld(string payload)
+        {
+            payload = payload.Trim().Replace('-', '+').Replace('_', '/');
+            var base64 = payload.PadRight(payload.Length + (4 - payload.Length % 4) % 4, '=');
             return Convert.FromBase64String(base64);
         }
     }

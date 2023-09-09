@@ -1,8 +1,9 @@
-﻿using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
+﻿using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
+using GenocsBlazor.Application.Features.Brands.Commands.Import;
+using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
 using GenocsBlazor.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand
 {
@@ -15,5 +16,7 @@ namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand
         Task<IResult<int>> DeleteAsync(int id);
 
         Task<IResult<string>> ExportToExcelAsync(string searchString = "");
+
+        Task<IResult<int>> ImportAsync(ImportBrandsCommand request);
     }
 }

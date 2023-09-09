@@ -1,4 +1,5 @@
 ﻿using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
+using GenocsBlazor.Application.Features.Brands.Commands.Import;
 using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
 using GenocsBlazor.Client.Infrastructure.Extensions;
 using GenocsBlazor.Shared.Wrapper;
@@ -41,6 +42,12 @@ namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand
         public async Task<IResult<int>> SaveAsync(AddEditBrandCommand request)
         {
             var response = await _httpClient.PostAsJsonAsync(Routes.BrandsEndpoints.Save, request);
+            return await response.ToResult<int>();
+        }
+
+        public async Task<IResult<int>> ImportAsync(ImportBrandsCommand request)
+        {
+            var response = await _httpClient.PostAsJsonAsync(Routes.BrandsEndpoints.Import, request);
             return await response.ToResult<int>();
         }
     }
