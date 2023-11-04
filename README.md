@@ -1,6 +1,7 @@
 <!-- PROJECT SHIELDS -->
 [![License][license-shield]][license-url]
 [![Build][build-shield]][build-url]
+[![Packages][package-shield]][package-url]
 [![Downloads][downloads-shield]][downloads-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -9,12 +10,15 @@
 [![Discord][discord-shield]][discord-url]
 [![Gitter][gitter-shield]][gitter-url]
 [![Twitter][twitter-shield]][twitter-url]
+[![Twitterx][twitterx-shield]][twitterx-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 [license-shield]: https://img.shields.io/github/license/Genocs/blazor-clean-template?color=2da44e&style=flat-square
 [license-url]: https://github.com/Genocs/blazor-clean-template/blob/main/LICENSE
 [build-shield]: https://img.shields.io/badge/nuget-v.0.7-blue
 [build-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
+[package-shield]: https://img.shields.io/badge/nuget-v.1.0.0-blue?&label=latests&logo=nuget
+[package-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg
 [downloads-url]: https://www.nuget.org/packages/Genocs.CLI
 [contributors-shield]: https://img.shields.io/github/contributors/Genocs/blazor-clean-template.svg?style=flat-square
@@ -33,6 +37,8 @@
 [twitter-url]: https://twitter.com/genocs
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/
+[twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
+[twitterx-url]: https://twitter.com/genocs
 
 <!-- PROJECT LOGO -->
 <p align="center">

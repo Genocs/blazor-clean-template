@@ -456,6 +456,6 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 # Package build
-nupkgs
+nupkg
 
 [Ll]og*.txt

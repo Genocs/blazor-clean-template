@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Nocco Giovanni Emanuele",
+  "classifications": [
+    "Blazor",
+    "WASM",
+    "WebAssembly",
+    "Web"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "identity": "Genocs.BlazorClean.Template",
+  "name": "Genocs: Blazor Clean WebAssembly Template",
+  "description": "Clean Architecture Template for .NET7 Blazor WebAssembly built with MudBlazor Components.",
+  "groupIdentity": "Genocs.BlazorClean.Template",
+  "shortName": "gnx-blazorclean",
+  "sourceName": "Genocs.BlazorClean.Template",
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**",
+        ".idea/**",
+        ".vs/**",
+        ".github/**",
+        "media/**"
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "./"
+    }
+  ],
+  "postActions": [
+    {
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
