@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace GenocsBlazor.Application.Responses.Identity;
 
-namespace GenocsBlazor.Application.Responses.Identity
+public class TokenResponse
 {
-    public class TokenResponse
-    {
-        public string Token { get; set; }
-        public string RefreshToken { get; set; }
-        public string UserImageURL { get; set; }
-        public DateTime RefreshTokenExpiryTime { get; set; }
-    }
+    public string Token { get; set; }
+    public string RefreshToken { get; set; }
+    public string UserImageURL { get; set; }
+    public DateTime RefreshTokenExpiryTime { get; set; }
 }

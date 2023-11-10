@@ -1,11 +1,9 @@
 ﻿using GenocsBlazor.Application.Responses.Identity;
-using System.Collections.Generic;
 
-namespace GenocsBlazor.Application.Requests.Identity
+namespace GenocsBlazor.Application.Requests.Identity;
+
+public class UpdateUserRolesRequest
 {
-    public class UpdateUserRolesRequest
-    {
-        public string UserId { get; set; }
-        public IList<UserRoleModel> UserRoles { get; set; }
-    }
+    public string UserId { get; set; }
+    public IList<UserRoleModel> UserRoles { get; set; }
 }

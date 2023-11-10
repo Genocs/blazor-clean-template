@@ -7,7 +7,7 @@ public static class LocalizationConstants
             new LanguageCode
             {
                 Code = "en-US",
-                DisplayName= "English"
+                DisplayName = "English"
             },
             new LanguageCode
             {
@@ -17,7 +17,7 @@ public static class LocalizationConstants
             new LanguageCode
             {
                 Code = "km_KH",
-                DisplayName= "Khmer"
+                DisplayName = "Khmer"
             },
             new LanguageCode
             {

@@ -115,11 +115,13 @@ namespace GenocsBlazor.Client.Infrastructure.Authentication
                     {
                         claims.Add(new Claim(ApplicationClaimTypes.Permission, permissions.ToString()));
                     }
+
                     keyValuePairs.Remove(ApplicationClaimTypes.Permission);
                 }
 
                 claims.AddRange(keyValuePairs.Select(kvp => new Claim(kvp.Key, kvp.Value.ToString())));
             }
+
             return claims;
         }
 
@@ -137,7 +139,7 @@ namespace GenocsBlazor.Client.Infrastructure.Authentication
         private byte[] ParseBase64WithoutPaddingOld(string payload)
         {
             payload = payload.Trim().Replace('-', '+').Replace('_', '/');
-            var base64 = payload.PadRight(payload.Length + (4 - payload.Length % 4) % 4, '=');
+            string base64 = payload.PadRight(payload.Length + (4 - payload.Length % 4) % 4, '=');
             return Convert.FromBase64String(base64);
         }
     }

@@ -30,9 +30,7 @@ namespace GenocsBlazor.Application.Features.Brands.Queries.Export
         private readonly IUnitOfWork<int> _unitOfWork;
         private readonly IStringLocalizer<ExportBrandsQueryHandler> _localizer;
 
-        public ExportBrandsQueryHandler(IExcelService excelService
-            , IUnitOfWork<int> unitOfWork
-            , IStringLocalizer<ExportBrandsQueryHandler> localizer)
+        public ExportBrandsQueryHandler(IExcelService excelService, IUnitOfWork<int> unitOfWork, IStringLocalizer<ExportBrandsQueryHandler> localizer)
         {
             _excelService = excelService;
             _unitOfWork = unitOfWork;
@@ -45,7 +43,8 @@ namespace GenocsBlazor.Application.Features.Brands.Queries.Export
             var brands = await _unitOfWork.Repository<Brand>().Entities
                 .Specify(brandFilterSpec)
                 .ToListAsync(cancellationToken);
-            var data = await _excelService.ExportAsync(brands, mappers: new Dictionary<string, Func<Brand, object>>
+
+            string data = await _excelService.ExportAsync(brands, mappers: new Dictionary<string, Func<Brand, object>>
             {
                 { _localizer["Id"], item => item.Id },
                 { _localizer["Name"], item => item.Name },
