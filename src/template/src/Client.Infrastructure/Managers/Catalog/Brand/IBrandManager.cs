@@ -2,21 +2,18 @@
 using GenocsBlazor.Application.Features.Brands.Commands.Import;
 using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
 using GenocsBlazor.Shared.Wrapper;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand
+namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
+
+public interface IBrandManager : IManager
 {
-    public interface IBrandManager : IManager
-    {
-        Task<IResult<List<GetAllBrandsResponse>>> GetAllAsync();
+    Task<IResult<List<GetAllBrandsResponse>>> GetAllAsync();
 
-        Task<IResult<int>> SaveAsync(AddEditBrandCommand request);
+    Task<IResult<int>> SaveAsync(AddEditBrandCommand request);
 
-        Task<IResult<int>> DeleteAsync(int id);
+    Task<IResult<int>> DeleteAsync(int id);
 
-        Task<IResult<string>> ExportToExcelAsync(string searchString = "");
+    Task<IResult<string>> ExportToExcelAsync(string searchString = "");
 
-        Task<IResult<int>> ImportAsync(ImportBrandsCommand request);
-    }
+    Task<IResult<int>> ImportAsync(ImportBrandsCommand request);
 }

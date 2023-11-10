@@ -1,6 +1,4 @@
-﻿#nullable enable
-using System;
-using GenocsBlazor.Domain.Enums;
+﻿using GenocsBlazor.Domain.Enums;
 
 namespace GenocsBlazor.Domain.Contracts;
 
@@ -14,7 +12,7 @@ public abstract class AuditableEntityExtendedAttribute<TId, TEntityId, TEntity>
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
     /// <summary>
-    /// Extended attribute's related entity
+    /// Extended attribute's related entity.
     /// </summary>
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public virtual TEntity Entity { get; set; }

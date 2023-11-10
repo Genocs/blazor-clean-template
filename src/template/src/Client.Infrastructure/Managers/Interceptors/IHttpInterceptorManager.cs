@@ -1,14 +1,12 @@
-﻿using System.Threading.Tasks;
-using Toolbelt.Blazor;
+﻿using Toolbelt.Blazor;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Interceptors
+namespace GenocsBlazor.Client.Infrastructure.Managers.Interceptors;
+
+public interface IHttpInterceptorManager : IManager
 {
-    public interface IHttpInterceptorManager : IManager
-    {
-        void RegisterEvent();
+    void RegisterEvent();
 
-        Task InterceptBeforeHttpAsync(object sender, HttpClientInterceptorEventArgs e);
+    Task InterceptBeforeHttpAsync(object sender, HttpClientInterceptorEventArgs e);
 
-        void DisposeEvent();
-    }
+    void DisposeEvent();
 }
