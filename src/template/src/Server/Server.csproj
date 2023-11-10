@@ -58,11 +58,9 @@
         </None>
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-      </PackageReference>
+        <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
-
-
 </Project>

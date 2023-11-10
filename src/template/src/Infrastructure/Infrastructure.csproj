@@ -28,13 +28,13 @@
         <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-      </PackageReference>
+        <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Migrations\" />
+        <Folder Include="Migrations\" />
     </ItemGroup>
 
 </Project>
