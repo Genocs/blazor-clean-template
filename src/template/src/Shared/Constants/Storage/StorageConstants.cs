@@ -15,6 +15,6 @@ public static class StorageConstants
     {
         public static string Preference = "serverPreference";
 
-        //TODO - add
+        // TODO - add
     }
 }

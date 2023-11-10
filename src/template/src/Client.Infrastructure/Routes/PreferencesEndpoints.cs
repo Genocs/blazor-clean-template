@@ -1,9 +1,8 @@
-﻿namespace GenocsBlazor.Client.Infrastructure.Routes
-{
-    public static class PreferencesEndpoints
-    {
-        public static string ChangeLanguage = "changeLanguage";
+﻿namespace GenocsBlazor.Client.Infrastructure.Routes;
 
-        //TODO - add endpoints
-    }
+public static class PreferencesEndpoints
+{
+    public static string ChangeLanguage = "changeLanguage";
+
+    // TODO - add endpoints
 }

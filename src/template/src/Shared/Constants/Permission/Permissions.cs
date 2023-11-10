@@ -114,7 +114,7 @@ public static class Permissions
     {
         public const string ChangeLanguage = "Permissions.Preferences.ChangeLanguage";
 
-        //TODO - add permissions
+        // TODO - add permissions
     }
 
     [DisplayName("Dashboards")]
@@ -153,6 +153,7 @@ public static class Permissions
             if (propertyValue is not null)
                 permissions.Add(propertyValue.ToString());
         }
+
         return permissions;
     }
 }

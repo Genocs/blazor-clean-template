@@ -23,8 +23,8 @@ public static class ApplicationConstants
 
         public const string PingRequest = "PingRequestAsync";
         public const string PingResponse = "PingResponseAsync";
-
     }
+
     public static class Cache
     {
         public const string GetAllBrandsCacheKey = "all-brands";

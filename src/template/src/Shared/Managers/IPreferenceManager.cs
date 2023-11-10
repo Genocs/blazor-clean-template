@@ -13,13 +13,13 @@ public interface IPreferenceManager
     /// </summary>
     /// <param name="preference">The preference.</param>
     /// <returns></returns>
-    Task SetPreference(IPreference preference);
+    Task SetPreferenceAsync(IPreference preference);
 
     /// <summary>
     /// Preference getter.
     /// </summary>
     /// <returns>The preference settings.</returns>
-    Task<IPreference> GetPreference();
+    Task<IPreference> GetPreferenceAsync();
 
     /// <summary>
     /// Language change.

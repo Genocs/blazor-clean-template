@@ -22,11 +22,11 @@ public class ServerPreferenceManager : IServerPreferenceManager
 
     public async Task<Shared.Wrapper.IResult> ChangeLanguageAsync(string languageCode)
     {
-        var preference = await GetPreference() as ServerPreference;
+        var preference = await GetPreferenceAsync() as ServerPreference;
         if (preference != null)
         {
             preference.LanguageCode = languageCode;
-            await SetPreference(preference);
+            await SetPreferenceAsync(preference);
             return new Result
             {
                 Succeeded = true,
@@ -41,12 +41,12 @@ public class ServerPreferenceManager : IServerPreferenceManager
         };
     }
 
-    public async Task<IPreference> GetPreference()
+    public async Task<IPreference> GetPreferenceAsync()
     {
         return await _serverStorageService.GetItemAsync<ServerPreference>(StorageConstants.Server.Preference) ?? new ServerPreference();
     }
 
-    public async Task SetPreference(IPreference preference)
+    public async Task SetPreferenceAsync(IPreference preference)
     {
         await _serverStorageService.SetItemAsync(StorageConstants.Server.Preference, preference as ServerPreference);
     }

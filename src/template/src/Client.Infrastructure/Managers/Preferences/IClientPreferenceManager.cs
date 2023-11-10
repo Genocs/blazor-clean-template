@@ -1,13 +1,11 @@
 ﻿using GenocsBlazor.Shared.Managers;
 using MudBlazor;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Preferences
+namespace GenocsBlazor.Client.Infrastructure.Managers.Preferences;
+
+public interface IClientPreferenceManager : IPreferenceManager
 {
-    public interface IClientPreferenceManager : IPreferenceManager
-    {
-        Task<MudTheme> GetCurrentThemeAsync();
+    Task<MudTheme> GetCurrentThemeAsync();
 
-        Task<bool> ToggleDarkModeAsync();
-    }
+    Task<bool> ToggleDarkModeAsync();
 }

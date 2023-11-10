@@ -104,7 +104,7 @@ internal static class ServiceCollectionExtensions
         {
             // TODO - should implement ServerStorageProvider to work correctly!
             CultureInfo culture;
-            if (await storageService.GetPreference() is ServerPreference preference)
+            if (await storageService.GetPreferenceAsync() is ServerPreference preference)
                 culture = new(preference.LanguageCode);
             else
                 culture = new(LocalizationConstants.SupportedLanguages.FirstOrDefault()?.Code ?? "en-US");
