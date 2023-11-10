@@ -37,15 +37,17 @@ public class BlazorPortalContext : AuditableContext
             {
                 case EntityState.Added:
                     entry.Entity.CreatedOn = _dateTimeService.NowUtc;
-                    entry.Entity.CreatedBy = _currentUserService.UserId;
+                    if (!string.IsNullOrWhiteSpace(_currentUserService.UserId)) entry.Entity.CreatedBy = _currentUserService.UserId;
+                    if (string.IsNullOrWhiteSpace(entry.Entity.CreatedBy)) entry.Entity.CreatedBy = "System";
                     break;
 
                 case EntityState.Modified:
                     entry.Entity.LastModifiedOn = _dateTimeService.NowUtc;
-                    entry.Entity.LastModifiedBy = _currentUserService.UserId;
+                    if (!string.IsNullOrWhiteSpace(_currentUserService.UserId)) entry.Entity.LastModifiedBy = _currentUserService.UserId;
                     break;
             }
         }
+
         if (_currentUserService.UserId == null)
         {
             return await base.SaveChangesAsync(cancellationToken);
@@ -71,6 +73,7 @@ public class BlazorPortalContext : AuditableContext
         {
             property.SetColumnType("nvarchar(128)");
         }
+
         base.OnModelCreating(builder);
         builder.Entity<ChatHistory<BlazorPortalUser>>(entity =>
         {
@@ -86,6 +89,7 @@ public class BlazorPortalContext : AuditableContext
                 .HasForeignKey(d => d.ToUserId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });
+
         builder.Entity<BlazorPortalUser>(entity =>
         {
             entity.ToTable(name: "Users", "Identity");
@@ -96,6 +100,7 @@ public class BlazorPortalContext : AuditableContext
         {
             entity.ToTable(name: "Roles", "Identity");
         });
+
         builder.Entity<IdentityUserRole<string>>(entity =>
         {
             entity.ToTable("UserRoles", "Identity");
