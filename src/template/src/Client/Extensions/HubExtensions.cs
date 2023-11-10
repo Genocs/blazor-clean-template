@@ -18,8 +18,10 @@ public static class HubExtensions
                               .WithAutomaticReconnect()
                               .Build();
         }
+
         return hubConnection;
     }
+
     public static HubConnection TryInitialize(this HubConnection hubConnection, NavigationManager navigationManager)
     {
         if (hubConnection == null)
@@ -28,6 +30,7 @@ public static class HubExtensions
                               .WithUrl(navigationManager.ToAbsoluteUri(ApplicationConstants.SignalR.HubUrl))
                               .Build();
         }
+
         return hubConnection;
     }
 }

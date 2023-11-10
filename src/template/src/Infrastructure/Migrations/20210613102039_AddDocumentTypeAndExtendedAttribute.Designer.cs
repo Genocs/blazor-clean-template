@@ -665,10 +665,10 @@ namespace GenocsBlazor.Infrastructure.Migrations
                     b.Navigation("ExtendedAttributes");
                 });
 
-            modelBuilder.Entity("GenocsBlazor.Infrastructure.Models.Identity.BlazorPortalRole", b =>
-                {
-                    b.Navigation("RoleClaims");
-                });
+            //modelBuilder.Entity("GenocsBlazor.Infrastructure.Models.Identity.BlazorPortalRole", b =>
+            //    {
+            //        b.Navigation("RoleClaims");
+            //    });
 
             modelBuilder.Entity("GenocsBlazor.Infrastructure.Models.Identity.BlazorPortalUser", b =>
                 {

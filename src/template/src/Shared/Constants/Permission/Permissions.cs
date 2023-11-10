@@ -149,7 +149,7 @@ public static class Permissions
         var permissions = new List<string>();
         foreach (var prop in typeof(Permissions).GetNestedTypes().SelectMany(c => c.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)))
         {
-            var propertyValue = prop.GetValue(null);
+            object? propertyValue = prop.GetValue(null);
             if (propertyValue is not null)
                 permissions.Add(propertyValue.ToString());
         }

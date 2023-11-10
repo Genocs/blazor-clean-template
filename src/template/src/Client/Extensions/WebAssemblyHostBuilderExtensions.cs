@@ -9,13 +9,9 @@ using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using MudBlazor;
 using MudBlazor.Services;
-using System;
 using System.Globalization;
-using System.Linq;
-using System.Net.Http;
 using System.Reflection;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
@@ -102,7 +98,7 @@ public static class WebAssemblyHostBuilderExtensions
 
     public static IServiceCollection AddExtendedAttributeManagers(this IServiceCollection services)
     {
-        //TODO - add managers with reflection!
+        // TODO - add managers with reflection!
 
         return services
             .AddTransient(typeof(IExtendedAttributeManager<int, int, Document, DocumentExtendedAttribute>), typeof(ExtendedAttributeManager<int, int, Document, DocumentExtendedAttribute>));

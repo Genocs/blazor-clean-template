@@ -1,5 +1,4 @@
 ﻿using GenocsBlazor.Domain.Contracts;
-using System;
 
 namespace GenocsBlazor.Infrastructure.Models.Audit;
 

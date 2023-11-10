@@ -4,16 +4,13 @@ using GenocsBlazor.Infrastructure.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace GenocsBlazor.Infrastructure.Contexts;
 
 public abstract class AuditableContext : IdentityDbContext<BlazorPortalUser, BlazorPortalRole, string, IdentityUserClaim<string>, IdentityUserRole<string>, IdentityUserLogin<string>, BlazorPortalRoleClaim, IdentityUserToken<string>>
 {
-    protected AuditableContext(DbContextOptions options) : base(options)
+    protected AuditableContext(DbContextOptions options)
+        : base(options)
     {
     }
 
@@ -41,6 +38,7 @@ public abstract class AuditableContext : IdentityDbContext<BlazorPortalUser, Bla
                 TableName = entry.Entity.GetType().Name,
                 UserId = userId
             };
+
             auditEntries.Add(auditEntry);
             foreach (var property in entry.Properties)
             {
@@ -77,14 +75,17 @@ public abstract class AuditableContext : IdentityDbContext<BlazorPortalUser, Bla
                             auditEntry.OldValues[propertyName] = property.OriginalValue;
                             auditEntry.NewValues[propertyName] = property.CurrentValue;
                         }
+
                         break;
                 }
             }
         }
+
         foreach (var auditEntry in auditEntries.Where(_ => !_.HasTemporaryProperties))
         {
             AuditTrails.Add(auditEntry.ToAudit());
         }
+
         return auditEntries.Where(_ => _.HasTemporaryProperties).ToList();
     }
 
@@ -106,8 +107,10 @@ public abstract class AuditableContext : IdentityDbContext<BlazorPortalUser, Bla
                     auditEntry.NewValues[prop.Metadata.Name] = prop.CurrentValue;
                 }
             }
+
             AuditTrails.Add(auditEntry.ToAudit());
         }
+
         return SaveChangesAsync(cancellationToken);
     }
 }

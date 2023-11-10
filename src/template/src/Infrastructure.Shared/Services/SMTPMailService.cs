@@ -6,7 +6,6 @@ using MailKit.Security;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using System.Threading.Tasks;
 
 namespace GenocsBlazor.Infrastructure.Shared.Services;
 

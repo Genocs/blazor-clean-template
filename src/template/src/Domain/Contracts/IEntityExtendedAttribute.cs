@@ -1,5 +1,4 @@
-﻿#nullable enable
-using GenocsBlazor.Domain.Enums;
+﻿using GenocsBlazor.Domain.Enums;
 
 namespace GenocsBlazor.Domain.Contracts;
 
@@ -11,10 +10,10 @@ public interface IEntityExtendedAttribute<TId, TEntityId, TEntity>
 
 public interface IEntityExtendedAttribute<TEntityId, TEntity>
     : IEntityExtendedAttribute
-        where TEntity : IEntity<TEntityId>
+    where TEntity : IEntity<TEntityId>
 {
     /// <summary>
-    /// External attribute's entity id
+    /// External attribute's entity id.
     /// </summary>
     public TEntityId EntityId { get; set; }
 }
@@ -22,12 +21,12 @@ public interface IEntityExtendedAttribute<TEntityId, TEntity>
 public interface IEntityExtendedAttribute : IEntity
 {
     /// <summary>
-    /// Extended attribute value type
+    /// Extended attribute value type.
     /// </summary>
     public EntityExtendedAttributeType Type { get; set; }
 
     /// <summary>
-    /// Extended attribute key
+    /// Extended attribute key.
     /// </summary>
     public string Key { get; set; }
 

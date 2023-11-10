@@ -21,7 +21,7 @@
         <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.*" />
         <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.*" />
         <PackageReference Include="MudBlazor" Version="6.9.0" />
-        <PackageReference Include="System.Net.Http.Json" Version="6.0.*" />
+        <PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -44,6 +44,13 @@
     <ItemGroup>
         <ProjectReference Include="..\Client.Infrastructure\Client.Infrastructure.csproj" />
         <ProjectReference Include="..\Shared\Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      </PackageReference>
     </ItemGroup>
 
 </Project>

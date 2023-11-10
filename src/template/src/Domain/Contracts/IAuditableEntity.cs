@@ -10,7 +10,7 @@ public interface IAuditableEntity : IEntity
 
     DateTime CreatedOn { get; set; }
 
-    string LastModifiedBy { get; set; }
+    string? LastModifiedBy { get; set; }
 
     DateTime? LastModifiedOn { get; set; }
 }

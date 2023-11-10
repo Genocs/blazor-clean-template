@@ -66,11 +66,10 @@ public class UserService : IUserService
         {
             return await Result.FailAsync(string.Format(_localizer["Username {0} is already taken."], request.UserName));
         }
-        var user = new BlazorPortalUser
+
+        var user = new BlazorPortalUser(request.FirstName, request.LastName)
         {
             Email = request.Email,
-            FirstName = request.FirstName,
-            LastName = request.LastName,
             UserName = request.UserName,
             PhoneNumber = request.PhoneNumber,
             IsActive = request.ActivateUser,

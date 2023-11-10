@@ -8,8 +8,6 @@ using GenocsBlazor.Shared.Constants.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Threading.Tasks;
 
 namespace GenocsBlazor.Infrastructure;
 
@@ -45,31 +43,29 @@ public class DatabaseSeeder : IDatabaseSeeder
     {
         Task.Run(async () =>
         {
-            //Check if Role Exists
-            var adminRole = new BlazorPortalRole(RoleConstants.AdministratorRole, _localizer["Administrator role with full permissions"]);
+            // Check if Role Exists
             var adminRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.AdministratorRole);
             if (adminRoleInDb == null)
             {
+                var adminRole = new BlazorPortalRole(RoleConstants.AdministratorRole, _localizer["Administrator role with full permissions"]);
                 await _roleManager.CreateAsync(adminRole);
                 adminRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.AdministratorRole);
                 _logger.LogInformation(_localizer["Seeded Administrator Role."]);
             }
 
-            var basicRole = new BlazorPortalRole(RoleConstants.BasicRole, _localizer["Basic role with full permissions"]);
             var basicRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.BasicRole);
             if (basicRoleInDb == null)
             {
+                var basicRole = new BlazorPortalRole(RoleConstants.BasicRole, _localizer["Basic role with full permissions"]);
                 await _roleManager.CreateAsync(basicRole);
                 basicRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.BasicRole);
                 _logger.LogInformation(_localizer["Seeded Administrator Role."]);
             }
 
-            //Check if User Exists
+            // Check if User Exists
             {
-                var sysAdmin = new BlazorPortalUser
+                var sysAdmin = new BlazorPortalUser("Administrator", "Sys")
                 {
-                    FirstName = "Administrator",
-                    LastName = "Sys",
                     Email = "info@genocs.com",
                     UserName = "sysAdmin",
                     EmailConfirmed = true,
@@ -77,6 +73,7 @@ public class DatabaseSeeder : IDatabaseSeeder
                     CreatedOn = DateTime.Now,
                     IsActive = true
                 };
+
                 var sysAdminInDb = await _userManager.FindByEmailAsync(sysAdmin.Email);
                 if (sysAdminInDb == null)
                 {
@@ -95,11 +92,10 @@ public class DatabaseSeeder : IDatabaseSeeder
                     }
                 }
             }
+
             {
-                var superUser = new BlazorPortalUser
+                var superUser = new BlazorPortalUser("Giovanni E.", "Nocco")
                 {
-                    FirstName = "Giovanni E.",
-                    LastName = "Nocco",
                     Email = "giovanni.nocco@genocs.com",
                     UserName = "nocco",
                     EmailConfirmed = true,
@@ -139,7 +135,7 @@ public class DatabaseSeeder : IDatabaseSeeder
     {
         Task.Run(async () =>
         {
-            //Check if Role Exists
+            // Check if Role Exists
             var basicRole = new BlazorPortalRole(RoleConstants.BasicRole, _localizer["Basic role with default permissions"]);
             var basicRoleInDb = await _roleManager.FindByNameAsync(RoleConstants.BasicRole);
             if (basicRoleInDb == null)
@@ -148,11 +144,9 @@ public class DatabaseSeeder : IDatabaseSeeder
                 _logger.LogInformation(_localizer["Seeded Basic Role."]);
             }
 
-            //Check if User Exists
-            var basicUser = new BlazorPortalUser
+            // Check if User Exists
+            var basicUser = new BlazorPortalUser("John", "Doe")
             {
-                FirstName = "John",
-                LastName = "Doe",
                 Email = "john@genocs.com",
                 UserName = "johndoe",
                 EmailConfirmed = true,
@@ -160,6 +154,7 @@ public class DatabaseSeeder : IDatabaseSeeder
                 CreatedOn = DateTime.Now,
                 IsActive = true
             };
+
             var basicUserInDb = await _userManager.FindByEmailAsync(basicUser.Email);
             if (basicUserInDb == null)
             {

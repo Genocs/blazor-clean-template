@@ -2,13 +2,12 @@
 using GenocsBlazor.Application.Responses.Audit;
 using GenocsBlazor.Infrastructure.Models.Audit;
 
-namespace GenocsBlazor.Infrastructure.Mappings
+namespace GenocsBlazor.Infrastructure.Mappings;
+
+public class AuditProfile : Profile
 {
-    public class AuditProfile : Profile
+    public AuditProfile()
     {
-        public AuditProfile()
-        {
-            CreateMap<AuditResponse, Audit>().ReverseMap();
-        }
+        CreateMap<AuditResponse, Audit>().ReverseMap();
     }
 }

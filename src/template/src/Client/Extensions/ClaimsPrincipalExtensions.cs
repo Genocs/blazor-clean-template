@@ -17,5 +17,5 @@ internal static class ClaimsPrincipalExtensions
         => claimsPrincipal.FindFirstValue(ClaimTypes.MobilePhone);
 
     internal static string GetUserId(this ClaimsPrincipal claimsPrincipal)
-       => claimsPrincipal.FindFirstValue(ClaimTypes.NameIdentifier);
+        => claimsPrincipal.FindFirstValue(ClaimTypes.NameIdentifier);
 }

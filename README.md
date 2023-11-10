@@ -15,7 +15,7 @@
 
 [license-shield]: https://img.shields.io/github/license/Genocs/blazor-clean-template?color=2da44e&style=flat-square
 [license-url]: https://github.com/Genocs/blazor-clean-template/blob/main/LICENSE
-[build-shield]: https://img.shields.io/badge/nuget-v.0.7-blue
+[build-shield]: https://img.shields.io/badge/nuget-v.1.0.0-blue
 [build-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
 [package-shield]: https://img.shields.io/badge/nuget-v.1.0.0-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
@@ -43,11 +43,11 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://github.com/Genocs/blazor-clean-template">
-    <img src="https://genocs-blog.netlify.app/introduction/logo_hu5f84e5ac74e01291dbce57bab350d273_35818_2000x0_resize_box_3.png" alt="Blazor Portal">
+    <img src="https://raw.githubusercontent.com/Genocs/blazor-clean-template/main/assets/genocs-library-logo.png" alt="Blazor Portal">
   </a>
   <h3 align="center">Blazor Portal - Clean Architecture Template</h3>
   <p align="center">
-    Open Sourced Solution Template For Blazor Web-Assembly 6.0 built with MudBlazor Components
+    Open Source Solution Template For Blazor Web-Assembly 6.0 built with MudBlazor Components
     <br />
     <a href="https://genocs-blog.netlify.app/blazor-template/general/getting-started/"><strong>Read the Documentation »</strong></a>
     <br />
@@ -59,9 +59,6 @@
     <a href="https://github.com/Genocs/blazor-clean-template/issues">Request Documentation</a>
   </p>
 </p>
-
-
-
 
 ## About The Project :zap:
 
@@ -157,33 +154,50 @@ Here are the few contributions that I would highly appreciate ;)
 
 - [ ] Need someone to add in the API Documentation for Swagger.
 - [ ] Need someone to implement localization throughout every Razor Component of the solution under the WASM(Client) Project. You can take the Pages/Authentication/Login.razor as the point of reference. It is as simple as adding `@inject Microsoft.Extensions.Localization.IStringLocalizer<Login> localizer` to every page, changing the texts to `@localizer["Text Here"]` and finally adding resx files to the Resources Folder as per the folder structure.
-- [ ] Need few contributors to add in various language transalations as per the implemented Location. I got time to only add a few transalations for French as of now.
+- [ ] Need few contributors to add in various language translations as per the implemented Location. I got time to only add a few translations for French as of now.
 - [ ] Need a UI contributor to look at the UX/UI of the entire project
 - [ ] Need someone to buildup a cool Material Logo for BlazorPortal (BH):D Do contact me on LinkedIn (https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/).
 - [ ] And finally, Stars from everyone! :D
 
 ## License
 
-Distributed under the MIT License.
+This project is licensed with the [MIT license](LICENSE).
 
-## Contact
 
-### Giovanni Emanuele Nocco
+## Community
 
-- Blogs at [Genocs.com](https://genocs-blog.netlify.app)
-- Facebook - [Genocs](https://www.facebook.com/Genocs)
-- Twitter - [Giovanni Emanuele Nocco](https://www.twitter.com/Giovanni)
-- Linkedin - [Giovanni Emanuele Nocco](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
+- Discord [@genocs](https://discord.com/invite/fWwArnkV)
+- Facebook Page [@genocs](https://facebook.com/Genocs)
+- Youtube Channel [@genocs](https://youtube.com/c/genocs)
 
 ## Support :star:
 
-Has this Project helped you learn something New? or Helped you at work? Do Consider Supporting. 
+Has this Project helped you learn something New? or Helped you at work? Do Consider Supporting.
 Here are a few ways by which you can support.
 
-- Leave a star! :star:
-- Recommend this awesome project to your colleagues. 🥇
+- ⭐ Leave a star!
+- 🥇 Recommend this project to your colleagues.
+- 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
 - Leave your feedback / comments regarding this project in the comments section on my blog [Genocs Library Blog](https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/)
-- Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169) 🦸
-- Or, If you want to support this project on the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)! ☕
+- ☕ If you want to support this project in the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)!
 
-<a href="https://www.buymeacoffee.com/genocs" target="_blank"><img src="https://genocs-blog.netlify.app/wp-content/uploads/2021/04/bmclogo.jpg" alt="Buy Me A Coffee" width="200"  style="height: 60px !important;width: 200px !important;" ></a>
+
+[![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/blazor-wasm-template/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
+
+## Code Contributors
+
+This project exists thanks to all the people who contribute. [Submit your PR and join the team!](CONTRIBUTING.md)
+
+[![genocs contributors](https://contrib.rocks/image?repo=Genocs/blazor-wasm-template "genocs contributors")](https://github.com/genocs/blazor-wasm-template/graphs/contributors)
+
+## Financial Contributors
+
+Become a financial contributor and help me sustain the project.
+
+**Support the Project** on [Opencollective](https://opencollective.com/genocs)
+
+
+## Acknowledgements
+
+- [Mukesh Murugan](https://github.com/iammukeshm)
+- [FullStackHero](https://fullstackhero.net)
