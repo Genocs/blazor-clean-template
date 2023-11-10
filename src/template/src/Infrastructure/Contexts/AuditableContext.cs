@@ -16,7 +16,7 @@ public abstract class AuditableContext : IdentityDbContext<BlazorPortalUser, Bla
 
     public DbSet<Audit> AuditTrails { get; set; }
 
-    public virtual async Task<int> SaveChangesAsync(string userId = null, CancellationToken cancellationToken = new())
+    public virtual async Task<int> SaveChangesAsync(string? userId = null, CancellationToken cancellationToken = new())
     {
         var auditEntries = OnBeforeSaveChanges(userId);
         int result = await base.SaveChangesAsync(cancellationToken);

@@ -15,8 +15,18 @@ public class AuditEntry
     public string UserId { get; set; }
     public string TableName { get; set; }
     public Dictionary<string, object> KeyValues { get; } = new();
-    public Dictionary<string, object> OldValues { get; } = new();
-    public Dictionary<string, object> NewValues { get; } = new();
+
+    /// <summary>
+    /// The old values of the entity.
+    /// Old values are only recorded when the entity is modified or deleted.
+    /// </summary>
+    public Dictionary<string, object>? OldValues { get; } = new();
+
+    /// <summary>
+    /// The new values of the entity.
+    /// The new values are only recorded when the entity is modified or added.
+    /// </summary>
+    public Dictionary<string, object>? NewValues { get; } = new();
     public List<PropertyEntry> TemporaryProperties { get; } = new();
     public AuditType AuditType { get; set; }
     public List<string> ChangedColumns { get; } = new();
