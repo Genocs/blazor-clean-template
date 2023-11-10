@@ -170,9 +170,9 @@ This project is licensed with the [MIT license](LICENSE).
 - Facebook Page [@genocs](https://facebook.com/Genocs)
 - Youtube Channel [@genocs](https://youtube.com/c/genocs)
 
-## Support :star:
+## Support
 
-Has this Project helped you learn something New? or Helped you at work? Do Consider Supporting.
+Has this Project helped you learn something New? or Helped you at work?
 Here are a few ways by which you can support.
 
 - ⭐ Leave a star!

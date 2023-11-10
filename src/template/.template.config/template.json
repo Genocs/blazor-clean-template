@@ -13,10 +13,10 @@
   },
   "identity": "Genocs.BlazorClean.Template",
   "name": "Genocs: Blazor Clean WebAssembly Template",
-  "description": "Clean Architecture Template for .NET7 Blazor WebAssembly built with MudBlazor Components.",
+  "description": "Clean Blazor WebAssembly Template for .NET7 built with MudBlazor Components.",
   "groupIdentity": "Genocs.BlazorClean.Template",
   "shortName": "gnx-blazorclean",
-  "sourceName": "Genocs.BlazorClean.Template",
+  "sourceName": "Genocs.BlazorClean.Template", // Will replace the string 'Genocs.BlazorClean.Template' with the value provided via -n.
   "preferNameDirectory": true,
   "sources": [
     {
