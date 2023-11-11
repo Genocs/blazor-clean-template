@@ -2,9 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
         <RootNamespace>GenocsBlazor.Domain</RootNamespace>
         <AssemblyName>GenocsBlazor.Domain</AssemblyName>
-        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

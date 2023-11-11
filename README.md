@@ -178,7 +178,6 @@ Here are a few ways by which you can support.
 - ⭐ Leave a star!
 - 🥇 Recommend this project to your colleagues.
 - 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
-- Leave your feedback / comments regarding this project in the comments section on my blog [Genocs Library Blog](https://genocs-blog.netlify.app/blog/blazor-hero-quick-start-guide/)
 - ☕ If you want to support this project in the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)!
 
 

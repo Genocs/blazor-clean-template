@@ -1,7 +1,6 @@
 ﻿using GenocsBlazor.Application.Extensions;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Requests;
-using System.IO;
 
 namespace GenocsBlazor.Infrastructure.Services;
 

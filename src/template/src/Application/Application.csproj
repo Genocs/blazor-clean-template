@@ -2,10 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
         <RootNamespace>GenocsBlazor.Application</RootNamespace>
         <AssemblyName>GenocsBlazor.Application</AssemblyName>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
         <PackageReference Include="FluentValidation" Version="11.8.0" />

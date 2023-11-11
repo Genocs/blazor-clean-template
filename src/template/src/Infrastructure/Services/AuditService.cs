@@ -1,18 +1,14 @@
 ﻿using AutoMapper;
+using GenocsBlazor.Application.Extensions;
 using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Infrastructure.Models.Audit;
 using GenocsBlazor.Application.Responses.Audit;
 using GenocsBlazor.Infrastructure.Contexts;
+using GenocsBlazor.Infrastructure.Models.Audit;
+using GenocsBlazor.Infrastructure.Specifications;
 using GenocsBlazor.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Infrastructure.Specifications;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
 
 namespace GenocsBlazor.Infrastructure.Services;
 

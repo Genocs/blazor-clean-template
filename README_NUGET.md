@@ -13,22 +13,22 @@
 [![Twitterx][twitterx-shield]][twitterx-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-[license-shield]: https://img.shields.io/github/license/Genocs/blazor-wasm-template?color=2da44e&style=flat-square
-[license-url]: https://github.com/Genocs/blazor-wasm-template/blob/main/LICENSE
-[build-shield]: https://github.com/Genocs/blazor-wasm-template/actions/workflows/build_and_test.yml/badge.svg?branch=main
-[build-url]: https://github.com/Genocs/blazor-wasm-template/actions/workflows/build_and_test.yml
+[license-shield]: https://img.shields.io/github/license/Genocs/blazor-clean-template?color=2da44e&style=flat-square
+[license-url]: https://github.com/Genocs/blazor-clean-template/blob/main/LICENSE
+[build-shield]: https://img.shields.io/badge/nuget-v.1.0.0-blue
+[build-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
 [package-shield]: https://img.shields.io/badge/nuget-v.1.0.0-blue?&label=latests&logo=nuget
-[package-url]: https://github.com/Genocs/blazor-wasm-template/actions/workflows/build_and_test.yml
-[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.Microservice.Template.svg?color=2da44e&label=downloads&logo=nuget
-[downloads-url]: https://www.nuget.org/packages/Genocs.Microservice.Template
-[contributors-shield]: https://img.shields.io/github/contributors/Genocs/blazor-wasm-template.svg?style=flat-square
-[contributors-url]: https://github.com/Genocs/blazor-wasm-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Genocs/blazor-wasm-template?style=flat-square
-[forks-url]: https://github.com/Genocs/blazor-wasm-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/Genocs/blazor-wasm-template.svg?style=flat-square
-[stars-url]: https://img.shields.io/github/stars/Genocs/blazor-wasm-template?style=flat-square
-[issues-shield]: https://img.shields.io/github/issues/Genocs/blazor-wasm-template?style=flat-square
-[issues-url]: https://github.com/Genocs/blazor-wasm-template/issues
+[package-url]: https://github.com/Genocs/blazor-clean-template/actions/workflows/build_and_test.yml
+[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg
+[downloads-url]: https://www.nuget.org/packages/Genocs.CLI
+[contributors-shield]: https://img.shields.io/github/contributors/Genocs/blazor-clean-template.svg?style=flat-square
+[contributors-url]: https://github.com/Genocs/blazor-clean-template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Genocs/blazor-clean-template?style=flat-square
+[forks-url]: https://github.com/Genocs/blazor-clean-template/network/members
+[stars-shield]: https://img.shields.io/github/stars/Genocs/blazor-clean-template.svg?style=flat-square
+[stars-url]: https://img.shields.io/github/stars/Genocs/blazor-clean-template?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/Genocs/blazor-clean-template?style=flat-square
+[issues-url]: https://github.com/Genocs/blazor-clean-template/issues
 [discord-shield]: https://img.shields.io/discord/1106846706512953385?color=%237289da&label=Discord&logo=discord&logoColor=%237289da&style=flat-square
 [discord-url]: https://discord.com/invite/fWwArnkV
 [gitter-shield]: https://img.shields.io/badge/chat-on%20gitter-blue.svg
@@ -70,27 +70,21 @@ The goal of this repository is to help developers/companies kickstart their Web 
 Open up your Command Prompt / Powershell and run the following command to install the solution template.
 
 ``` PS
-dotnet new --install Genocs.Microservice.Template
+dotnet new --install Genocs.BlazorClean.Template
 ```
 
 or, if you want to use a specific version of the boilerplate, use
 
 ```powershell
-dotnet new --install Genocs.Microservice.Template::1.0.0
+dotnet new --install Genocs.BlazorClean.Template::1.0.0
 ```
 
-This would install the `Genocs Blazor WebAssembly Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.0.0** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
+This would install the `Genocs Blazor Clean Architecture Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.0.0** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
 
-> *To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/Genocs.Microservice.Template/)*
+> *To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/Genocs.BlazorClean.Template/)*
 >
 
-**Genocs.Blazor.Template::1.0.0 is compatible only with Genocs.Microservice.Template::1.0.0 and above.**
 
-Get the .NET WebApi Boilerplate by running the following command
-
-```
-dotnet new --install Genocs.Blazor.Template::1.0.0
-```
 
 For more details on getting started, [read the documentation](https://genocs-blog.netlify.app/blazor-template/general/overview/)
 
