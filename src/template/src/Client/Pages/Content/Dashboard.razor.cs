@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Client.Extensions;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Dashboard;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;

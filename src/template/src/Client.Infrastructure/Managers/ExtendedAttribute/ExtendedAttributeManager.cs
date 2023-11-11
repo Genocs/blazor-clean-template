@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
 using GenocsBlazor.Client.Infrastructure.Extensions;
 using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Shared.Wrapper;
 using System.Net.Http.Json;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.ExtendedAttribute;

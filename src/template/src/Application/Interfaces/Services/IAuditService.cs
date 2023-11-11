@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Application.Responses.Audit;
-using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Responses.Audit;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

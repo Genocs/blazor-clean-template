@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 using GenocsBlazor.Application.Features.Documents.Commands.AddEdit;
 using GenocsBlazor.Client.Infrastructure.Managers.Misc.Document;
 using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 
 namespace GenocsBlazor.Client.Pages.Misc
 {

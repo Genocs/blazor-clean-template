@@ -1,5 +1,5 @@
 ﻿using Blazored.LocalStorage;
-using GenocsBlazor.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 

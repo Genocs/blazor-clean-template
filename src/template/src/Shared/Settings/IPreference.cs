@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Settings;
+﻿namespace Genocs.BlazorClean.Template.Shared.Settings;
 
 /// <summary>
 /// The interface is used to define the preference of the user.

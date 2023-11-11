@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
 using GenocsBlazor.Application.Features.Brands.Commands.Delete;
 using GenocsBlazor.Application.Features.Brands.Commands.Import;
 using GenocsBlazor.Application.Features.Brands.Queries.Export;
 using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
 using GenocsBlazor.Application.Features.Brands.Queries.GetById;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

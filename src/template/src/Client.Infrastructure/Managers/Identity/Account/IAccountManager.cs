@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Requests.Identity;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Account;
 

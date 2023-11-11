@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
 using GenocsBlazor.Application.Features.Products.Queries.GetAllPaged;
 using GenocsBlazor.Application.Requests.Catalog;
-using GenocsBlazor.Shared.Wrapper;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Product;
 

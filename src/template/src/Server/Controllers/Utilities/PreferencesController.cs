@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Server.Managers.Preferences;
-using GenocsBlazor.Shared.Constants.Permission;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Server.Managers.Preferences;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

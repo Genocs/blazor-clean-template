@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Interfaces.Repositories;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;

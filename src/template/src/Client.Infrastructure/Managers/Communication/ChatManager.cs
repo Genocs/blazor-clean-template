@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Interfaces.Chat;
 using GenocsBlazor.Application.Models.Chat;
 using GenocsBlazor.Application.Responses.Identity;
 using GenocsBlazor.Client.Infrastructure.Extensions;
-using GenocsBlazor.Shared.Wrapper;
 using System.Net.Http.Json;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Communication;

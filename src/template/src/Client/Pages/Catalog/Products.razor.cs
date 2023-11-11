@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
 using GenocsBlazor.Application.Features.Products.Queries.GetAllPaged;
 using GenocsBlazor.Application.Requests.Catalog;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Product;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;

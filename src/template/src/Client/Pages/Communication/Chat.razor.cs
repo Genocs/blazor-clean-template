@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Storage;
+using GenocsBlazor.Application.Interfaces.Chat;
 using GenocsBlazor.Application.Models.Chat;
 using GenocsBlazor.Application.Responses.Identity;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Communication;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Storage;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.SignalR.Client;

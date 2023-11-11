@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using Genocs.BlazorClean.Template.Shared.Constants.Role;
+using Genocs.BlazorClean.Template.Shared.Constants.User;
+using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Infrastructure.Contexts;
 using GenocsBlazor.Infrastructure.Helpers;
 using GenocsBlazor.Infrastructure.Models.Identity;
-using GenocsBlazor.Shared.Constants.Permission;
-using GenocsBlazor.Shared.Constants.Role;
-using GenocsBlazor.Shared.Constants.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;

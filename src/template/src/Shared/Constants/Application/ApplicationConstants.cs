@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Constants.Application;
+﻿namespace Genocs.BlazorClean.Template.Shared.Constants.Application;
 
 public static class ApplicationConstants
 {

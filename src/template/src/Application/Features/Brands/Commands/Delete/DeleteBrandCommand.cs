@@ -1,11 +1,11 @@
 ﻿using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Domain.Entities.Catalog;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Localization;
-using GenocsBlazor.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Features.Brands.Commands.Delete
 {

@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Client.Infrastructure.Extensions;
-using GenocsBlazor.Shared.Wrapper;
 using System.Net.Http.Json;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Account;

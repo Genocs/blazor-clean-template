@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Interfaces.Services;
 using Microsoft.Extensions.Localization;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;

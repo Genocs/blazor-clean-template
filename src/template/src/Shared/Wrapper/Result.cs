@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Shared.Wrapper;
+namespace Genocs.BlazorClean.Template.Shared.Wrapper;
 
 public class Result : IResult
 {

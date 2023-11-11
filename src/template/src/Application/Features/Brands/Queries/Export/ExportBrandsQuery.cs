@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using GenocsBlazor.Application.Extensions;
 using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Specifications.Catalog;
 using GenocsBlazor.Domain.Entities.Catalog;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;

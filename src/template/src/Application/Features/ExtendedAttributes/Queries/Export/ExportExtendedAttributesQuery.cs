@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Extensions;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Extensions;
 using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Specifications.ExtendedAttribute;
 using GenocsBlazor.Domain.Contracts;
 using GenocsBlazor.Domain.Enums;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;

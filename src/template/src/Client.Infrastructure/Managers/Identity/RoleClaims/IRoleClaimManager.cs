@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Shared.Wrapper;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.RoleClaims;
 

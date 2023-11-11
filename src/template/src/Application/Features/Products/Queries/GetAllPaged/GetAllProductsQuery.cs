@@ -2,7 +2,6 @@
 using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Application.Specifications.Catalog;
 using GenocsBlazor.Domain.Entities.Catalog;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using System;
 using System.Linq;
@@ -10,6 +9,7 @@ using System.Linq.Expressions;
 using System.Linq.Dynamic.Core;
 using System.Threading;
 using System.Threading.Tasks;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Features.Products.Queries.GetAllPaged
 {

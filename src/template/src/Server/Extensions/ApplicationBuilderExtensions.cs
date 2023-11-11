@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Configurations;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Localization;
+using GenocsBlazor.Application.Configurations;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Server.Hubs;
 using GenocsBlazor.Server.Middlewares;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Localization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;

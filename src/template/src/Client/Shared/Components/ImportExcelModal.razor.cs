@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using System.IO;
 using GenocsBlazor.Application.Requests;
 using System;
-using GenocsBlazor.Shared.Wrapper;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Client.Shared.Components
 {

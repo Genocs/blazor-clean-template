@@ -1,11 +1,11 @@
-﻿using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.Delete;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetById;
 using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;

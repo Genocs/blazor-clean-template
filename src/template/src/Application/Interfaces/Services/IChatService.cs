@@ -1,9 +1,9 @@
 ﻿using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using GenocsBlazor.Application.Interfaces.Chat;
 using GenocsBlazor.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Interfaces.Services
 {

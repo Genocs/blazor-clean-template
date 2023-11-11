@@ -1,6 +1,6 @@
 ﻿using Blazored.LocalStorage;
-using GenocsBlazor.Shared.Constants.Permission;
-using GenocsBlazor.Shared.Constants.Storage;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Headers;
 using System.Security.Claims;

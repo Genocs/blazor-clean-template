@@ -1,5 +1,5 @@
 ﻿using Blazored.LocalStorage;
-using GenocsBlazor.Shared.Constants.Storage;
+using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 using System.Net.Http.Headers;
 
 namespace GenocsBlazor.Client.Infrastructure.Authentication;

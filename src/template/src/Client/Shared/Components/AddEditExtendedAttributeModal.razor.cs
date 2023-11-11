@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.ExtendedAttribute;
 using GenocsBlazor.Domain.Contracts;
 using GenocsBlazor.Domain.Enums;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;

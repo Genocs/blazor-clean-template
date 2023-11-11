@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Interfaces.Common;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Interfaces.Common;
 using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Shared.Wrapper;
 using System.Threading.Tasks;
 
 namespace GenocsBlazor.Application.Interfaces.Services.Identity

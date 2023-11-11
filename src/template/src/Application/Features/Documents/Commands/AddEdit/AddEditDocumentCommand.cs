@@ -3,13 +3,13 @@ using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Requests;
 using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Localization;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Features.Documents.Commands.AddEdit
 {

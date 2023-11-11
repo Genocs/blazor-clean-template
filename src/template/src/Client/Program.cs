@@ -1,7 +1,7 @@
+using Genocs.BlazorClean.Template.Shared.Constants.Localization;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Preferences;
 using GenocsBlazor.Client.Infrastructure.Settings;
-using GenocsBlazor.Shared.Constants.Localization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using System.Globalization;
 

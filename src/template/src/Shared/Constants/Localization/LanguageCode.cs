@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Constants.Localization;
+﻿namespace Genocs.BlazorClean.Template.Shared.Constants.Localization;
 
 public class LanguageCode
 {

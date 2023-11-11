@@ -6,14 +6,14 @@ using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Application.Responses.Identity;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Mappings;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
 using GenocsBlazor.Client.Infrastructure.Managers.Identity.Roles;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 
 namespace GenocsBlazor.Client.Pages.Identity
 {

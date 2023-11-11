@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Interfaces.Services.Identity;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Interfaces.Services.Identity;
 using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

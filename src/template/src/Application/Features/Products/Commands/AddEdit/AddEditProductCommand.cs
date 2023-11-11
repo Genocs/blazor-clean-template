@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Requests;
 using GenocsBlazor.Domain.Entities.Catalog;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;

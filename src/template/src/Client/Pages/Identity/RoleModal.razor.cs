@@ -1,12 +1,12 @@
 ﻿using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
 using GenocsBlazor.Client.Infrastructure.Managers.Identity.Roles;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 
 namespace GenocsBlazor.Client.Pages.Identity;
 

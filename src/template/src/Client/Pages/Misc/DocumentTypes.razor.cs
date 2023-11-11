@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
 using GenocsBlazor.Application.Features.DocumentTypes.Queries.GetAll;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Misc.DocumentType;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;

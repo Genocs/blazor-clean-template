@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using GenocsBlazor.Application.Extensions;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Responses.Audit;
 using GenocsBlazor.Infrastructure.Contexts;
 using GenocsBlazor.Infrastructure.Models.Audit;
 using GenocsBlazor.Infrastructure.Specifications;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.Globalization;

@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Configurations;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Configurations;
 using GenocsBlazor.Application.Interfaces.Services.Identity;
 using GenocsBlazor.Application.Requests.Identity;
 using GenocsBlazor.Application.Responses.Identity;
 using GenocsBlazor.Infrastructure.Models.Identity;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;

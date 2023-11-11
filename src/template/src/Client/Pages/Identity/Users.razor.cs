@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Permission;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Responses.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
 using MudBlazor;

@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Constants.Role;
+﻿namespace Genocs.BlazorClean.Template.Shared.Constants.Role;
 
 public static class RoleConstants
 {

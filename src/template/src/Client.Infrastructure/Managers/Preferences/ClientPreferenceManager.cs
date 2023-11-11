@@ -1,8 +1,8 @@
 ﻿using Blazored.LocalStorage;
+using Genocs.BlazorClean.Template.Shared.Constants.Storage;
+using Genocs.BlazorClean.Template.Shared.Settings;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using GenocsBlazor.Client.Infrastructure.Settings;
-using GenocsBlazor.Shared.Constants.Storage;
-using GenocsBlazor.Shared.Settings;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
 using MudBlazor;
 

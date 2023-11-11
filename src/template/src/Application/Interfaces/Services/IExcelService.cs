@@ -1,4 +1,4 @@
-﻿using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Data;
 
 namespace GenocsBlazor.Application.Interfaces.Services;

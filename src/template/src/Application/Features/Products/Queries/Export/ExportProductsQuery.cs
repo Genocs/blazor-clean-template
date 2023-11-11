@@ -8,9 +8,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using GenocsBlazor.Application.Extensions;
 using GenocsBlazor.Application.Specifications.Catalog;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Features.Products.Queries.Export
 {

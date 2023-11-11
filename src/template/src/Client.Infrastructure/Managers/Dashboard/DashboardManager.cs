@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
 using GenocsBlazor.Client.Infrastructure.Extensions;
-using GenocsBlazor.Shared.Wrapper;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Dashboard;
 

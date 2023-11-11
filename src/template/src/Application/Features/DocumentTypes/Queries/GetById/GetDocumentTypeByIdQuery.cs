@@ -1,9 +1,9 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 
 namespace GenocsBlazor.Application.Features.DocumentTypes.Queries.GetById

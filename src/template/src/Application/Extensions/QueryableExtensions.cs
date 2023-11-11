@@ -1,11 +1,11 @@
 ﻿using GenocsBlazor.Application.Exceptions;
 using GenocsBlazor.Application.Specifications.Base;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GenocsBlazor.Domain.Contracts;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Extensions
 {

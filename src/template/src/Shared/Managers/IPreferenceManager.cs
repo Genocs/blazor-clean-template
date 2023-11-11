@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Shared.Settings;
-using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Settings;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Shared.Managers;
+namespace Genocs.BlazorClean.Template.Shared.Managers;
 
 /// <summary>
 /// The Preference Manager Interface definition.

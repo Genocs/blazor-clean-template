@@ -1,14 +1,11 @@
-﻿using GenocsBlazor.Client.Extensions;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Identity.Roles;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
-using System;
-using System.Linq;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 namespace GenocsBlazor.Client.Shared;
 

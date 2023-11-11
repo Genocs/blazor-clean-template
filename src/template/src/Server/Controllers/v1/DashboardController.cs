@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
-using GenocsBlazor.Shared.Constants.Permission;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

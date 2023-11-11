@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 
-namespace GenocsBlazor.Shared.Constants.Permission;
+namespace Genocs.BlazorClean.Template.Shared.Constants.Permission;
 
 public static class Permissions
 {

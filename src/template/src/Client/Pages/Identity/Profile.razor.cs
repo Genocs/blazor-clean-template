@@ -7,7 +7,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using GenocsBlazor.Shared.Constants.Storage;
+using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 
 namespace GenocsBlazor.Client.Pages.Identity
 {

@@ -1,4 +1,4 @@
-﻿using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 

@@ -1,11 +1,11 @@
 ﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
 using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
 using GenocsBlazor.Application.Requests;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
 using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Product;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.SignalR.Client;

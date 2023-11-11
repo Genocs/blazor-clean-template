@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using GenocsBlazor.Shared.Constants.Localization;
-using GenocsBlazor.Shared.Settings;
+using Genocs.BlazorClean.Template.Shared.Constants.Localization;
+using Genocs.BlazorClean.Template.Shared.Settings;
 
 namespace GenocsBlazor.Server.Settings
 {

@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
 using GenocsBlazor.Application.Features.Products.Commands.Delete;
 using GenocsBlazor.Application.Features.Products.Queries.Export;
 using GenocsBlazor.Application.Features.Products.Queries.GetAllPaged;
 using GenocsBlazor.Application.Features.Products.Queries.GetProductImage;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

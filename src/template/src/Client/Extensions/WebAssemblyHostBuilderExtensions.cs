@@ -1,11 +1,11 @@
 ﻿using Blazored.LocalStorage;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 using GenocsBlazor.Client.Infrastructure.Authentication;
 using GenocsBlazor.Client.Infrastructure.Managers;
 using GenocsBlazor.Client.Infrastructure.Managers.ExtendedAttribute;
 using GenocsBlazor.Client.Infrastructure.Managers.Preferences;
 using GenocsBlazor.Domain.Entities.ExtendedAttributes;
 using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;

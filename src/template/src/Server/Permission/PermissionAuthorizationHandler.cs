@@ -1,4 +1,4 @@
-﻿using GenocsBlazor.Shared.Constants.Permission;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 using System.Threading.Tasks;

@@ -7,10 +7,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using GenocsBlazor.Client.Infrastructure.Managers.Audit;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 
 namespace GenocsBlazor.Client.Pages.Utilities
 {

@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Responses.Identity;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Responses.Identity;
 using GenocsBlazor.Infrastructure.Models.Identity;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 using System.ComponentModel;

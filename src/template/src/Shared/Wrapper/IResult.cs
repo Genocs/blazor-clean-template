@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Wrapper;
+﻿namespace Genocs.BlazorClean.Template.Shared.Wrapper;
 
 public interface IResult
 {

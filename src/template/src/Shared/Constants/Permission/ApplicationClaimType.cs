@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Constants.Permission;
+﻿namespace Genocs.BlazorClean.Template.Shared.Constants.Permission;
 
 public static class ApplicationClaimTypes
 {

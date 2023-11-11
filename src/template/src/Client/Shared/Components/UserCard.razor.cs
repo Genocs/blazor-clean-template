@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Shared.Constants.Storage;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Storage;
+using GenocsBlazor.Client.Extensions;
 using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
 

@@ -1,23 +1,19 @@
-﻿using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
 using GenocsBlazor.Application.Features.Brands.Commands.Import;
 using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
 using GenocsBlazor.Application.Requests;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
 using GenocsBlazor.Client.Shared.Components;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Constants.Permission;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace GenocsBlazor.Client.Pages.Catalog;
 

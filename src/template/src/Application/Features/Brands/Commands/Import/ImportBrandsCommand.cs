@@ -2,8 +2,6 @@
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Requests;
 using GenocsBlazor.Domain.Entities.Catalog;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Wrapper;
 using MediatR;
 using Microsoft.Extensions.Localization;
 using System;
@@ -16,6 +14,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
 using FluentValidation;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
 namespace GenocsBlazor.Application.Features.Brands.Commands.Import
 {

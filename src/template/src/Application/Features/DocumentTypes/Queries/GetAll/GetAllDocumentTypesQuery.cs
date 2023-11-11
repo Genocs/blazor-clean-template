@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using GenocsBlazor.Application.Interfaces.Repositories;
 using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Shared.Constants.Application;
-using GenocsBlazor.Shared.Wrapper;
 using LazyCache;
 using MediatR;
 using System;

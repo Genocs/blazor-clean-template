@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Application.Interfaces.Services.Storage;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Storage;
+using Genocs.BlazorClean.Template.Shared.Settings;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Interfaces.Services.Storage;
 using GenocsBlazor.Server.Settings;
-using GenocsBlazor.Shared.Constants.Storage;
-using GenocsBlazor.Shared.Settings;
-using GenocsBlazor.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
 
 namespace GenocsBlazor.Server.Managers.Preferences;
@@ -20,7 +20,7 @@ public class ServerPreferenceManager : IServerPreferenceManager
         _localizer = localizer;
     }
 
-    public async Task<Shared.Wrapper.IResult> ChangeLanguageAsync(string languageCode)
+    public async Task<Genocs.BlazorClean.Template.Shared.Wrapper.IResult> ChangeLanguageAsync(string languageCode)
     {
         var preference = await GetPreferenceAsync() as ServerPreference;
         if (preference != null)

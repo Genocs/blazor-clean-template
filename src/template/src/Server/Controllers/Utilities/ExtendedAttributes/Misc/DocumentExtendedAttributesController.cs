@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
 using GenocsBlazor.Domain.Entities.ExtendedAttributes;
 using GenocsBlazor.Domain.Entities.Misc;
 using GenocsBlazor.Server.Controllers.Utilities.ExtendedAttributes.Base;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

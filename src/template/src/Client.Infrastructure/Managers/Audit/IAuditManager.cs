@@ -1,5 +1,5 @@
-﻿using GenocsBlazor.Application.Responses.Audit;
-using GenocsBlazor.Shared.Wrapper;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Responses.Audit;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Audit;
 

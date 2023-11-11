@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Models;
+﻿namespace Genocs.BlazorClean.Template.Shared.Models;
 
 public class User
 {

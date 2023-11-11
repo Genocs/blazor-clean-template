@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Shared.Constants.Storage;
+﻿namespace Genocs.BlazorClean.Template.Shared.Constants.Storage;
 
 public static class StorageConstants
 {

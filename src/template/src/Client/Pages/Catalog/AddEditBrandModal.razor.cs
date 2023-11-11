@@ -1,8 +1,8 @@
 ﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
 using GenocsBlazor.Client.Extensions;
 using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
-using GenocsBlazor.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;

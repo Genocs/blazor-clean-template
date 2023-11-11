@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
 using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
 using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Shared.Wrapper;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.ExtendedAttribute;
 

@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace GenocsBlazor.Shared.Authorization;
+namespace Genocs.BlazorClean.Template.Shared.Authorization;
 
 public static class ClaimsPrincipalExtensions
 {

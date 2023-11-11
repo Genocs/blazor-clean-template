@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Interfaces.Chat;
 using GenocsBlazor.Application.Models.Chat;
 using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Shared.Wrapper;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Communication;
 

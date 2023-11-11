@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
+﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using GenocsBlazor.Application.Interfaces.Chat;
 using GenocsBlazor.Application.Interfaces.Services;
 using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;

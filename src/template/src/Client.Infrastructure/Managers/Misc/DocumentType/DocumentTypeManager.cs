@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
+﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
+using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
 using GenocsBlazor.Application.Features.DocumentTypes.Queries.GetAll;
 using GenocsBlazor.Client.Infrastructure.Extensions;
-using GenocsBlazor.Shared.Wrapper;
 using System.Net.Http.Json;
 
 namespace GenocsBlazor.Client.Infrastructure.Managers.Misc.DocumentType;

@@ -1,4 +1,4 @@
-﻿using GenocsBlazor.Shared.Managers;
+﻿using Genocs.BlazorClean.Template.Shared.Managers;
 
 namespace GenocsBlazor.Server.Managers.Preferences;
 
