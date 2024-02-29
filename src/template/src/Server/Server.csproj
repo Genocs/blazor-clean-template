@@ -3,11 +3,10 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <RootNamespace>GenocsBlazor.Server</RootNamespace>
         <AssemblyName>GenocsBlazor.Server</AssemblyName>
     </PropertyGroup>
+    
     <PropertyGroup>
         <DocumentationFile>GenocsBlazor.Server.xml</DocumentationFile>
         <NoWarn>1701;1702;1591</NoWarn>
@@ -16,6 +15,7 @@
         <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
         <DockerfileContext>..\..</DockerfileContext>
     </PropertyGroup>
+    
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
         <PackageReference Include="Hangfire" Version="1.8.6" />
@@ -59,10 +59,5 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
-    <ItemGroup>
-        <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
+
 </Project>

@@ -3,15 +3,8 @@
     <PropertyGroup>
         <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <IsPackable>false</IsPackable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <RootNamespace>Genocs.BlazorClean.Template.Shared</RootNamespace>
         <AssemblyName>Genocs.BlazorClean.Template.Shared</AssemblyName>
     </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
+
 </Project>

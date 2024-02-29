@@ -3,8 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <RootNamespace>GenocsBlazor.Application</RootNamespace>
         <AssemblyName>GenocsBlazor.Application</AssemblyName>
     </PropertyGroup>
@@ -23,10 +21,5 @@
         <ProjectReference Include="..\Domain\Domain.csproj" />
         <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
-    <ItemGroup>
-        <PackageReference Update="Roslynator.Analyzers" Version="4.6.1">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
+
 </Project>
