@@ -159,7 +159,7 @@ Distributed under the MIT License.
 - Blogs at [Genocs.com](https://genocs-blog.netlify.app)
 - Facebook - [Genocs](https://www.facebook.com/Genocs)
 - Twitter - [Giovanni Emanuele Nocco](https://www.twitter.com/Giovanni)
-- Linkedin - [Giovanni Emanuele Nocco](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
+- LinkedIn - [Giovanni Emanuele Nocco](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
 
 ## Support :star:
 
