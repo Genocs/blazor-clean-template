@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Infrastructure.Models.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
+using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
 
-namespace GenocsBlazor.Infrastructure.Mappings;
+namespace Genocs.BlazorClean.Template.Infrastructure.Mappings;
 
 public class ChatHistoryProfile : Profile
 {

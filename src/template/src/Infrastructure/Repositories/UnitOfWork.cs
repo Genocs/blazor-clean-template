@@ -1,15 +1,11 @@
-﻿using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Infrastructure.Contexts;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Infrastructure.Contexts;
 using LazyCache;
-using System;
 using System.Collections;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Repositories;
+namespace Genocs.BlazorClean.Template.Infrastructure.Repositories;
 
 public class UnitOfWork<TId> : IUnitOfWork<TId>
 {
@@ -52,11 +48,13 @@ public class UnitOfWork<TId> : IUnitOfWork<TId>
 
     public async Task<int> CommitAndRemoveCache(CancellationToken cancellationToken, params string[] cacheKeys)
     {
-        var result =  await _dbContext.SaveChangesAsync(cancellationToken);
+        var result = await _dbContext.SaveChangesAsync(cancellationToken);
+
         foreach (var cacheKey in cacheKeys)
         {
             _cache.Remove(cacheKey);
         }
+
         return result;
     }
 

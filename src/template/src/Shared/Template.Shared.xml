@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>GenocsBlazor.Shared</name>
+        <name>Genocs.BlazorClean.Template.Shared</name>
     </assembly>
     <members>
-        <member name="M:GenocsBlazor.Shared.Constants.Permission.Permissions.GetRegisteredPermissions">
+        <member name="M:Genocs.BlazorClean.Template.Shared.Constants.Permission.Permissions.GetRegisteredPermissions">
             <summary>
                 Returns a list of Permissions.
             </summary>

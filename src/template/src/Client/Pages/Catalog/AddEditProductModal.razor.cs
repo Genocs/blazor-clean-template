@@ -1,22 +1,17 @@
 ﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.Products.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Requests;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Brand;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Product;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
-using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
-using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
-using GenocsBlazor.Application.Requests;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
-using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Product;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Catalog;
+namespace Genocs.BlazorClean.Template.Client.Pages.Catalog;
 
 public partial class AddEditProductModal
 {

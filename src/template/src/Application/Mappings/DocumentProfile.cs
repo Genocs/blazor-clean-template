@@ -1,16 +1,15 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Features.Documents.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Documents.Queries.GetById;
-using GenocsBlazor.Domain.Entities.Misc;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Queries.GetById;
+using Genocs.BlazorClean.Template.Domain.Entities.Misc;
 
-namespace GenocsBlazor.Application.Mappings
+namespace Genocs.BlazorClean.Template.Application.Mappings;
+
+public class DocumentProfile : Profile
 {
-    public class DocumentProfile : Profile
+    public DocumentProfile()
     {
-        public DocumentProfile()
-        {
-            CreateMap<AddEditDocumentCommand, Document>().ReverseMap();
-            CreateMap<GetDocumentByIdResponse, Document>().ReverseMap();
-        }
+        CreateMap<AddEditDocumentCommand, Document>().ReverseMap();
+        CreateMap<GetDocumentByIdResponse, Document>().ReverseMap();
     }
 }

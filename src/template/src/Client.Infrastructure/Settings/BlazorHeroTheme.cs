@@ -1,6 +1,6 @@
 ﻿using MudBlazor;
 
-namespace GenocsBlazor.Client.Infrastructure.Settings;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Settings;
 
 public class GenocsPortalTheme
 {

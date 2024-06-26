@@ -1,9 +1,8 @@
-﻿using GenocsBlazor.Application.Interfaces.Common;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Common;
 
-namespace GenocsBlazor.Application.Interfaces.Services
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Services;
+
+public interface ICurrentUserService : IService
 {
-    public interface ICurrentUserService : IService
-    {
-        string UserId { get; }
-    }
+    string UserId { get; }
 }

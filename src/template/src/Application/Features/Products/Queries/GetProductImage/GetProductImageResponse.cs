@@ -1,7 +1,6 @@
-﻿namespace GenocsBlazor.Application.Features.Products.Queries.GetProductImage
+﻿namespace Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetProductImage;
+
+public class GetProductImageResponse
 {
-    public class GetProductImageResponse
-    {
-        public string ImageDataURL { get; set; }
-    }
+    public string ImageDataURL { get; set; }
 }

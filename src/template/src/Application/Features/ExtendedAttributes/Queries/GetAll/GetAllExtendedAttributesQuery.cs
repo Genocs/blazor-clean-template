@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Contracts;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Contracts;
 using LazyCache;
 using MediatR;
 
-namespace GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll
+namespace Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAll
 {
     public class GetAllExtendedAttributesQuery<TId, TEntityId, TEntity, TExtendedAttribute>
         : IRequest<Result<List<GetAllExtendedAttributesResponse<TId, TEntityId>>>>

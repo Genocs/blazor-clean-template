@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Interfaces.Services.Storage;
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Services.Storage;
 
 public interface IServerStorageService
 {

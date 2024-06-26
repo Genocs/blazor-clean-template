@@ -1,6 +1,5 @@
-﻿namespace GenocsBlazor.Application.Interfaces.Repositories
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+
+public interface IBrandRepository
 {
-    public interface IBrandRepository
-    {
-    }
 }

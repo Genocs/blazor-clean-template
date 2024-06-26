@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GenocsBlazor.Application.Interfaces.Chat;
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Chat;
 
 public interface IChatUser
 {

@@ -1,8 +1,7 @@
-﻿namespace GenocsBlazor.Application.Requests.Identity
+﻿namespace Genocs.BlazorClean.Template.Application.Requests.Identity;
+
+public class ToggleUserStatusRequest
 {
-    public class ToggleUserStatusRequest
-    {
-        public bool ActivateUser { get; set; }
-        public string UserId { get; set; }
-    }
+    public bool ActivateUser { get; set; }
+    public string UserId { get; set; }
 }

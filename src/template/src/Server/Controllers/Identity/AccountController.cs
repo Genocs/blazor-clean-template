@@ -1,11 +1,11 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Account;
-using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Account;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Identity;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Identity;
 
 [Authorize]
 [Route("api/identity/account")]

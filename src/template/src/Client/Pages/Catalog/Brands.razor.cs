@@ -1,13 +1,13 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+﻿using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.Import;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Requests;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Brand;
+using Genocs.BlazorClean.Template.Client.Shared.Components;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Brands.Commands.Import;
-using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
-using GenocsBlazor.Application.Requests;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
-using GenocsBlazor.Client.Shared.Components;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -15,7 +15,7 @@ using Microsoft.JSInterop;
 using MudBlazor;
 using System.Security.Claims;
 
-namespace GenocsBlazor.Client.Pages.Catalog;
+namespace Genocs.BlazorClean.Template.Client.Pages.Catalog;
 
 public partial class Brands
 {

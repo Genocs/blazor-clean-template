@@ -1,5 +1,5 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Exceptions;
+using Genocs.BlazorClean.Template.Application.Exceptions;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Middlewares;
+namespace Genocs.BlazorClean.Template.Server.Middlewares;
 
 public class ErrorHandlerMiddleware
 {

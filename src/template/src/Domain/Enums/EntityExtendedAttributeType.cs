@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Domain.Enums;
+﻿namespace Genocs.BlazorClean.Template.Domain.Enums;
 
 public enum EntityExtendedAttributeType : byte
 {

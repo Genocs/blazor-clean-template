@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
+﻿namespace Genocs.BlazorClean.Template.Application.Responses.Identity;
 
-namespace GenocsBlazor.Application.Responses.Identity
+public class GetAllUsersResponse
 {
-    public class GetAllUsersResponse
-    {
-        public IEnumerable<UserResponse> Users { get; set; }
-    }
+    public IEnumerable<UserResponse> Users { get; set; }
 }

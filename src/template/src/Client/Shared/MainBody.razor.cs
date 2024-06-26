@@ -1,13 +1,13 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Identity.Roles;
+﻿using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.Roles;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
 using System.Net.Http.Headers;
 
-namespace GenocsBlazor.Client.Shared;
+namespace Genocs.BlazorClean.Template.Client.Shared;
 
 public partial class MainBody
 {

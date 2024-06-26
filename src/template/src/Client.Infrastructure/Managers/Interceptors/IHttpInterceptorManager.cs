@@ -1,6 +1,6 @@
 ﻿using Toolbelt.Blazor;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Interceptors;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Interceptors;
 
 public interface IHttpInterceptorManager : IManager
 {

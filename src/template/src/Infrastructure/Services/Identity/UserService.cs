@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Exceptions;
+using Genocs.BlazorClean.Template.Application.Extensions;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Mail;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Specifications;
 using Genocs.BlazorClean.Template.Shared.Constants.Role;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Exceptions;
-using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Identity;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Requests.Mail;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Infrastructure.Models.Identity;
-using GenocsBlazor.Infrastructure.Specifications;
 using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
+using System.Text;
+using System.Text.Encodings.Web;
 
-namespace GenocsBlazor.Infrastructure.Services.Identity;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services.Identity;
 
 public class UserService : IUserService
 {
@@ -226,7 +222,7 @@ public class UserService : IUserService
     public async Task<IResult> ForgotPasswordAsync(ForgotPasswordRequest request, string origin)
     {
         var user = await _userManager.FindByEmailAsync(request.Email);
-        if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+        if (user == null || !await _userManager.IsEmailConfirmedAsync(user))
         {
             // Don't reveal that the user does not exist or is not confirmed
             return await Result.FailAsync(_localizer["An Error has occurred!"]);

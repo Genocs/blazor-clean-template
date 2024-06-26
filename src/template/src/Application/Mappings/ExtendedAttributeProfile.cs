@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetById;
-using GenocsBlazor.Domain.Entities.ExtendedAttributes;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetById;
+using Genocs.BlazorClean.Template.Domain.Entities.ExtendedAttributes;
 
-namespace GenocsBlazor.Application.Mappings;
+namespace Genocs.BlazorClean.Template.Application.Mappings;
 
 public class ExtendedAttributeProfile : Profile
 {

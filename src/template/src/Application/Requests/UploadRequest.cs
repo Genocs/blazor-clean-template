@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Enums;
+﻿using Genocs.BlazorClean.Template.Application.Enums;
 
-namespace GenocsBlazor.Application.Requests;
+namespace Genocs.BlazorClean.Template.Application.Requests;
 
 public class UploadRequest
 {

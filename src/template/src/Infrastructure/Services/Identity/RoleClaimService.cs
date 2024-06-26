@@ -1,18 +1,15 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Contexts;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Identity;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Infrastructure.Contexts;
-using GenocsBlazor.Infrastructure.Models.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Services.Identity;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services.Identity;
 
 public class RoleClaimService : IRoleClaimService
 {

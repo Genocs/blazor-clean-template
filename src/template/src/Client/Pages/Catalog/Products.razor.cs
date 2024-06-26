@@ -1,22 +1,18 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+﻿using Genocs.BlazorClean.Template.Application.Features.Products.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetAllPaged;
+using Genocs.BlazorClean.Template.Application.Requests.Catalog;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Product;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Products.Queries.GetAllPaged;
-using GenocsBlazor.Application.Requests.Catalog;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Product;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Catalog;
+namespace Genocs.BlazorClean.Template.Client.Pages.Catalog;
 
 public partial class Products
 {

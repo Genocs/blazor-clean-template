@@ -1,13 +1,13 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Domain.Entities.ExtendedAttributes;
-using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Server.Controllers.Utilities.ExtendedAttributes.Base;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Domain.Entities.ExtendedAttributes;
+using Genocs.BlazorClean.Template.Domain.Entities.Misc;
+using Genocs.BlazorClean.Template.Server.Controllers.Utilities.ExtendedAttributes.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Utilities.ExtendedAttributes.Misc;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Utilities.ExtendedAttributes.Misc;
 
 public class DocumentExtendedAttributesController : ExtendedAttributesController<int, int, Document, DocumentExtendedAttribute>
 {

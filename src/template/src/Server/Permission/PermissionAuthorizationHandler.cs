@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Permission;
+namespace Genocs.BlazorClean.Template.Server.Permission;
 
 internal class PermissionAuthorizationHandler : AuthorizationHandler<PermissionRequirement>
 {

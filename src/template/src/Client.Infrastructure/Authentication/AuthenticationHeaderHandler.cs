@@ -2,7 +2,7 @@
 using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 using System.Net.Http.Headers;
 
-namespace GenocsBlazor.Client.Infrastructure.Authentication;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Authentication;
 
 public class AuthenticationHeaderHandler : DelegatingHandler
 {

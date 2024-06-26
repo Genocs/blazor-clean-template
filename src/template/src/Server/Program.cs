@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Infrastructure.Contexts;
-using GenocsBlazor.Server.Extensions;
+﻿using Genocs.BlazorClean.Template.Infrastructure.Contexts;
+using Genocs.BlazorClean.Template.Server.Extensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace GenocsBlazor.Server;
+namespace Genocs.BlazorClean.Template.Server;
 
 public class Program
 {

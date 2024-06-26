@@ -1,9 +1,9 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Brands.Commands.Import;
-using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
+﻿using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.Import;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Brand;
 
 public interface IBrandManager : IManager
 {

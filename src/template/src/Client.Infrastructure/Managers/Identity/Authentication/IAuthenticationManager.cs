@@ -1,8 +1,8 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Security.Claims;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Authentication;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.Authentication;
 
 public interface IAuthenticationManager : IManager
 {

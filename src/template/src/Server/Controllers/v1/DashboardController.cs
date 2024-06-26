@@ -1,10 +1,10 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Features.Dashboards.Queries.GetData;
+using Genocs.BlazorClean.Template.Application.Features.Dashboards.Queries.GetData;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.v1;
+namespace Genocs.BlazorClean.Template.Server.Controllers.v1;
 
 [ApiController]
 public class DashboardController : BaseApiController<DashboardController>

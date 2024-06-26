@@ -1,14 +1,13 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Client.Extensions;
+﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.Roles;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
-using System.Threading.Tasks;
-using Blazored.FluentValidation;
-using GenocsBlazor.Client.Infrastructure.Managers.Identity.Roles;
-using Genocs.BlazorClean.Template.Shared.Constants.Application;
 
-namespace GenocsBlazor.Client.Pages.Identity;
+namespace Genocs.BlazorClean.Template.Client.Pages.Identity;
 
 public partial class RoleModal
 {

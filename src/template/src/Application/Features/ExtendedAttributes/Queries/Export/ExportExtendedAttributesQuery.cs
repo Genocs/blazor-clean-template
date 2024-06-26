@@ -1,16 +1,16 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Specifications.ExtendedAttribute;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Domain.Enums;
+﻿using Genocs.BlazorClean.Template.Application.Extensions;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Specifications.ExtendedAttribute;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Domain.Enums;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.Globalization;
 
-namespace GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
+namespace Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.Export;
 
 internal class ExportExtendedAttributesQueryLocalization
 {

@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Domain.Contracts;
+﻿namespace Genocs.BlazorClean.Template.Domain.Contracts;
 
 public interface IEntity<TId> : IEntity
 {

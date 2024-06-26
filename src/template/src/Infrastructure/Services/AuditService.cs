@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Extensions;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Responses.Audit;
+using Genocs.BlazorClean.Template.Infrastructure.Contexts;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Audit;
+using Genocs.BlazorClean.Template.Infrastructure.Specifications;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Responses.Audit;
-using GenocsBlazor.Infrastructure.Contexts;
-using GenocsBlazor.Infrastructure.Models.Audit;
-using GenocsBlazor.Infrastructure.Specifications;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.Globalization;
 
-namespace GenocsBlazor.Infrastructure.Services;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services;
 
 public class AuditService : IAuditService
 {

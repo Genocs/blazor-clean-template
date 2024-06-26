@@ -1,15 +1,11 @@
-﻿using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Infrastructure.Contexts;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Infrastructure.Contexts;
 using LazyCache;
-using System;
 using System.Collections;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Repositories;
+namespace Genocs.BlazorClean.Template.Infrastructure.Repositories;
 
 public class ExtendedAttributeUnitOfWork<TId, TEntityId, TEntity> : IExtendedAttributeUnitOfWork<TId, TEntityId, TEntity> where TEntity : AuditableEntity<TEntityId>
 {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
 
-namespace GenocsBlazor.Client.Infrastructure.Mappings;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Mappings;
 
 public class RoleProfile : Profile
 {

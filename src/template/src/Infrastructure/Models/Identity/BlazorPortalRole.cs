@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 using Microsoft.AspNetCore.Identity;
 
-namespace GenocsBlazor.Infrastructure.Models.Identity;
+namespace Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 
 public class BlazorPortalRole : IdentityRole, IAuditableEntity<string>
 {

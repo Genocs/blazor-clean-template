@@ -1,11 +1,11 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Products.Queries.GetAllPaged;
-using GenocsBlazor.Application.Requests.Catalog;
-using GenocsBlazor.Client.Infrastructure.Extensions;
+﻿using Genocs.BlazorClean.Template.Application.Features.Products.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetAllPaged;
+using Genocs.BlazorClean.Template.Application.Requests.Catalog;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Extensions;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Net.Http.Json;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Catalog.Product;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Product;
 
 public class ProductManager : IProductManager
 {

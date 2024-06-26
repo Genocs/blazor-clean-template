@@ -1,18 +1,15 @@
-﻿using GenocsBlazor.Domain.Contracts;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 
-namespace GenocsBlazor.Application.Interfaces.Repositories
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+
+public interface IUnitOfWork<TId> : IDisposable
 {
-    public interface IUnitOfWork<TId> : IDisposable
-    {
-        IRepositoryAsync<T, TId> Repository<T>() where T : AuditableEntity<TId>;
+    IRepositoryAsync<T, TId> Repository<T>()
+        where T : AuditableEntity<TId>;
 
-        Task<int> Commit(CancellationToken cancellationToken);
+    Task<int> Commit(CancellationToken cancellationToken);
 
-        Task<int> CommitAndRemoveCache(CancellationToken cancellationToken, params string[] cacheKeys);
+    Task<int> CommitAndRemoveCache(CancellationToken cancellationToken, params string[] cacheKeys);
 
-        Task Rollback();
-    }
+    Task Rollback();
 }

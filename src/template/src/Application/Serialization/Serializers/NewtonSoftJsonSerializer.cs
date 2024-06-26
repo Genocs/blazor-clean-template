@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Interfaces.Serialization.Serializers;
-using GenocsBlazor.Application.Serialization.Settings;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Serialization.Serializers;
+using Genocs.BlazorClean.Template.Application.Serialization.Settings;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
-namespace GenocsBlazor.Application.Serialization.Serializers;
+namespace Genocs.BlazorClean.Template.Application.Serialization.Serializers;
 
 public class NewtonSoftJsonSerializer : IJsonSerializer
 {

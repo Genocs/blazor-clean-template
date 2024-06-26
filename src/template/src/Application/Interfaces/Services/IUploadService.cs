@@ -1,9 +1,8 @@
-﻿using GenocsBlazor.Application.Requests;
+﻿using Genocs.BlazorClean.Template.Application.Requests;
 
-namespace GenocsBlazor.Application.Interfaces.Services
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Services;
+
+public interface IUploadService
 {
-    public interface IUploadService
-    {
-        string UploadAsync(UploadRequest request);
-    }
+    string UploadAsync(UploadRequest request);
 }

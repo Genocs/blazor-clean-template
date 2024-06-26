@@ -1,9 +1,7 @@
-﻿using GenocsBlazor.Client.Infrastructure.Settings;
+﻿using Genocs.BlazorClean.Template.Client.Infrastructure.Settings;
 using MudBlazor;
-using System;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Shared;
+namespace Genocs.BlazorClean.Template.Client.Shared;
 
 public partial class MainLayout : IDisposable
 {

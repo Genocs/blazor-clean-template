@@ -1,9 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
 
-namespace GenocsBlazor.Application.Interfaces.Repositories
+public interface IProductRepository
 {
-    public interface IProductRepository
-    {
-        Task<bool> IsBrandUsed(int brandId);
-    }
+    Task<bool> IsBrandUsed(int brandId);
 }

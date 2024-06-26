@@ -1,58 +1,56 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
-using System.Threading.Tasks;
-using Blazored.FluentValidation;
 
-namespace GenocsBlazor.Client.Pages.Identity
+namespace Genocs.BlazorClean.Template.Client.Pages.Identity;
+
+public partial class RegisterUserModal
 {
-    public partial class RegisterUserModal
+    private FluentValidationValidator _fluentValidationValidator;
+    private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
+    private readonly RegisterRequest _registerUserModel = new();
+    [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
+
+    private void Cancel()
     {
-        private FluentValidationValidator _fluentValidationValidator;
-        private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-        private readonly RegisterRequest _registerUserModel = new();
-        [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
+        MudDialog.Cancel();
+    }
 
-        private void Cancel()
+    private async Task SubmitAsync()
+    {
+        var response = await _userManager.RegisterUserAsync(_registerUserModel);
+        if (response.Succeeded)
         {
-            MudDialog.Cancel();
+            _snackBar.Add(response.Messages[0], Severity.Success);
+            MudDialog.Close();
         }
-
-        private async Task SubmitAsync()
+        else
         {
-            var response = await _userManager.RegisterUserAsync(_registerUserModel);
-            if (response.Succeeded)
+            foreach (var message in response.Messages)
             {
-                _snackBar.Add(response.Messages[0], Severity.Success);
-                MudDialog.Close();
-            }
-            else
-            {
-                foreach (var message in response.Messages)
-                {
-                    _snackBar.Add(message, Severity.Error);
-                }
+                _snackBar.Add(message, Severity.Error);
             }
         }
+    }
 
-        private bool _passwordVisibility;
-        private InputType _passwordInput = InputType.Password;
-        private string _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
+    private bool _passwordVisibility;
+    private InputType _passwordInput = InputType.Password;
+    private string _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
 
-        private void TogglePasswordVisibility()
+    private void TogglePasswordVisibility()
+    {
+        if (_passwordVisibility)
         {
-            if (_passwordVisibility)
-            {
-                _passwordVisibility = false;
-                _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
-                _passwordInput = InputType.Password;
-            }
-            else
-            {
-                _passwordVisibility = true;
-                _passwordInputIcon = Icons.Material.Filled.Visibility;
-                _passwordInput = InputType.Text;
-            }
+            _passwordVisibility = false;
+            _passwordInputIcon = Icons.Material.Filled.VisibilityOff;
+            _passwordInput = InputType.Password;
+        }
+        else
+        {
+            _passwordVisibility = true;
+            _passwordInputIcon = Icons.Material.Filled.Visibility;
+            _passwordInput = InputType.Text;
         }
     }
 }

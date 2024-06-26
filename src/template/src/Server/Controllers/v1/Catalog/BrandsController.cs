@@ -1,15 +1,15 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Brands.Commands.Delete;
-using GenocsBlazor.Application.Features.Brands.Commands.Import;
-using GenocsBlazor.Application.Features.Brands.Queries.Export;
-using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
-using GenocsBlazor.Application.Features.Brands.Queries.GetById;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.Delete;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.Import;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.Export;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetById;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.v1.Catalog;
+namespace Genocs.BlazorClean.Template.Server.Controllers.v1.Catalog;
 
 public class BrandsController : BaseApiController<BrandsController>
 {

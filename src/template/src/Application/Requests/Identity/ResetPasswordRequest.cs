@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GenocsBlazor.Application.Requests.Identity;
+namespace Genocs.BlazorClean.Template.Application.Requests.Identity;
 
 public class ResetPasswordRequest
 {

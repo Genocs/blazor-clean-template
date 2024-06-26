@@ -3,8 +3,8 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
-        <RootNamespace>GenocsBlazor.Application</RootNamespace>
-        <AssemblyName>GenocsBlazor.Application</AssemblyName>
+        <RootNamespace>Genocs.BlazorClean.Template.Application</RootNamespace>
+        <AssemblyName>Genocs.BlazorClean.Template.Application</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

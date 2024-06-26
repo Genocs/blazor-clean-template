@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
-using GenocsBlazor.Application.Configurations;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Configurations;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 
-namespace GenocsBlazor.Server.Extensions;
+namespace Genocs.BlazorClean.Template.Server.Extensions;
 
 internal static class MvcBuilderExtensions
 {

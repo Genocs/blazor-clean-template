@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Domain.Enums;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Domain.Enums;
 using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
+namespace Genocs.BlazorClean.Template.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit;
 
 public class AddEditExtendedAttributeCommandValidatorLocalization
 {

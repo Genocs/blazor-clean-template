@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Application.Interfaces.Serialization.Serializers;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Validators;
+using Genocs.BlazorClean.Template.Application.Interfaces.Serialization.Serializers;
 
-namespace GenocsBlazor.Application.Validators;
+namespace Genocs.BlazorClean.Template.Application.Validators;
 
 public class JsonValidator<T> : PropertyValidator<T, string>
 {

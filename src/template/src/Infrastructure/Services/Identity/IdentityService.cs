@@ -1,23 +1,19 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Configurations;
-using GenocsBlazor.Application.Interfaces.Services.Identity;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Infrastructure.Models.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Configurations;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Services.Identity;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services.Identity;
 
 public class IdentityService : ITokenService
 {

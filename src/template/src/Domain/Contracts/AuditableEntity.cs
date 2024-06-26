@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Domain.Contracts;
+﻿namespace Genocs.BlazorClean.Template.Domain.Contracts;
 
 public abstract class AuditableEntity<TId> : IAuditableEntity<TId>
 {

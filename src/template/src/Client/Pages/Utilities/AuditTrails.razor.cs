@@ -1,14 +1,14 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+﻿using Genocs.BlazorClean.Template.Application.Responses.Audit;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Audit;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Responses.Audit;
-using GenocsBlazor.Client.Infrastructure.Managers.Audit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using MudBlazor;
 using System.Security.Claims;
 
-namespace GenocsBlazor.Client.Pages.Utilities;
+namespace Genocs.BlazorClean.Template.Client.Pages.Utilities;
 
 public partial class AuditTrails
 {

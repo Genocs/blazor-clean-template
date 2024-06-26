@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Responses.Audit;
+﻿namespace Genocs.BlazorClean.Template.Application.Responses.Audit;
 
 public class AuditResponse
 {

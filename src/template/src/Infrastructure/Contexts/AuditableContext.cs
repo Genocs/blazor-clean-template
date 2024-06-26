@@ -1,11 +1,11 @@
-﻿using GenocsBlazor.Application.Enums;
-using GenocsBlazor.Infrastructure.Models.Audit;
-using GenocsBlazor.Infrastructure.Models.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Enums;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Audit;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace GenocsBlazor.Infrastructure.Contexts;
+namespace Genocs.BlazorClean.Template.Infrastructure.Contexts;
 
 public abstract class AuditableContext : IdentityDbContext<BlazorPortalUser, BlazorPortalRole, string, IdentityUserClaim<string>, IdentityUserRole<string>, IdentityUserLogin<string>, BlazorPortalRoleClaim, IdentityUserToken<string>>
 {

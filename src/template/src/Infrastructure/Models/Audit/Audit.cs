@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 
-namespace GenocsBlazor.Infrastructure.Models.Audit;
+namespace Genocs.BlazorClean.Template.Infrastructure.Models.Audit;
 
 public class Audit : IEntity<int>
 {

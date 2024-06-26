@@ -1,53 +1,49 @@
-﻿using System.Linq;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Entities.Misc;
-using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Localization;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Entities.Misc;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Application.Features.Documents.Commands.Delete
+namespace Genocs.BlazorClean.Template.Application.Features.Documents.Commands.Delete;
+
+public class DeleteDocumentCommand : IRequest<Result<int>>
 {
-    public class DeleteDocumentCommand : IRequest<Result<int>>
+    public int Id { get; set; }
+}
+
+internal class DeleteDocumentCommandHandler : IRequestHandler<DeleteDocumentCommand, Result<int>>
+{
+    private readonly IUnitOfWork<int> _unitOfWork;
+    private readonly IStringLocalizer<DeleteDocumentCommandHandler> _localizer;
+
+    public DeleteDocumentCommandHandler(IUnitOfWork<int> unitOfWork, IStringLocalizer<DeleteDocumentCommandHandler> localizer)
     {
-        public int Id { get; set; }
+        _unitOfWork = unitOfWork;
+        _localizer = localizer;
     }
 
-    internal class DeleteDocumentCommandHandler : IRequestHandler<DeleteDocumentCommand, Result<int>>
+    public async Task<Result<int>> Handle(DeleteDocumentCommand command, CancellationToken cancellationToken)
     {
-        private readonly IUnitOfWork<int> _unitOfWork;
-        private readonly IStringLocalizer<DeleteDocumentCommandHandler> _localizer;
+        var documentsWithExtendedAttributes = _unitOfWork.Repository<Document>().Entities.Include(x => x.ExtendedAttributes);
 
-        public DeleteDocumentCommandHandler(IUnitOfWork<int> unitOfWork, IStringLocalizer<DeleteDocumentCommandHandler> localizer)
+        var document = await _unitOfWork.Repository<Document>().GetByIdAsync(command.Id);
+        if (document != null)
         {
-            _unitOfWork = unitOfWork;
-            _localizer = localizer;
+            await _unitOfWork.Repository<Document>().DeleteAsync(document);
+
+            // delete all caches related with deleted entity
+            var cacheKeys = await documentsWithExtendedAttributes.SelectMany(x => x.ExtendedAttributes).Where(x => x.EntityId == command.Id).Distinct().Select(x => ApplicationConstants.Cache.GetAllEntityExtendedAttributesByEntityIdCacheKey(nameof(Document), x.EntityId))
+                .ToListAsync(cancellationToken);
+            cacheKeys.Add(ApplicationConstants.Cache.GetAllEntityExtendedAttributesCacheKey(nameof(Document)));
+            await _unitOfWork.CommitAndRemoveCache(cancellationToken, cacheKeys.ToArray());
+
+            return await Result<int>.SuccessAsync(document.Id, _localizer["Document Deleted"]);
         }
-
-        public async Task<Result<int>> Handle(DeleteDocumentCommand command, CancellationToken cancellationToken)
+        else
         {
-            var documentsWithExtendedAttributes = _unitOfWork.Repository<Document>().Entities.Include(x => x.ExtendedAttributes);
-
-            var document = await _unitOfWork.Repository<Document>().GetByIdAsync(command.Id);
-            if (document != null)
-            {
-                await _unitOfWork.Repository<Document>().DeleteAsync(document);
-
-                // delete all caches related with deleted entity
-                var cacheKeys = await documentsWithExtendedAttributes.SelectMany(x => x.ExtendedAttributes).Where(x => x.EntityId == command.Id).Distinct().Select(x => ApplicationConstants.Cache.GetAllEntityExtendedAttributesByEntityIdCacheKey(nameof(Document), x.EntityId))
-                    .ToListAsync(cancellationToken);
-                cacheKeys.Add(ApplicationConstants.Cache.GetAllEntityExtendedAttributesCacheKey(nameof(Document)));
-                await _unitOfWork.CommitAndRemoveCache(cancellationToken, cacheKeys.ToArray());
-
-                return await Result<int>.SuccessAsync(document.Id, _localizer["Document Deleted"]);
-            }
-            else
-            {
-                return await Result<int>.FailAsync(_localizer["Document Not Found!"]);
-            }
+            return await Result<int>.FailAsync(_localizer["Document Not Found!"]);
         }
     }
 }

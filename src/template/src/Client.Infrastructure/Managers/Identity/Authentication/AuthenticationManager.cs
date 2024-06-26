@@ -1,18 +1,18 @@
 ﻿using Blazored.LocalStorage;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Authentication;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Routes;
 using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Client.Infrastructure.Authentication;
-using GenocsBlazor.Client.Infrastructure.Extensions;
-using GenocsBlazor.Client.Infrastructure.Routes;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Localization;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Security.Claims;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Authentication;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.Authentication;
 
 public class AuthenticationManager : IAuthenticationManager
 {

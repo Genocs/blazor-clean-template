@@ -1,6 +1,6 @@
 ﻿using Hangfire.Dashboard;
 
-namespace GenocsBlazor.Server.Filters;
+namespace Genocs.BlazorClean.Template.Server.Filters;
 
 public class HangfireAuthorizationFilter : IDashboardAuthorizationFilter
 {

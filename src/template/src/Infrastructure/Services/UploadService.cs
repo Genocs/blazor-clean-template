@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Requests;
+﻿using Genocs.BlazorClean.Template.Application.Extensions;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Requests;
 
-namespace GenocsBlazor.Infrastructure.Services;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services;
 
 /// <summary>
 /// Upload service implementation. This service is used to upload files to the server.
@@ -19,9 +19,9 @@ public class UploadService : IUploadService
             var folder = request.UploadType.ToDescriptionString();
             var folderName = Path.Combine("Files", folder);
             var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
-            bool exists = System.IO.Directory.Exists(pathToSave);
+            bool exists = Directory.Exists(pathToSave);
             if (!exists)
-                System.IO.Directory.CreateDirectory(pathToSave);
+                Directory.CreateDirectory(pathToSave);
             var fileName = request.FileName.Trim('"');
             var fullPath = Path.Combine(pathToSave, fileName);
             var dbPath = Path.Combine(folderName, fileName);
@@ -30,10 +30,12 @@ public class UploadService : IUploadService
                 dbPath = NextAvailableFilename(dbPath);
                 fullPath = NextAvailableFilename(fullPath);
             }
+
             using (var stream = new FileStream(fullPath, FileMode.Create))
             {
                 streamData.CopyTo(stream);
             }
+
             return dbPath;
         }
         else

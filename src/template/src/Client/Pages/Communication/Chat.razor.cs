@@ -1,21 +1,17 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Communication;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Constants.Storage;
-using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Communication;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Communication;
+namespace Genocs.BlazorClean.Template.Client.Pages.Communication;
 
 public partial class Chat
 {

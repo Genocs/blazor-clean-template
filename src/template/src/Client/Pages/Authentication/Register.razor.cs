@@ -1,9 +1,9 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
 
-namespace GenocsBlazor.Client.Pages.Authentication
+namespace Genocs.BlazorClean.Template.Client.Pages.Authentication
 {
     public partial class Register
     {

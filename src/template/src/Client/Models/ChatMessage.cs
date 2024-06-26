@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Client.Models;
+﻿namespace Genocs.BlazorClean.Template.Client.Models;
 
 public class ChatMessage
 {

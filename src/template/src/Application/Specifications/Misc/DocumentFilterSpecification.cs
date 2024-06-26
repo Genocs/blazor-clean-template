@@ -1,20 +1,19 @@
-﻿using GenocsBlazor.Application.Specifications.Base;
-using GenocsBlazor.Domain.Entities.Misc;
+﻿using Genocs.BlazorClean.Template.Application.Specifications.Base;
+using Genocs.BlazorClean.Template.Domain.Entities.Misc;
 
-namespace GenocsBlazor.Application.Specifications.Misc
+namespace Genocs.BlazorClean.Template.Application.Specifications.Misc;
+
+public class DocumentFilterSpecification : GenocsSpecification<Document>
 {
-    public class DocumentFilterSpecification : GenocsSpecification<Document>
+    public DocumentFilterSpecification(string searchString, string userId)
     {
-        public DocumentFilterSpecification(string searchString, string userId)
+        if (!string.IsNullOrEmpty(searchString))
         {
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                Criteria = p => (p.Title.Contains(searchString) || p.Description.Contains(searchString)) && (p.IsPublic == true || (p.IsPublic == false && p.CreatedBy == userId));
-            }
-            else
-            {
-                Criteria = p => (p.IsPublic == true || (p.IsPublic == false && p.CreatedBy == userId));
-            }
+            Criteria = p => (p.Title.Contains(searchString) || p.Description.Contains(searchString)) && (p.IsPublic == true || (p.IsPublic == false && p.CreatedBy == userId));
+        }
+        else
+        {
+            Criteria = p => (p.IsPublic == true || (p.IsPublic == false && p.CreatedBy == userId));
         }
     }
 }

@@ -1,16 +1,12 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
+﻿using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Responses.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
 using MudBlazor;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Identity;
+namespace Genocs.BlazorClean.Template.Client.Pages.Identity;
 
 public partial class Users
 {

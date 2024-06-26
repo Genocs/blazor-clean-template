@@ -1,12 +1,12 @@
 ﻿using Blazored.LocalStorage;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Settings;
 using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 using Genocs.BlazorClean.Template.Shared.Settings;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Client.Infrastructure.Settings;
 using Microsoft.Extensions.Localization;
 using MudBlazor;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Preferences;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Preferences;
 
 public class ClientPreferenceManager : IClientPreferenceManager
 {

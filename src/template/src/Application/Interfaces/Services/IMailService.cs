@@ -1,7 +1,6 @@
-﻿using GenocsBlazor.Application.Requests.Mail;
-using System.Threading.Tasks;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Mail;
 
-namespace GenocsBlazor.Application.Interfaces.Services;
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Services;
 
 public interface IMailService
 {

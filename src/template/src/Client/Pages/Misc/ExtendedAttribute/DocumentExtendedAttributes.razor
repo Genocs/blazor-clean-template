@@ -1,9 +1,9 @@
 ﻿@page "/extended-attributes/{EntityName}/{EntityIdString}"
 @attribute [Authorize(Policy = Permissions.DocumentExtendedAttributes.View)]
 
-@using GenocsBlazor.Domain.Entities.Misc
-@using GenocsBlazor.Domain.Entities.ExtendedAttributes
-@namespace GenocsBlazor.Client.Pages.Misc.ExtendedAttribute
+@using Genocs.BlazorClean.Template.Domain.Entities.Misc
+@using Genocs.BlazorClean.Template.Domain.Entities.ExtendedAttributes
+@namespace Genocs.BlazorClean.Template.Client.Pages.Misc.ExtendedAttribute
 
 @inherits ExtendedAttributes<int, int, Document, DocumentExtendedAttribute>
 

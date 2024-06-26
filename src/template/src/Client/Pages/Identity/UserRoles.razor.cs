@@ -1,15 +1,12 @@
-﻿using System;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Shared.Constants.Permission;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
-using System.Collections.Generic;
 using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Genocs.BlazorClean.Template.Shared.Constants.Permission;
 
-namespace GenocsBlazor.Client.Pages.Identity;
+namespace Genocs.BlazorClean.Template.Client.Pages.Identity;
 
 public partial class UserRoles
 {

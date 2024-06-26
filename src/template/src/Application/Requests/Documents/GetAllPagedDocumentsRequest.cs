@@ -1,7 +1,6 @@
-﻿namespace GenocsBlazor.Application.Requests.Documents
+﻿namespace Genocs.BlazorClean.Template.Application.Requests.Documents;
+
+public class GetAllPagedDocumentsRequest : PagedRequest
 {
-    public class GetAllPagedDocumentsRequest : PagedRequest
-    {
-        public string SearchString { get; set; }
-    }
+    public string SearchString { get; set; }
 }

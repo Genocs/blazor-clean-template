@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Identity;
-using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Identity;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Identity;
 
 [Route("api/identity/token")]
 [ApiController]

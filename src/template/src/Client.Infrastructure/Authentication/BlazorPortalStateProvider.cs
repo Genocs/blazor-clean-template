@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text.Json;
 
-namespace GenocsBlazor.Client.Infrastructure.Authentication;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Authentication;
 
 public class GenocsPortalStateProvider : AuthenticationStateProvider
 {

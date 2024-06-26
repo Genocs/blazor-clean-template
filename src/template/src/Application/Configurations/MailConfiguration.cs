@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Configurations;
+﻿namespace Genocs.BlazorClean.Template.Application.Configurations;
 
 public class MailConfiguration
 {

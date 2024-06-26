@@ -1,8 +1,8 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.Users;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.Users;
 
 public interface IUserManager : IManager
 {

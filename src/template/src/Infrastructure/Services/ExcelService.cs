@@ -1,12 +1,12 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Services;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System.Data;
 using System.Drawing;
 
-namespace GenocsBlazor.Infrastructure.Services;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services;
 
 public class ExcelService : IExcelService
 {
@@ -68,7 +68,7 @@ public class ExcelService : IExcelService
             }
         }
 
-        using (ExcelRange autoFilterCells = ws.Cells[1, 1, dataList.Count + 1, headers.Count])
+        using (var autoFilterCells = ws.Cells[1, 1, dataList.Count + 1, headers.Count])
         {
             autoFilterCells.AutoFilter = true;
             autoFilterCells.AutoFitColumns();
@@ -118,7 +118,7 @@ public class ExcelService : IExcelService
             try
             {
                 var wsRow = ws.Cells[rowNum, 1, rowNum, ws.Dimension.End.Column];
-                DataRow row = dt.Rows.Add();
+                var row = dt.Rows.Add();
                 var item = (TEntity)Activator.CreateInstance(typeof(TEntity));
                 foreach (var cell in wsRow)
                 {

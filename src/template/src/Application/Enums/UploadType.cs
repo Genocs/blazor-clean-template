@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace GenocsBlazor.Application.Enums
+namespace Genocs.BlazorClean.Template.Application.Enums
 {
     public enum UploadType : byte
     {

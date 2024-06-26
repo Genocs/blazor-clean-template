@@ -1,13 +1,13 @@
-﻿using GenocsBlazor.Application.Configurations;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Requests.Mail;
+﻿using Genocs.BlazorClean.Template.Application.Configurations;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Requests.Mail;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace GenocsBlazor.Infrastructure.Shared.Services;
+namespace Genocs.BlazorClean.Template.Infrastructure.Shared.Services;
 
 public class SMTPMailService : IMailService
 {

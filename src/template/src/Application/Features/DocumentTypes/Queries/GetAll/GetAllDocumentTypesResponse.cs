@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Features.DocumentTypes.Queries.GetAll;
+﻿namespace Genocs.BlazorClean.Template.Application.Features.DocumentTypes.Queries.GetAll;
 
 public class GetAllDocumentTypesResponse
 {

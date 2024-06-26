@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
-using GenocsBlazor.Domain.Entities.Catalog;
+using Genocs.BlazorClean.Template.Application.Features.Products.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 
-namespace GenocsBlazor.Application.Mappings
+namespace Genocs.BlazorClean.Template.Application.Mappings;
+
+public class ProductProfile : Profile
 {
-    public class ProductProfile : Profile
+    public ProductProfile()
     {
-        public ProductProfile()
-        {
-            CreateMap<AddEditProductCommand, Product>().ReverseMap();
-        }
+        CreateMap<AddEditProductCommand, Product>().ReverseMap();
     }
 }

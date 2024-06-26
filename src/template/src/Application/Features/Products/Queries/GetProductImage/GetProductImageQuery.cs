@@ -1,37 +1,33 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Entities.Catalog;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Application.Features.Products.Queries.GetProductImage
+namespace Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetProductImage;
+
+public class GetProductImageQuery : IRequest<Result<string>>
 {
-    public class GetProductImageQuery : IRequest<Result<string>>
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        public GetProductImageQuery(int productId)
-        {
-            Id = productId;
-        }
+    public GetProductImageQuery(int productId)
+    {
+        Id = productId;
+    }
+}
+
+internal class GetProductImageQueryHandler : IRequestHandler<GetProductImageQuery, Result<string>>
+{
+    private readonly IUnitOfWork<int> _unitOfWork;
+
+    public GetProductImageQueryHandler(IUnitOfWork<int> unitOfWork)
+    {
+        _unitOfWork = unitOfWork;
     }
 
-    internal class GetProductImageQueryHandler : IRequestHandler<GetProductImageQuery, Result<string>>
+    public async Task<Result<string>> Handle(GetProductImageQuery request, CancellationToken cancellationToken)
     {
-        private readonly IUnitOfWork<int> _unitOfWork;
-
-        public GetProductImageQueryHandler(IUnitOfWork<int> unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
-
-        public async Task<Result<string>> Handle(GetProductImageQuery request, CancellationToken cancellationToken)
-        {
-            var data = await _unitOfWork.Repository<Product>().Entities.Where(p => p.Id == request.Id).Select(a => a.ImageDataURL).FirstOrDefaultAsync(cancellationToken);
-            return await Result<string>.SuccessAsync(data: data);
-        }
+        var data = await _unitOfWork.Repository<Product>().Entities.Where(p => p.Id == request.Id).Select(a => a.ImageDataURL).FirstOrDefaultAsync(cancellationToken);
+        return await Result<string>.SuccessAsync(data: data);
     }
 }

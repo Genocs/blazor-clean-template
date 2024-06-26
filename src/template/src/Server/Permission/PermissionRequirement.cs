@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace GenocsBlazor.Server.Permission;
+namespace Genocs.BlazorClean.Template.Server.Permission;
 
 internal class PermissionRequirement : IAuthorizationRequirement
 {

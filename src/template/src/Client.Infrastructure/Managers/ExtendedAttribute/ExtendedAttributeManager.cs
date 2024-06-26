@@ -1,13 +1,13 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using GenocsBlazor.Client.Infrastructure.Extensions;
-using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.Export;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Extensions;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Net.Http.Json;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.ExtendedAttribute;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.ExtendedAttribute;
 
 public class ExtendedAttributeManager<TId, TEntityId, TEntity, TExtendedAttribute>
     : IExtendedAttributeManager<TId, TEntityId, TEntity, TExtendedAttribute>

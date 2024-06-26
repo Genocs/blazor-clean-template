@@ -1,11 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
 
-namespace GenocsBlazor.Application.Interfaces.Repositories
+public interface IDocumentRepository
 {
-    public interface IDocumentRepository
-    {
-        Task<bool> IsDocumentTypeUsed(int documentTypeId);
+    Task<bool> IsDocumentTypeUsed(int documentTypeId);
 
-        Task<bool> IsDocumentExtendedAttributeUsed(int documentExtendedAttributeId);
-    }
+    Task<bool> IsDocumentExtendedAttributeUsed(int documentExtendedAttributeId);
 }

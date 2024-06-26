@@ -1,11 +1,11 @@
 ﻿using Blazored.FluentValidation;
-using GenocsBlazor.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Authentication;
+namespace Genocs.BlazorClean.Template.Client.Pages.Authentication;
 
 public partial class Login
 {

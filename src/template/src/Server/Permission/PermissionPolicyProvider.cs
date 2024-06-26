@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Permission;
+namespace Genocs.BlazorClean.Template.Server.Permission;
 
 internal class PermissionPolicyProvider : IAuthorizationPolicyProvider
 {

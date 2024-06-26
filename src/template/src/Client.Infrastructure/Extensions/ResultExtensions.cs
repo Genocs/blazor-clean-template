@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace GenocsBlazor.Client.Infrastructure.Extensions;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Extensions;
 
 internal static class ResultExtensions
 {

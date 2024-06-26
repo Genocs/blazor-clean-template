@@ -1,11 +1,11 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Storage;
 using Genocs.BlazorClean.Template.Shared.Settings;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Services.Storage;
-using GenocsBlazor.Server.Settings;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Storage;
+using Genocs.BlazorClean.Template.Server.Settings;
 using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Server.Managers.Preferences;
+namespace Genocs.BlazorClean.Template.Server.Managers.Preferences;
 
 public class ServerPreferenceManager : IServerPreferenceManager
 {

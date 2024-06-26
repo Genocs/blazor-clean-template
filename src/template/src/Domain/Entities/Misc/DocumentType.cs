@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 
-namespace GenocsBlazor.Domain.Entities.Misc;
+namespace Genocs.BlazorClean.Template.Domain.Entities.Misc;
 
 public class DocumentType : AuditableEntity<int>
 {

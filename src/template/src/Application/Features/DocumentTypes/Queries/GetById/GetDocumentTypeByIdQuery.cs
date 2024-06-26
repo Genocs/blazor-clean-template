@@ -1,34 +1,31 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Entities.Misc;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Entities.Misc;
 using MediatR;
 
-namespace GenocsBlazor.Application.Features.DocumentTypes.Queries.GetById
+namespace Genocs.BlazorClean.Template.Application.Features.DocumentTypes.Queries.GetById;
+
+public class GetDocumentTypeByIdQuery : IRequest<Result<GetDocumentTypeByIdResponse>>
 {
-    public class GetDocumentTypeByIdQuery : IRequest<Result<GetDocumentTypeByIdResponse>>
+    public int Id { get; set; }
+}
+
+internal class GetDocumentTypeByIdQueryHandler : IRequestHandler<GetDocumentTypeByIdQuery, Result<GetDocumentTypeByIdResponse>>
+{
+    private readonly IUnitOfWork<int> _unitOfWork;
+    private readonly IMapper _mapper;
+
+    public GetDocumentTypeByIdQueryHandler(IUnitOfWork<int> unitOfWork, IMapper mapper)
     {
-        public int Id { get; set; }
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
-    internal class GetDocumentTypeByIdQueryHandler : IRequestHandler<GetDocumentTypeByIdQuery, Result<GetDocumentTypeByIdResponse>>
+    public async Task<Result<GetDocumentTypeByIdResponse>> Handle(GetDocumentTypeByIdQuery query, CancellationToken cancellationToken)
     {
-        private readonly IUnitOfWork<int> _unitOfWork;
-        private readonly IMapper _mapper;
-
-        public GetDocumentTypeByIdQueryHandler(IUnitOfWork<int> unitOfWork, IMapper mapper)
-        {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
-        }
-
-        public async Task<Result<GetDocumentTypeByIdResponse>> Handle(GetDocumentTypeByIdQuery query, CancellationToken cancellationToken)
-        {
-            var documentType = await _unitOfWork.Repository<DocumentType>().GetByIdAsync(query.Id);
-            var mappedDocumentType = _mapper.Map<GetDocumentTypeByIdResponse>(documentType);
-            return await Result<GetDocumentTypeByIdResponse>.SuccessAsync(mappedDocumentType);
-        }
+        var documentType = await _unitOfWork.Repository<DocumentType>().GetByIdAsync(query.Id);
+        var mappedDocumentType = _mapper.Map<GetDocumentTypeByIdResponse>(documentType);
+        return await Result<GetDocumentTypeByIdResponse>.SuccessAsync(mappedDocumentType);
     }
 }

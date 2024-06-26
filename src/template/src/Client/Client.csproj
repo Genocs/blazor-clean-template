@@ -4,8 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
         <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-        <RootNamespace>GenocsBlazor.Client</RootNamespace>
-        <AssemblyName>GenocsBlazor.Client</AssemblyName>
+        <RootNamespace>Genocs.BlazorClean.Template.Client</RootNamespace>
+        <AssemblyName>Genocs.BlazorClean.Template.Client</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

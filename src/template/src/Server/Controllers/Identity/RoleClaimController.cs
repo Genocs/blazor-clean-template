@@ -1,11 +1,11 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Interfaces.Services.Identity;
-using GenocsBlazor.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Identity;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Identity;
 
 [Route("api/identity/roleClaim")]
 [ApiController]

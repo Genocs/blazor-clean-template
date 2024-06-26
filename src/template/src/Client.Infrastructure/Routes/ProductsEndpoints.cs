@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace GenocsBlazor.Client.Infrastructure.Routes;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Routes;
 
 public static class ProductsEndpoints
 {

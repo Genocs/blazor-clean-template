@@ -1,7 +1,7 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Data;
 
-namespace GenocsBlazor.Application.Interfaces.Services;
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Services;
 
 public interface IExcelService
 {

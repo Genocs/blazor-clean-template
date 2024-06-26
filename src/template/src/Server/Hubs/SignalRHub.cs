@@ -1,11 +1,9 @@
-﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
-using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Models.Chat;
-using Microsoft.AspNetCore.Authorization;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Microsoft.AspNetCore.SignalR;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Hubs;
+namespace Genocs.BlazorClean.Template.Server.Hubs;
 
 //[Authorize]
 public class SignalRHub : Hub
@@ -14,10 +12,12 @@ public class SignalRHub : Hub
     {
         await Clients.All.SendAsync(ApplicationConstants.SignalR.PingRequest, userId);
     }
+
     public async Task PingResponseAsync(string userId, string requestedUserId)
     {
         await Clients.User(requestedUserId).SendAsync(ApplicationConstants.SignalR.PingResponse, userId);
     }
+
     public async Task OnConnectAsync(string userId)
     {
         await Clients.All.SendAsync(ApplicationConstants.SignalR.ConnectUser, userId);

@@ -1,62 +1,60 @@
-﻿using System.Threading.Tasks;
-using Blazored.FluentValidation;
+﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Application.Features.DocumentTypes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Misc.DocumentType;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
-using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Misc.DocumentType;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 
-namespace GenocsBlazor.Client.Pages.Misc
+namespace Genocs.BlazorClean.Template.Client.Pages.Misc;
+
+public partial class AddEditDocumentTypeModal
 {
-    public partial class AddEditDocumentTypeModal
+    [Inject] private IDocumentTypeManager DocumentTypeManager { get; set; }
+
+    [Parameter] public AddEditDocumentTypeCommand AddEditDocumentTypeModel { get; set; } = new();
+    [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
+    [CascadingParameter] private HubConnection HubConnection { get; set; }
+
+    private FluentValidationValidator _fluentValidationValidator;
+    private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
+
+    public void Cancel()
     {
-        [Inject] private IDocumentTypeManager DocumentTypeManager { get; set; }
+        MudDialog.Cancel();
+    }
 
-        [Parameter] public AddEditDocumentTypeCommand AddEditDocumentTypeModel { get; set; } = new();
-        [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
-        [CascadingParameter] private HubConnection HubConnection { get; set; }
-
-        private FluentValidationValidator _fluentValidationValidator;
-        private bool Validated => _fluentValidationValidator.Validate(options => { options.IncludeAllRuleSets(); });
-
-        public void Cancel()
+    private async Task SaveAsync()
+    {
+        var response = await DocumentTypeManager.SaveAsync(AddEditDocumentTypeModel);
+        if (response.Succeeded)
         {
-            MudDialog.Cancel();
+            _snackBar.Add(response.Messages[0], Severity.Success);
+            MudDialog.Close();
         }
-
-        private async Task SaveAsync()
+        else
         {
-            var response = await DocumentTypeManager.SaveAsync(AddEditDocumentTypeModel);
-            if (response.Succeeded)
+            foreach (var message in response.Messages)
             {
-                _snackBar.Add(response.Messages[0], Severity.Success);
-                MudDialog.Close();
-            }
-            else
-            {
-                foreach (var message in response.Messages)
-                {
-                    _snackBar.Add(message, Severity.Error);
-                }
-            }
-            await HubConnection.SendAsync(ApplicationConstants.SignalR.SendUpdateDashboard);
-        }
-
-        protected override async Task OnInitializedAsync()
-        {
-            await LoadDataAsync();
-            HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
-            if (HubConnection.State == HubConnectionState.Disconnected)
-            {
-                await HubConnection.StartAsync();
+                _snackBar.Add(message, Severity.Error);
             }
         }
+        await HubConnection.SendAsync(ApplicationConstants.SignalR.SendUpdateDashboard);
+    }
 
-        private async Task LoadDataAsync()
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadDataAsync();
+        HubConnection = HubConnection.TryInitialize(_navigationManager, _localStorage);
+        if (HubConnection.State == HubConnectionState.Disconnected)
         {
-            await Task.CompletedTask;
+            await HubConnection.StartAsync();
         }
+    }
+
+    private async Task LoadDataAsync()
+    {
+        await Task.CompletedTask;
     }
 }

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Middlewares;
+namespace Genocs.BlazorClean.Template.Server.Middlewares;
 
 public class RequestCultureMiddleware
 {

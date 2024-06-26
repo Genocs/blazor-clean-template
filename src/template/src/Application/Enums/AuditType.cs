@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Enums
+﻿namespace Genocs.BlazorClean.Template.Application.Enums
 {
     public enum AuditType : byte
     {

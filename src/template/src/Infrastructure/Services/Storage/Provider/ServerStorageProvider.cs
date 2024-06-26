@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Storage.Provider;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Storage.Provider;
 
-namespace GenocsBlazor.Infrastructure.Services.Storage.Provider;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services.Storage.Provider;
 
 internal class ServerStorageProvider : IStorageProvider
 {

@@ -1,15 +1,13 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Account;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Infrastructure.Models.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Account;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Services.Identity;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services.Identity;
 
 public class AccountService : IAccountService
 {
@@ -18,7 +16,8 @@ public class AccountService : IAccountService
     private readonly IUploadService _uploadService;
     private readonly IStringLocalizer<AccountService> _localizer;
 
-    public AccountService(UserManager<BlazorPortalUser> userManager,
+    public AccountService(
+                          UserManager<BlazorPortalUser> userManager,
                           SignInManager<BlazorPortalUser> signInManager,
                           IUploadService uploadService,
                           IStringLocalizer<AccountService> localizer)
@@ -31,13 +30,13 @@ public class AccountService : IAccountService
 
     public async Task<IResult> ChangePasswordAsync(ChangePasswordRequest model, string userId)
     {
-        var user = await this._userManager.FindByIdAsync(userId);
+        var user = await _userManager.FindByIdAsync(userId);
         if (user == null)
         {
             return await Result.FailAsync(_localizer["User Not Found."]);
         }
 
-        var identityResult = await this._userManager.ChangePasswordAsync(
+        var identityResult = await _userManager.ChangePasswordAsync(
             user,
             model.Password,
             model.NewPassword);

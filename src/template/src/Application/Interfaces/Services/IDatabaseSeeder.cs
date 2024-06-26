@@ -1,7 +1,6 @@
-﻿namespace GenocsBlazor.Application.Interfaces.Services
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Services;
+
+public interface IDatabaseSeeder
 {
-    public interface IDatabaseSeeder
-    {
-        void Initialize();
-    }
+    void Initialize();
 }

@@ -1,12 +1,9 @@
-﻿using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Infrastructure.Contexts;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Infrastructure.Repositories;
+namespace Genocs.BlazorClean.Template.Infrastructure.Repositories;
 
 public class RepositoryAsync<T, TId> : IRepositoryAsync<T, TId> where T : AuditableEntity<TId>
 {
@@ -55,7 +52,7 @@ public class RepositoryAsync<T, TId> : IRepositoryAsync<T, TId> where T : Audita
 
     public Task UpdateAsync(T entity)
     {
-        T exist = _dbContext.Set<T>().Find(entity.Id);
+        var exist = _dbContext.Set<T>().Find(entity.Id);
         _dbContext.Entry(exist).CurrentValues.SetValues(entity);
         return Task.CompletedTask;
     }

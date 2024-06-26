@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace GenocsBlazor.Client;
+namespace Genocs.BlazorClean.Template.Client;
 
 [ExcludeFromCodeCoverage]
 public class CustomIcons

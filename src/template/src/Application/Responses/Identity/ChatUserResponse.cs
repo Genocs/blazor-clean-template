@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Models.Chat;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
 
-namespace GenocsBlazor.Application.Responses.Identity;
+namespace Genocs.BlazorClean.Template.Application.Responses.Identity;
 
 public class ChatUserResponse
 {

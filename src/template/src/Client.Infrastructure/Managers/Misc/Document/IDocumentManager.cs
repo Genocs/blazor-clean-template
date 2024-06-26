@@ -1,10 +1,10 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.Documents.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Documents.Queries.GetAll;
-using GenocsBlazor.Application.Features.Documents.Queries.GetById;
-using GenocsBlazor.Application.Requests.Documents;
+﻿using Genocs.BlazorClean.Template.Application.Features.Documents.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Queries.GetById;
+using Genocs.BlazorClean.Template.Application.Requests.Documents;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Misc.Document;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Misc.Document;
 
 public interface IDocumentManager : IManager
 {

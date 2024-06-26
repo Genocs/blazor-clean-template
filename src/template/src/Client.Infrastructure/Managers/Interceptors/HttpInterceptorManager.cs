@@ -1,11 +1,11 @@
-﻿using GenocsBlazor.Client.Infrastructure.Managers.Identity.Authentication;
+﻿using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.Authentication;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using MudBlazor;
 using System.Net.Http.Headers;
 using Toolbelt.Blazor;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Interceptors;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Interceptors;
 
 public class HttpInterceptorManager : IHttpInterceptorManager
 {

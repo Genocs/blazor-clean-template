@@ -1,12 +1,12 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Contracts;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Contracts;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Application.Features.ExtendedAttributes.Commands.Delete;
+namespace Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.Delete;
 
 internal class DeleteExtendedAttributeCommandLocalization
 {

@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Client.Infrastructure.Managers;
+﻿namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers;
 
 public interface IManager
 {

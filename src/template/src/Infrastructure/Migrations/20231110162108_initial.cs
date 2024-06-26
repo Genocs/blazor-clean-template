@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace GenocsBlazor.Infrastructure.Migrations
+namespace Genocs.BlazorClean.Template.Infrastructure.Migrations
 {
     public partial class initial : Migration
     {

@@ -1,10 +1,10 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Server.Managers.Preferences;
+using Genocs.BlazorClean.Template.Server.Managers.Preferences;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Utilities;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Utilities;
 
 [Route("api/[controller]")]
 [ApiController]

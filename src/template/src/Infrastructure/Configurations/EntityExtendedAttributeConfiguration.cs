@@ -1,12 +1,12 @@
-﻿using GenocsBlazor.Application.Serialization.Options;
-using GenocsBlazor.Application.Serialization.Serializers;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Infrastructure.Extensions;
+﻿using Genocs.BlazorClean.Template.Application.Serialization.Options;
+using Genocs.BlazorClean.Template.Application.Serialization.Serializers;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.Extensions.Options;
 
-namespace GenocsBlazor.Infrastructure.Configurations;
+namespace Genocs.BlazorClean.Template.Infrastructure.Configurations;
 
 public class EntityExtendedAttributeConfiguration : IEntityTypeConfiguration<IEntityExtendedAttribute>
 {

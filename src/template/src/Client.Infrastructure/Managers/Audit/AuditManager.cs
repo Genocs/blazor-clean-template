@@ -1,8 +1,8 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Responses.Audit;
-using GenocsBlazor.Client.Infrastructure.Extensions;
+﻿using Genocs.BlazorClean.Template.Application.Responses.Audit;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Extensions;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Audit;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Audit;
 
 public class AuditManager : IAuditManager
 {

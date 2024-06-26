@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Server.Localization;
+﻿namespace Genocs.BlazorClean.Template.Server.Localization;
 
 internal class ServerCommonResources
 {

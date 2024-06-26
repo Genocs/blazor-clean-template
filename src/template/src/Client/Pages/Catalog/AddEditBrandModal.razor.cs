@@ -1,14 +1,13 @@
 ﻿using Blazored.FluentValidation;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Catalog.Brand;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
-using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Catalog.Brand;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Catalog;
+namespace Genocs.BlazorClean.Template.Client.Pages.Catalog;
 
 public partial class AddEditBrandModal
 {

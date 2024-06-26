@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Features.Brands.Queries.GetById;
+﻿namespace Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetById;
 
 public class GetBrandByIdResponse
 {

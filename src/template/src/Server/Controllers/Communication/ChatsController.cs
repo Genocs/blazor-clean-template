@@ -1,13 +1,13 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Communication;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Communication;
 
 [Authorize(Policy = Permissions.Communication.Chat)]
 [Route("api/[controller]")]

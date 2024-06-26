@@ -1,14 +1,14 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Features.Products.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Products.Commands.Delete;
-using GenocsBlazor.Application.Features.Products.Queries.Export;
-using GenocsBlazor.Application.Features.Products.Queries.GetAllPaged;
-using GenocsBlazor.Application.Features.Products.Queries.GetProductImage;
+using Genocs.BlazorClean.Template.Application.Features.Products.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Products.Commands.Delete;
+using Genocs.BlazorClean.Template.Application.Features.Products.Queries.Export;
+using Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetAllPaged;
+using Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetProductImage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.v1.Catalog;
+namespace Genocs.BlazorClean.Template.Server.Controllers.v1.Catalog;
 
 public class ProductsController : BaseApiController<ProductsController>
 {

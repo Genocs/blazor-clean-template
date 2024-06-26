@@ -1,18 +1,16 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Common;
-using GenocsBlazor.Application.Requests.Identity;
-using System.Threading.Tasks;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Common;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Application.Interfaces.Services.Account
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Services.Account;
+
+public interface IAccountService : IService
 {
-    public interface IAccountService : IService
-    {
-        Task<IResult> UpdateProfileAsync(UpdateProfileRequest model, string userId);
+    Task<IResult> UpdateProfileAsync(UpdateProfileRequest model, string userId);
 
-        Task<IResult> ChangePasswordAsync(ChangePasswordRequest model, string userId);
+    Task<IResult> ChangePasswordAsync(ChangePasswordRequest model, string userId);
 
-        Task<IResult<string>> GetProfilePictureAsync(string userId);
+    Task<IResult<string>> GetProfilePictureAsync(string userId);
 
-        Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string userId);
-    }
+    Task<IResult<string>> UpdateProfilePictureAsync(UpdateProfilePictureRequest request, string userId);
 }

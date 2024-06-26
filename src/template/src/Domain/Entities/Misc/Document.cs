@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Domain.Entities.ExtendedAttributes;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Domain.Entities.ExtendedAttributes;
 
-namespace GenocsBlazor.Domain.Entities.Misc;
+namespace Genocs.BlazorClean.Template.Domain.Entities.Misc;
 
 public class Document : AuditableEntityWithExtendedAttributes<int, int, Document, DocumentExtendedAttribute>
 {

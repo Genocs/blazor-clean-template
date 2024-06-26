@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Responses.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Responses.Identity;
 
-namespace GenocsBlazor.Application.Requests.Identity;
+namespace Genocs.BlazorClean.Template.Application.Requests.Identity;
 
 public class UpdateUserRolesRequest
 {

@@ -1,18 +1,17 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Features.Brands.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Brands.Queries.GetAll;
-using GenocsBlazor.Application.Features.Brands.Queries.GetById;
-using GenocsBlazor.Domain.Entities.Catalog;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetById;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 
-namespace GenocsBlazor.Application.Mappings
+namespace Genocs.BlazorClean.Template.Application.Mappings;
+
+public class BrandProfile : Profile
 {
-    public class BrandProfile : Profile
+    public BrandProfile()
     {
-        public BrandProfile()
-        {
-            CreateMap<AddEditBrandCommand, Brand>().ReverseMap();
-            CreateMap<GetBrandByIdResponse, Brand>().ReverseMap();
-            CreateMap<GetAllBrandsResponse, Brand>().ReverseMap();
-        }
+        CreateMap<AddEditBrandCommand, Brand>().ReverseMap();
+        CreateMap<GetBrandByIdResponse, Brand>().ReverseMap();
+        CreateMap<GetAllBrandsResponse, Brand>().ReverseMap();
     }
 }

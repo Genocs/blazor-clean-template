@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Specifications.Base;
-using GenocsBlazor.Infrastructure.Models.Audit;
+﻿using Genocs.BlazorClean.Template.Application.Specifications.Base;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Audit;
 
-namespace GenocsBlazor.Infrastructure.Specifications;
+namespace Genocs.BlazorClean.Template.Infrastructure.Specifications;
 
 public class AuditFilterSpecification : GenocsSpecification<Audit>
 {

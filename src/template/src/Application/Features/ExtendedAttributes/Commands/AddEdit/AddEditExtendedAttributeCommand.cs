@@ -2,15 +2,15 @@
 using AutoMapper;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Domain.Enums;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
 
-namespace GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
+namespace Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
 
 internal class AddEditExtendedAttributeCommandLocalization
 {

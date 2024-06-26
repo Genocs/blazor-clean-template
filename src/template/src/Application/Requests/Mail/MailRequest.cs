@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Application.Requests.Mail;
+﻿namespace Genocs.BlazorClean.Template.Application.Requests.Mail;
 
 public class MailRequest
 {

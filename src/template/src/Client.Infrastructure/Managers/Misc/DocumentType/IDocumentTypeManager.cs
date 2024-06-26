@@ -1,8 +1,8 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.DocumentTypes.Commands.AddEdit;
-using GenocsBlazor.Application.Features.DocumentTypes.Queries.GetAll;
+﻿using Genocs.BlazorClean.Template.Application.Features.DocumentTypes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.DocumentTypes.Queries.GetAll;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Misc.DocumentType;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Misc.DocumentType;
 
 public interface IDocumentTypeManager : IManager
 {

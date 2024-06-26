@@ -1,17 +1,16 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Application.Validators.Requests.Identity
+namespace Genocs.BlazorClean.Template.Application.Validators.Requests.Identity;
+
+public class UpdateProfileRequestValidator : AbstractValidator<UpdateProfileRequest>
 {
-    public class UpdateProfileRequestValidator : AbstractValidator<UpdateProfileRequest>
+    public UpdateProfileRequestValidator(IStringLocalizer<UpdateProfileRequestValidator> localizer)
     {
-        public UpdateProfileRequestValidator(IStringLocalizer<UpdateProfileRequestValidator> localizer)
-        {
-            RuleFor(request => request.FirstName)
-                .Must(x => !string.IsNullOrWhiteSpace(x)).WithMessage(x => localizer["First Name is required"]);
-            RuleFor(request => request.LastName)
-                .Must(x => !string.IsNullOrWhiteSpace(x)).WithMessage(x => localizer["Last Name is required"]);
-        }
+        RuleFor(request => request.FirstName)
+            .Must(x => !string.IsNullOrWhiteSpace(x)).WithMessage(x => localizer["First Name is required"]);
+        RuleFor(request => request.LastName)
+            .Must(x => !string.IsNullOrWhiteSpace(x)).WithMessage(x => localizer["Last Name is required"]);
     }
 }

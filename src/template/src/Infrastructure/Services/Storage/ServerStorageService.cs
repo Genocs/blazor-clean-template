@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Serialization.Serializers;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Storage;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Storage.Provider;
 using System.Text.Json;
-using System.Threading.Tasks;
-using GenocsBlazor.Application.Interfaces.Services.Storage;
-using GenocsBlazor.Application.Interfaces.Services.Storage.Provider;
-using GenocsBlazor.Application.Interfaces.Serialization.Serializers;
 
-namespace GenocsBlazor.Infrastructure.Services.Storage;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services.Storage;
 
 public class ServerStorageService : IServerStorageService, ISyncServerStorageService
 {

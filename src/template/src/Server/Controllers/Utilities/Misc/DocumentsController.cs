@@ -1,13 +1,13 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Permission;
-using GenocsBlazor.Application.Features.Documents.Commands.AddEdit;
-using GenocsBlazor.Application.Features.Documents.Commands.Delete;
-using GenocsBlazor.Application.Features.Documents.Queries.GetAll;
-using GenocsBlazor.Application.Features.Documents.Queries.GetById;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Commands.Delete;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.Documents.Queries.GetById;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Utilities.Misc;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Utilities.Misc;
 
 [Route("api/[controller]")]
 [ApiController]

@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 
-namespace GenocsBlazor.Domain.Entities.Catalog;
+namespace Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 
 public class Brand : AuditableEntity<int>
 {

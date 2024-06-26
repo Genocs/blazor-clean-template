@@ -2,7 +2,8 @@
 
 namespace GenocsBlazor.Server.Localization;
 
-internal class ServerLocalizer<T> where T : class
+internal class ServerLocalizer<T>
+    where T : class
 {
     public IStringLocalizer<T> Localizer { get; }
 

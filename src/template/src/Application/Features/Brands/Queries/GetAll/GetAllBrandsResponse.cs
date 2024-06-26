@@ -1,10 +1,9 @@
-﻿namespace GenocsBlazor.Application.Features.Brands.Queries.GetAll
+﻿namespace Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
+
+public class GetAllBrandsResponse
 {
-    public class GetAllBrandsResponse
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Tax { get; set; }
-    }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public decimal Tax { get; set; }
 }

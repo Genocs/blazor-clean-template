@@ -1,18 +1,18 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Exceptions;
+using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Contexts;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 using Genocs.BlazorClean.Template.Shared.Constants.Role;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Exceptions;
-using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Interfaces.Services.Identity;
-using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Infrastructure.Contexts;
-using GenocsBlazor.Infrastructure.Models.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace GenocsBlazor.Infrastructure.Services;
+namespace Genocs.BlazorClean.Template.Infrastructure.Services;
 
 public class ChatService : IChatService
 {
@@ -40,7 +40,7 @@ public class ChatService : IChatService
         {
             var user = response.Data;
             var query = await _context.ChatHistories
-                .Where(h => (h.FromUserId == userId && h.ToUserId == contactId) || (h.FromUserId == contactId && h.ToUserId == userId))
+                .Where(h => h.FromUserId == userId && h.ToUserId == contactId || h.FromUserId == contactId && h.ToUserId == userId)
                 .OrderBy(a => a.CreatedDate)
                 .Include(a => a.FromUser)
                 .Include(a => a.ToUser)

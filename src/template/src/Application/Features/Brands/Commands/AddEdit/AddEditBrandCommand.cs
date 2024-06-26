@@ -1,65 +1,62 @@
-﻿using System.ComponentModel.DataAnnotations;
-using AutoMapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Entities.Catalog;
-using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Localization;
+﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
+using MediatR;
+using Microsoft.Extensions.Localization;
+using System.ComponentModel.DataAnnotations;
 
-namespace GenocsBlazor.Application.Features.Brands.Commands.AddEdit
+namespace Genocs.BlazorClean.Template.Application.Features.Brands.Commands.AddEdit;
+
+public partial class AddEditBrandCommand : IRequest<Result<int>>
 {
-    public partial class AddEditBrandCommand : IRequest<Result<int>>
+    public int Id { get; set; }
+    [Required]
+    public string Name { get; set; }
+    [Required]
+    public string Description { get; set; }
+    [Required]
+    public decimal Tax { get; set; }
+}
+
+internal class AddEditBrandCommandHandler : IRequestHandler<AddEditBrandCommand, Result<int>>
+{
+    private readonly IMapper _mapper;
+    private readonly IStringLocalizer<AddEditBrandCommandHandler> _localizer;
+    private readonly IUnitOfWork<int> _unitOfWork;
+
+    public AddEditBrandCommandHandler(IUnitOfWork<int> unitOfWork, IMapper mapper, IStringLocalizer<AddEditBrandCommandHandler> localizer)
     {
-        public int Id { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Description { get; set; }
-        [Required]
-        public decimal Tax { get; set; }
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
+        _localizer = localizer;
     }
 
-    internal class AddEditBrandCommandHandler : IRequestHandler<AddEditBrandCommand, Result<int>>
+    public async Task<Result<int>> Handle(AddEditBrandCommand command, CancellationToken cancellationToken)
     {
-        private readonly IMapper _mapper;
-        private readonly IStringLocalizer<AddEditBrandCommandHandler> _localizer;
-        private readonly IUnitOfWork<int> _unitOfWork;
-
-        public AddEditBrandCommandHandler(IUnitOfWork<int> unitOfWork, IMapper mapper, IStringLocalizer<AddEditBrandCommandHandler> localizer)
+        if (command.Id == 0)
         {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
-            _localizer = localizer;
+            var brand = _mapper.Map<Brand>(command);
+            await _unitOfWork.Repository<Brand>().AddAsync(brand);
+            await _unitOfWork.CommitAndRemoveCache(cancellationToken, ApplicationConstants.Cache.GetAllBrandsCacheKey);
+            return await Result<int>.SuccessAsync(brand.Id, _localizer["Brand Saved"]);
         }
-
-        public async Task<Result<int>> Handle(AddEditBrandCommand command, CancellationToken cancellationToken)
+        else
         {
-            if (command.Id == 0)
+            var brand = await _unitOfWork.Repository<Brand>().GetByIdAsync(command.Id);
+            if (brand != null)
             {
-                var brand = _mapper.Map<Brand>(command);
-                await _unitOfWork.Repository<Brand>().AddAsync(brand);
+                brand.Name = command.Name ?? brand.Name;
+                brand.Tax = (command.Tax == 0) ? brand.Tax : command.Tax;
+                brand.Description = command.Description ?? brand.Description;
+                await _unitOfWork.Repository<Brand>().UpdateAsync(brand);
                 await _unitOfWork.CommitAndRemoveCache(cancellationToken, ApplicationConstants.Cache.GetAllBrandsCacheKey);
-                return await Result<int>.SuccessAsync(brand.Id, _localizer["Brand Saved"]);
+                return await Result<int>.SuccessAsync(brand.Id, _localizer["Brand Updated"]);
             }
             else
             {
-                var brand = await _unitOfWork.Repository<Brand>().GetByIdAsync(command.Id);
-                if (brand != null)
-                {
-                    brand.Name = command.Name ?? brand.Name;
-                    brand.Tax = (command.Tax == 0) ? brand.Tax : command.Tax;
-                    brand.Description = command.Description ?? brand.Description;
-                    await _unitOfWork.Repository<Brand>().UpdateAsync(brand);
-                    await _unitOfWork.CommitAndRemoveCache(cancellationToken, ApplicationConstants.Cache.GetAllBrandsCacheKey);
-                    return await Result<int>.SuccessAsync(brand.Id, _localizer["Brand Updated"]);
-                }
-                else
-                {
-                    return await Result<int>.FailAsync(_localizer["Brand Not Found!"]);
-                }
+                return await Result<int>.FailAsync(_localizer["Brand Not Found!"]);
             }
         }
     }

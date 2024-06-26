@@ -1,7 +1,7 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Managers;
 using MudBlazor;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Preferences;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Preferences;
 
 public interface IClientPreferenceManager : IPreferenceManager
 {

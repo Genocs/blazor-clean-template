@@ -1,11 +1,11 @@
+using Genocs.BlazorClean.Template.Client.Extensions;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Preferences;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Settings;
 using Genocs.BlazorClean.Template.Shared.Constants.Localization;
-using GenocsBlazor.Client.Extensions;
-using GenocsBlazor.Client.Infrastructure.Managers.Preferences;
-using GenocsBlazor.Client.Infrastructure.Settings;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using System.Globalization;
 
-namespace GenocsBlazor.Client;
+namespace Genocs.BlazorClean.Template.Client;
 
 public static class Program
 {

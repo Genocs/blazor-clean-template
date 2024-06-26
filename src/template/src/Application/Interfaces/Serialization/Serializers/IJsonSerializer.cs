@@ -1,8 +1,7 @@
-﻿namespace GenocsBlazor.Application.Interfaces.Serialization.Serializers
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Serialization.Serializers;
+
+public interface IJsonSerializer
 {
-    public interface IJsonSerializer
-    {
-        string Serialize<T>(T obj);
-        T Deserialize<T>(string text);
-    }
+    string Serialize<T>(T obj);
+    T Deserialize<T>(string text);
 }

@@ -1,6 +1,5 @@
-﻿namespace GenocsBlazor.Application.Interfaces.Common
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Common;
+
+public interface IScopedService
 {
-    public interface IScopedService
-    {
-    }
 }

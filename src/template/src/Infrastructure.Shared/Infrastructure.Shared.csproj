@@ -3,8 +3,8 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
-        <RootNamespace>GenocsBlazor.Infrastructure.Shared</RootNamespace>
-        <AssemblyName>GenocsBlazor.Infrastructure.Shared</AssemblyName>
+        <RootNamespace>Genocs.BlazorClean.Template.Infrastructure.Shared</RootNamespace>
+        <AssemblyName>Genocs.BlazorClean.Template.Infrastructure.Shared</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Specifications.Base;
-using GenocsBlazor.Infrastructure.Models.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Specifications.Base;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 
-namespace GenocsBlazor.Infrastructure.Specifications;
+namespace Genocs.BlazorClean.Template.Infrastructure.Specifications;
 
 public class UserFilterSpecification : GenocsSpecification<BlazorPortalUser>
 {

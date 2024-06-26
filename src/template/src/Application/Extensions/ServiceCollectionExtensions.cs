@@ -1,27 +1,27 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.Delete;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetById;
-using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.Delete;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.Export;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetById;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
-namespace GenocsBlazor.Application.Extensions;
+namespace Genocs.BlazorClean.Template.Application.Extensions;
 
 public static class ServiceCollectionExtensions
 {
     public static void AddApplicationLayer(this IServiceCollection services)
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+        // services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-        //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+        // services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
     }
 
     public static void AddExtendedAttributesHandlers(this IServiceCollection services)

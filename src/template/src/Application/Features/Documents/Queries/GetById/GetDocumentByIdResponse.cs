@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GenocsBlazor.Application.Features.Documents.Queries.GetById;
+﻿namespace Genocs.BlazorClean.Template.Application.Features.Documents.Queries.GetById;
 
 public class GetDocumentByIdResponse
 {

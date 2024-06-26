@@ -1,9 +1,9 @@
 ﻿using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Constants.Localization;
-using GenocsBlazor.Application.Configurations;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Server.Hubs;
-using GenocsBlazor.Server.Middlewares;
+using Genocs.BlazorClean.Template.Application.Configurations;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Server.Hubs;
+using Genocs.BlazorClean.Template.Server.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using System.Linq;
 
-namespace GenocsBlazor.Server.Extensions;
+namespace Genocs.BlazorClean.Template.Server.Extensions;
 
 internal static class ApplicationBuilderExtensions
 {

@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 
-namespace GenocsBlazor.Server.Services;
+namespace Genocs.BlazorClean.Template.Server.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

@@ -1,8 +1,8 @@
-﻿using GenocsBlazor.Application.Enums;
+﻿using Genocs.BlazorClean.Template.Application.Enums;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Newtonsoft.Json;
 
-namespace GenocsBlazor.Infrastructure.Models.Audit;
+namespace Genocs.BlazorClean.Template.Infrastructure.Models.Audit;
 
 public class AuditEntry
 {

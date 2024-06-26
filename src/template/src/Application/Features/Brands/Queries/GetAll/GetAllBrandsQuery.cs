@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Entities.Catalog;
 using LazyCache;
 using MediatR;
 
-namespace GenocsBlazor.Application.Features.Brands.Queries.GetAll;
+namespace Genocs.BlazorClean.Template.Application.Features.Brands.Queries.GetAll;
 
 public class GetAllBrandsQuery : IRequest<Result<List<GetAllBrandsResponse>>>
 {

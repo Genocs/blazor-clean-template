@@ -1,9 +1,8 @@
-﻿using GenocsBlazor.Application.Requests.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
-using System.Threading.Tasks;
 
-namespace GenocsBlazor.Client.Pages.Identity;
+namespace Genocs.BlazorClean.Template.Client.Pages.Identity;
 
 public partial class UserProfile
 {

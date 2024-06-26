@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Domain.Enums;
+﻿using Genocs.BlazorClean.Template.Domain.Enums;
 
-namespace GenocsBlazor.Domain.Contracts;
+namespace Genocs.BlazorClean.Template.Domain.Contracts;
 
 public interface IEntityExtendedAttribute<TId, TEntityId, TEntity>
     : IEntityExtendedAttribute<TEntityId, TEntity>, IEntity<TId>

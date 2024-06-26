@@ -1,8 +1,7 @@
-﻿using System;
-using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 using Microsoft.AspNetCore.Components;
 
-namespace GenocsBlazor.Client.Shared.Components;
+namespace Genocs.BlazorClean.Template.Client.Shared.Components;
 
 public abstract partial class ExtendedAttributes<TId, TEntityId, TEntity, TExtendedAttribute>
     : ExtendedAttributesBase<TId, TEntityId, TEntity, TExtendedAttribute>

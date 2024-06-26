@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GenocsBlazor.Application.Responses.Identity;
+namespace Genocs.BlazorClean.Template.Application.Responses.Identity;
 
 public class RoleResponse
 {

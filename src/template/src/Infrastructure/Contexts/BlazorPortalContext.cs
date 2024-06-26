@@ -1,14 +1,14 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Domain.Contracts;
-using GenocsBlazor.Domain.Entities.Catalog;
-using GenocsBlazor.Domain.Entities.ExtendedAttributes;
-using GenocsBlazor.Domain.Entities.Misc;
-using GenocsBlazor.Infrastructure.Models.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Domain.Contracts;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
+using Genocs.BlazorClean.Template.Domain.Entities.ExtendedAttributes;
+using Genocs.BlazorClean.Template.Domain.Entities.Misc;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace GenocsBlazor.Infrastructure.Contexts;
+namespace Genocs.BlazorClean.Template.Infrastructure.Contexts;
 
 public class BlazorPortalContext : AuditableContext
 {

@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Domain.Enums;
+﻿using Genocs.BlazorClean.Template.Domain.Enums;
 
-namespace GenocsBlazor.Domain.Contracts;
+namespace Genocs.BlazorClean.Template.Domain.Contracts;
 
 public abstract class AuditableEntityExtendedAttribute<TId, TEntityId, TEntity>
     : AuditableEntity<TId>, IEntityAuditableExtendedAttribute<TId, TEntityId, TEntity>

@@ -1,78 +1,73 @@
-﻿using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Application.Specifications.Catalog;
-using GenocsBlazor.Domain.Entities.Catalog;
-using MediatR;
-using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Linq.Dynamic.Core;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using Genocs.BlazorClean.Template.Application.Extensions;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Application.Specifications.Catalog;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
+using MediatR;
+using System.Linq.Dynamic.Core;
+using System.Linq.Expressions;
 
-namespace GenocsBlazor.Application.Features.Products.Queries.GetAllPaged
+namespace Genocs.BlazorClean.Template.Application.Features.Products.Queries.GetAllPaged;
+
+public class GetAllProductsQuery : IRequest<PaginatedResult<GetAllPagedProductsResponse>>
 {
-    public class GetAllProductsQuery : IRequest<PaginatedResult<GetAllPagedProductsResponse>>
-    {
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
-        public string SearchString { get; set; }
-        public string[] OrderBy { get; set; } // of the form fieldname [ascending|descending],fieldname [ascending|descending]...
+    public int PageNumber { get; set; }
+    public int PageSize { get; set; }
+    public string SearchString { get; set; }
+    public string[] OrderBy { get; set; } // of the form fieldname [ascending|descending],fieldname [ascending|descending]...
 
-        public GetAllProductsQuery(int pageNumber, int pageSize, string searchString, string orderBy)
+    public GetAllProductsQuery(int pageNumber, int pageSize, string searchString, string orderBy)
+    {
+        PageNumber = pageNumber;
+        PageSize = pageSize;
+        SearchString = searchString;
+        if (!string.IsNullOrWhiteSpace(orderBy))
         {
-            PageNumber = pageNumber;
-            PageSize = pageSize;
-            SearchString = searchString;
-            if (!string.IsNullOrWhiteSpace(orderBy))
-            {
-                OrderBy = orderBy.Split(',');
-            }
+            OrderBy = orderBy.Split(',');
         }
     }
+}
 
-    internal class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, PaginatedResult<GetAllPagedProductsResponse>>
+internal class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, PaginatedResult<GetAllPagedProductsResponse>>
+{
+    private readonly IUnitOfWork<int> _unitOfWork;
+
+    public GetAllProductsQueryHandler(IUnitOfWork<int> unitOfWork)
     {
-        private readonly IUnitOfWork<int> _unitOfWork;
+        _unitOfWork = unitOfWork;
+    }
 
-        public GetAllProductsQueryHandler(IUnitOfWork<int> unitOfWork)
+    public async Task<PaginatedResult<GetAllPagedProductsResponse>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+    {
+        Expression<Func<Product, GetAllPagedProductsResponse>> expression = e => new GetAllPagedProductsResponse
         {
-            _unitOfWork = unitOfWork;
+            Id = e.Id,
+            Name = e.Name,
+            Description = e.Description,
+            Rate = e.Rate,
+            Barcode = e.Barcode,
+            Brand = e.Brand.Name,
+            BrandId = e.BrandId
+        };
+        var productFilterSpec = new ProductFilterSpecification(request.SearchString);
+        if (request.OrderBy?.Any() != true)
+        {
+            var data = await _unitOfWork.Repository<Product>().Entities
+               .Specify(productFilterSpec)
+               .Select(expression)
+               .ToPaginatedListAsync(request.PageNumber, request.PageSize);
+            return data;
         }
-
-        public async Task<PaginatedResult<GetAllPagedProductsResponse>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+        else
         {
-            Expression<Func<Product, GetAllPagedProductsResponse>> expression = e => new GetAllPagedProductsResponse
-            {
-                Id = e.Id,
-                Name = e.Name,
-                Description = e.Description,
-                Rate = e.Rate,
-                Barcode = e.Barcode,
-                Brand = e.Brand.Name,
-                BrandId = e.BrandId
-            };
-            var productFilterSpec = new ProductFilterSpecification(request.SearchString);
-            if (request.OrderBy?.Any() != true)
-            {
-                var data = await _unitOfWork.Repository<Product>().Entities
-                   .Specify(productFilterSpec)
-                   .Select(expression)
-                   .ToPaginatedListAsync(request.PageNumber, request.PageSize);
-                return data;
-            }
-            else
-            {
-                var ordering = string.Join(",", request.OrderBy); // of the form fieldname [ascending|descending], ...
-                var data = await _unitOfWork.Repository<Product>().Entities
-                   .Specify(productFilterSpec)
-                   .OrderBy(ordering) // require system.linq.dynamic.core
-                   .Select(expression)
-                   .ToPaginatedListAsync(request.PageNumber, request.PageSize);
-                return data;
+            var ordering = string.Join(",", request.OrderBy); // of the form fieldname [ascending|descending], ...
+            var data = await _unitOfWork.Repository<Product>().Entities
+               .Specify(productFilterSpec)
+               .OrderBy(ordering) // require system.linq.dynamic.core
+               .Select(expression)
+               .ToPaginatedListAsync(request.PageNumber, request.PageSize);
+            return data;
 
-            }
         }
     }
 }

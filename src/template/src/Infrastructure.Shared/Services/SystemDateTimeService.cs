@@ -1,7 +1,6 @@
-﻿using GenocsBlazor.Application.Interfaces.Services;
-using System;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Services;
 
-namespace GenocsBlazor.Infrastructure.Shared.Services;
+namespace Genocs.BlazorClean.Template.Infrastructure.Shared.Services;
 
 public class SystemDateTimeService : IDateTimeService
 {

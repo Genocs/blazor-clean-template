@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace Genocs.BlazorClean.Template.Application.Interfaces.Services;
 
-namespace GenocsBlazor.Application.Interfaces.Services
+public interface IDateTimeService
 {
-    public interface IDateTimeService
-    {
-        DateTime NowUtc { get; }
-    }
+    DateTime NowUtc { get; }
 }

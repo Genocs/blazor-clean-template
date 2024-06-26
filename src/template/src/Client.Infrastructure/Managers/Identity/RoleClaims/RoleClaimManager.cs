@@ -1,10 +1,10 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Client.Infrastructure.Extensions;
+﻿using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Client.Infrastructure.Extensions;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 using System.Net.Http.Json;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Identity.RoleClaims;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Identity.RoleClaims;
 
 public class RoleClaimManager : IRoleClaimManager
 {

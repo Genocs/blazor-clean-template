@@ -1,9 +1,9 @@
-using GenocsBlazor.Application.Extensions;
-using GenocsBlazor.Infrastructure.Extensions;
-using GenocsBlazor.Server.Extensions;
-using GenocsBlazor.Server.Filters;
-using GenocsBlazor.Server.Managers.Preferences;
-using GenocsBlazor.Server.Middlewares;
+using Genocs.BlazorClean.Template.Infrastructure.Extensions;
+using Genocs.BlazorClean.Template.Application.Extensions;
+using Genocs.BlazorClean.Template.Server.Extensions;
+using Genocs.BlazorClean.Template.Server.Filters;
+using Genocs.BlazorClean.Template.Server.Managers.Preferences;
+using Genocs.BlazorClean.Template.Server.Middlewares;
 using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Localization;
 using System.IO;
 
-namespace GenocsBlazor.Server;
+namespace Genocs.BlazorClean.Template.Server;
 
 public class Startup
 {

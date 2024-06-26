@@ -1,9 +1,9 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Application.Responses.Identity;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Client.Infrastructure.Managers.Communication;
+namespace Genocs.BlazorClean.Template.Client.Infrastructure.Managers.Communication;
 
 public interface IChatManager : IManager
 {

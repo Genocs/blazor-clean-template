@@ -1,4 +1,4 @@
-﻿namespace GenocsBlazor.Domain.Contracts;
+﻿namespace Genocs.BlazorClean.Template.Domain.Contracts;
 
 public abstract class AuditableEntityWithExtendedAttributes<TId, TEntityId, TEntity, TExtendedAttribute>
     : AuditableEntity<TEntityId>, IEntityWithExtendedAttributes<TExtendedAttribute>

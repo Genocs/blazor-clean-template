@@ -1,6 +1,6 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
 
-namespace GenocsBlazor.Application.Models.Chat;
+namespace Genocs.BlazorClean.Template.Application.Models.Chat;
 
 public partial class ChatHistory<TUser> : IChatHistory<TUser>
     where TUser : IChatUser

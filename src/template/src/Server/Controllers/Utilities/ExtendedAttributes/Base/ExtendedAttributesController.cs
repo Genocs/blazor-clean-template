@@ -1,15 +1,15 @@
-﻿using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Commands.Delete;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.Export;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAll;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using GenocsBlazor.Application.Features.ExtendedAttributes.Queries.GetById;
-using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Commands.Delete;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.Export;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAll;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using Genocs.BlazorClean.Template.Application.Features.ExtendedAttributes.Queries.GetById;
+using Genocs.BlazorClean.Template.Domain.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
-namespace GenocsBlazor.Server.Controllers.Utilities.ExtendedAttributes.Base;
+namespace Genocs.BlazorClean.Template.Server.Controllers.Utilities.ExtendedAttributes.Base;
 
 /// <summary>
 /// Abstract Extended Attributes Controller Class

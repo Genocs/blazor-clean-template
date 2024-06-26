@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
+using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Application.Interfaces.Services;
+using Genocs.BlazorClean.Template.Application.Requests;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Application.Interfaces.Services;
-using GenocsBlazor.Application.Requests;
-using GenocsBlazor.Domain.Entities.Catalog;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
 
-namespace GenocsBlazor.Application.Features.Products.Commands.AddEdit;
+namespace Genocs.BlazorClean.Template.Application.Features.Products.Commands.AddEdit;
 
 public partial class AddEditProductCommand : IRequest<Result<int>>
 {

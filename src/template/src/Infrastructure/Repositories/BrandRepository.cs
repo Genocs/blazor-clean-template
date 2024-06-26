@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Application.Interfaces.Repositories;
-using GenocsBlazor.Domain.Entities.Catalog;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Repositories;
+using Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 
-namespace GenocsBlazor.Infrastructure.Repositories;
+namespace Genocs.BlazorClean.Template.Infrastructure.Repositories;
 
 public class BrandRepository : IBrandRepository
 {

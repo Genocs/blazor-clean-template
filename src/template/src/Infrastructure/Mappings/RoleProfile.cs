@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Infrastructure.Models.Identity;
-using GenocsBlazor.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 
-namespace GenocsBlazor.Infrastructure.Mappings
+namespace Genocs.BlazorClean.Template.Infrastructure.Mappings;
+
+public class RoleProfile : Profile
 {
-    public class RoleProfile : Profile
+    public RoleProfile()
     {
-        public RoleProfile()
-        {
-            CreateMap<RoleResponse, BlazorPortalRole>().ReverseMap();
-        }
+        CreateMap<RoleResponse, BlazorPortalRole>().ReverseMap();
     }
 }

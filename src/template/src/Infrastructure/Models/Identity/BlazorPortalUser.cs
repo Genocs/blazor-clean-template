@@ -1,10 +1,10 @@
-﻿using GenocsBlazor.Application.Interfaces.Chat;
-using GenocsBlazor.Application.Models.Chat;
-using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Chat;
+using Genocs.BlazorClean.Template.Application.Models.Chat;
+using Genocs.BlazorClean.Template.Domain.Contracts;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GenocsBlazor.Infrastructure.Models.Identity;
+namespace Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 
 public class BlazorPortalUser : IdentityUser<string>, IChatUser, IAuditableEntity<string>
 {

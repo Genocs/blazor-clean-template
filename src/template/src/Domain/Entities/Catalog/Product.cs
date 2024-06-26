@@ -1,7 +1,7 @@
-﻿using GenocsBlazor.Domain.Contracts;
+﻿using Genocs.BlazorClean.Template.Domain.Contracts;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GenocsBlazor.Domain.Entities.Catalog;
+namespace Genocs.BlazorClean.Template.Domain.Entities.Catalog;
 
 public class Product : AuditableEntity<int>
 {

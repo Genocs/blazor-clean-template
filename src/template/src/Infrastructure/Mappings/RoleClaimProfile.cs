@@ -1,23 +1,22 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
-using GenocsBlazor.Infrastructure.Models.Identity;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 
-namespace GenocsBlazor.Infrastructure.Mappings
+namespace Genocs.BlazorClean.Template.Infrastructure.Mappings;
+
+public class RoleClaimProfile : Profile
 {
-    public class RoleClaimProfile : Profile
+    public RoleClaimProfile()
     {
-        public RoleClaimProfile()
-        {
-            CreateMap<RoleClaimResponse, BlazorPortalRoleClaim>()
-                .ForMember(nameof(BlazorPortalRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
-                .ForMember(nameof(BlazorPortalRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
-                .ReverseMap();
+        CreateMap<RoleClaimResponse, BlazorPortalRoleClaim>()
+            .ForMember(nameof(BlazorPortalRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
+            .ForMember(nameof(BlazorPortalRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
+            .ReverseMap();
 
-            CreateMap<RoleClaimRequest, BlazorPortalRoleClaim>()
-                .ForMember(nameof(BlazorPortalRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
-                .ForMember(nameof(BlazorPortalRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
-                .ReverseMap();
-        }
+        CreateMap<RoleClaimRequest, BlazorPortalRoleClaim>()
+            .ForMember(nameof(BlazorPortalRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
+            .ForMember(nameof(BlazorPortalRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
+            .ReverseMap();
     }
 }

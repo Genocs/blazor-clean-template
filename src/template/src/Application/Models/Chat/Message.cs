@@ -1,4 +1,4 @@
-namespace GenocsBlazor.Application.Models.Chat;
+namespace Genocs.BlazorClean.Template.Application.Models.Chat;
 
 public class Message
 {

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace GenocsBlazor.Server.Controllers;
+namespace Genocs.BlazorClean.Template.Server.Controllers;
 
 /// <summary>
 /// Abstract BaseApi Controller Class

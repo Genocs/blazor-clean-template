@@ -2,7 +2,7 @@
 using Genocs.BlazorClean.Template.Shared.Constants.Localization;
 using Genocs.BlazorClean.Template.Shared.Settings;
 
-namespace GenocsBlazor.Server.Settings
+namespace Genocs.BlazorClean.Template.Server.Settings
 {
     public record ServerPreference : IPreference
     {

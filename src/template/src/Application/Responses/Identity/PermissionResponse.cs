@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
+﻿namespace Genocs.BlazorClean.Template.Application.Responses.Identity;
 
-namespace GenocsBlazor.Application.Responses.Identity
+public class PermissionResponse
 {
-    public class PermissionResponse
-    {
-        public string RoleId { get; set; }
-        public string RoleName { get; set; }
-        public List<RoleClaimResponse> RoleClaims { get; set; }
-    }
+    public string RoleId { get; set; }
+    public string RoleName { get; set; }
+    public List<RoleClaimResponse> RoleClaims { get; set; }
 }

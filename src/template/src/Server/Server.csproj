@@ -3,12 +3,12 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
-        <RootNamespace>GenocsBlazor.Server</RootNamespace>
-        <AssemblyName>GenocsBlazor.Server</AssemblyName>
+        <RootNamespace>Genocs.BlazorClean.Template.Server</RootNamespace>
+        <AssemblyName>Genocs.BlazorClean.Template.Server</AssemblyName>
     </PropertyGroup>
     
     <PropertyGroup>
-        <DocumentationFile>GenocsBlazor.Server.xml</DocumentationFile>
+        <DocumentationFile>Genocs.BlazorClean.Template.Server.xml</DocumentationFile>
         <NoWarn>1701;1702;1591</NoWarn>
         <UserSecretsId>Genocs</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -34,13 +34,13 @@
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
-        <PackageReference Include="Serilog.Extensions.Hosting" Version="7.0.0" />
-        <PackageReference Include="Serilog.Formatting.Compact" Version="2.0.0" />
-        <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.1" />
-        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-        <PackageReference Include="Serilog.Sinks.Console" Version="5.0.0" />
-        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+        <PackageReference Include="Serilog.Enrichers.Environment" Version="3.0.1" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+        <PackageReference Include="Serilog.Formatting.Compact" Version="3.0.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.1" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="2.0.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+        <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Application\Application.csproj" />

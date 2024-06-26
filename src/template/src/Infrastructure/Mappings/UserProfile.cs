@@ -1,16 +1,15 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Infrastructure.Models.Identity;
-using GenocsBlazor.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Identity;
 
-namespace GenocsBlazor.Infrastructure.Mappings
+namespace Genocs.BlazorClean.Template.Infrastructure.Mappings;
+
+public class UserProfile : Profile
 {
-    public class UserProfile : Profile
+    public UserProfile()
     {
-        public UserProfile()
-        {
-            CreateMap<UserResponse, BlazorPortalUser>().ReverseMap();
-            CreateMap<ChatUserResponse, BlazorPortalUser>().ReverseMap()
-                .ForMember(dest => dest.EmailAddress, source => source.MapFrom(source => source.Email)); //Specific Mapping
-        }
+        CreateMap<UserResponse, BlazorPortalUser>().ReverseMap();
+        CreateMap<ChatUserResponse, BlazorPortalUser>().ReverseMap()
+            .ForMember(dest => dest.EmailAddress, source => source.MapFrom(source => source.Email)); //Specific Mapping
     }
 }

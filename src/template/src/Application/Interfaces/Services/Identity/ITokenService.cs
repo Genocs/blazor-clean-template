@@ -1,15 +1,13 @@
-﻿using Genocs.BlazorClean.Template.Shared.Wrapper;
-using GenocsBlazor.Application.Interfaces.Common;
-using GenocsBlazor.Application.Requests.Identity;
-using GenocsBlazor.Application.Responses.Identity;
-using System.Threading.Tasks;
+﻿using Genocs.BlazorClean.Template.Application.Interfaces.Common;
+using Genocs.BlazorClean.Template.Application.Requests.Identity;
+using Genocs.BlazorClean.Template.Application.Responses.Identity;
+using Genocs.BlazorClean.Template.Shared.Wrapper;
 
-namespace GenocsBlazor.Application.Interfaces.Services.Identity
+namespace Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
+
+public interface ITokenService : IService
 {
-    public interface ITokenService : IService
-    {
-        Task<Result<TokenResponse>> LoginAsync(TokenRequest model);
+    Task<Result<TokenResponse>> LoginAsync(TokenRequest model);
 
-        Task<Result<TokenResponse>> GetRefreshTokenAsync(RefreshTokenRequest model);
-    }
+    Task<Result<TokenResponse>> GetRefreshTokenAsync(RefreshTokenRequest model);
 }

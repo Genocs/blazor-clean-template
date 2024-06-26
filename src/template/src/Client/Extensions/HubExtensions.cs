@@ -3,7 +3,7 @@ using Genocs.BlazorClean.Template.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace GenocsBlazor.Client.Extensions;
+namespace Genocs.BlazorClean.Template.Client.Extensions;
 
 public static class HubExtensions
 {

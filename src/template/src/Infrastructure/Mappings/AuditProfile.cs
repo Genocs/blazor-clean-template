@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using GenocsBlazor.Application.Responses.Audit;
-using GenocsBlazor.Infrastructure.Models.Audit;
+using Genocs.BlazorClean.Template.Infrastructure.Models.Audit;
+using Genocs.BlazorClean.Template.Application.Responses.Audit;
 
-namespace GenocsBlazor.Infrastructure.Mappings;
+namespace Genocs.BlazorClean.Template.Infrastructure.Mappings;
 
 public class AuditProfile : Profile
 {

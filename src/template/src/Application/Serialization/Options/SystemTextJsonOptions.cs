@@ -1,10 +1,9 @@
 ﻿using System.Text.Json;
-using GenocsBlazor.Application.Interfaces.Serialization.Options;
+using Genocs.BlazorClean.Template.Application.Interfaces.Serialization.Options;
 
-namespace GenocsBlazor.Application.Serialization.Options
+namespace Genocs.BlazorClean.Template.Application.Serialization.Options;
+
+public class SystemTextJsonOptions : IJsonSerializerOptions
 {
-    public class SystemTextJsonOptions : IJsonSerializerOptions
-    {
-        public JsonSerializerOptions JsonSerializerOptions { get; } = new();
-    }
+    public JsonSerializerOptions JsonSerializerOptions { get; } = new();
 }

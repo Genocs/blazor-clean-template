@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace GenocsBlazor.Server.Extensions;
+namespace Genocs.BlazorClean.Template.Server.Extensions;
 
 internal static class HostBuilderExtensions
 {
