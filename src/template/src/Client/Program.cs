@@ -17,6 +17,7 @@ public static class Program
                       .AddClientServices();
         var host = builder.Build();
         var storageService = host.Services.GetRequiredService<ClientPreferenceManager>();
+
         if (storageService != null)
         {
             CultureInfo culture;
@@ -28,6 +29,7 @@ public static class Program
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;
         }
+
         await builder.Build().RunAsync();
     }
 }

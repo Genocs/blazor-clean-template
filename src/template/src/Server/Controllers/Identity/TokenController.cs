@@ -2,7 +2,6 @@
 using Genocs.BlazorClean.Template.Application.Interfaces.Services.Identity;
 using Genocs.BlazorClean.Template.Application.Requests.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Genocs.BlazorClean.Template.Server.Controllers.Identity;
 
@@ -18,24 +17,24 @@ public class TokenController : ControllerBase
     }
 
     /// <summary>
-    /// Get Token (Email, Password)
+    /// Get Token (Email, Password).
     /// </summary>
-    /// <param name="model"></param>
-    /// <returns>Status 200 OK</returns>
+    /// <param name="model">The model</param>
+    /// <returns>Status 200 OK.</returns>
     [HttpPost]
-    public async Task<ActionResult> Get(TokenRequest model)
+    public async Task<ActionResult> GetAsync(TokenRequest model)
     {
         var response = await _identityService.LoginAsync(model);
         return Ok(response);
     }
 
     /// <summary>
-    /// Refresh Token
+    /// Refresh Token.
     /// </summary>
     /// <param name="model"></param>
-    /// <returns>Status 200 OK</returns>
+    /// <returns>Status 200 OK.</returns>
     [HttpPost("refresh")]
-    public async Task<ActionResult> Refresh([FromBody] RefreshTokenRequest model)
+    public async Task<ActionResult> RefreshAsync([FromBody] RefreshTokenRequest model)
     {
         var response = await _identityService.GetRefreshTokenAsync(model);
         return Ok(response);
